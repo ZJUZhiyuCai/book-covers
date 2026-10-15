@@ -192,6 +192,14 @@ export function coverLayout(book, lang) {
     )
       throw new Error(`Typography outside reserved region: ${book.id}/${lang}/${e.text}`);
   }
+  const boxes = [...title, translated].map((e) => textBounds(e.text, e.x, e.y, e.size, e));
+  for (let i = 0; i < boxes.length; i++)
+    for (let j = i + 1; j < boxes.length; j++) {
+      const a = boxes[i],
+        b = boxes[j];
+      if (a.right > b.left && b.right > a.left && a.bottom > b.top && b.bottom > a.top)
+        throw new Error(`Typography overlaps: ${book.id}/${lang}`);
+    }
   return layout;
 }
 
@@ -202,10 +210,18 @@ export function typographySVG(book, lang) {
 }
 
 export async function renderCover(book, lang, { width = 1024, format = 'png' } = {}) {
+  const art = await readFile(inside(ROOT, book.artwork));
+  return composeCover(book, lang, art, { width, format });
+}
+
+// External books can use the same complete-cover pipeline without entering the public catalog.
+export async function composeCover(book, lang, art, { width = 1024, format = 'png' } = {}) {
   if (!Number.isInteger(width) || width < 128 || width > 4096)
     throw new Error('Export width must be an integer from 128 to 4096.');
   if (!['png', 'webp'].includes(format)) throw new Error('Export format must be png or webp.');
-  const art = await readFile(inside(ROOT, book.artwork));
+  const meta = await sharp(art).metadata();
+  if (meta.width !== 1024 || meta.height !== 1536 || meta.pages > 1)
+    throw new Error('Artwork must be a single 1024×1536 image; do not silently crop it.');
   // Typography is a separate deterministic layer. The source illustration is never rewritten.
   const full = await sharp(art)
     .composite([{ input: Buffer.from(typographySVG(book, lang)) }])

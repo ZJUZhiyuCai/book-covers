@@ -34,7 +34,7 @@ Four founding studies came from the author's personal-library design exploration
 
 ## Install the skill
 
-The skill itself needs no Node runtime. Download `quiet-book-covers-v1.1.0.zip` from the latest release and place the enclosed `quiet-book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
+The skill itself needs no Node runtime. Download `quiet-book-covers-v1.2.0.zip` from the latest release and place the enclosed `quiet-book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
 
 Alternatively, with Node.js 22+:
 
@@ -90,3 +90,13 @@ Created and curated by [Zhiyu Cai](https://caizhiyu.com/). Font sources and thei
 ## Typography in v1.1
 
 Chinese and English receive separate type direction: Zhuque Fangsong for engraved Chinese forms, selective Ma Shan Zheng brush lettering, and Cormorant Garamond roman/true italic for English. Editable per-language plans shape each title and give the author a deliberate place. The renderer measures actual ink bounds, preserves wording and source artwork, and rejects clipping or missing glyphs. See the [typography guide](skills/quiet-book-covers/references/typography.md) and [before/after sheet](press/05-typography.png).
+
+## Complete covers for your own books
+
+A cover request now delivers a finished image containing the exact title and author by default. Text-free artwork is an intermediate layer, or an explicit separate request. Plan the lettering before generating the picture and review the combined composition.
+
+```sh
+npm run compose -- --spec examples/complete-cover.json --out output/custom
+```
+
+Copy the example spec for a book outside the public catalog. Provide exact bilingual titles and authors, meaningful line breaks, an artwork path relative to the JSON file and optional typography plans. The command writes complete Chinese and English PNGs, WebP previews and an artwork/font provenance receipt. It validates both languages before writing, rejects overlaps and missing names, and requires `--force` to replace existing outputs. A website can copy these files without a runtime dependency on Quiet Covers.

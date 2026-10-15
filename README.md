@@ -14,7 +14,8 @@ Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 
 - **封面集**：每本书都有独立页面、构图说明、无字原图与中英文 PNG 下载。
 - **生成方法**：[quiet-book-covers](skills/quiet-book-covers/SKILL.md) 包含视觉规范、四张参考图、完整提示词模板和审图标准；可独立安装。
-- **排版与导出**：书名和作者单独排版，字体转为路径，不依赖本机字体，不让生图模型拼写书名。
+- **完整封面是默认交付**：原创插画、艺术性书名和作者一起导出。无字底图只是中间素材，只有明确要求时才单独交付。
+- **排版与导出**：书名和作者单独排版后合成完整图片，字体转为路径，不依赖浏览器字体。
 - **完整过程**：实际使用的提示词、生成记录、原图校验值，以及两张封面修正前的首稿。
 - **展示素材**：五张 1440 × 1920 竖版作品图与 GitHub 横版介绍图，见 [press/](press/)。
 
@@ -34,7 +35,7 @@ Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 
 ## 安装 Skill
 
-需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `quiet-book-covers-v1.1.0.zip`，将里面的 `quiet-book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
+需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `quiet-book-covers-v1.2.0.zip`，将里面的 `quiet-book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
 
 也可以从项目安装（Node.js 22+）：
 
@@ -78,7 +79,10 @@ npm run build               # 双语静态画廊、WebP 预览、20 张 PNG 下�
 npm run export              # 五张竖版作品图 + 横版介绍图 → output/
 npm run export -- --book ordinary-world --lang en
 npm run export -- --book border-town --lang zh --width 2048
+npm run compose -- --spec examples/complete-cover.json --out output/custom
 ```
+
+`compose` 可处理画廊之外的书籍：复制示例 JSON，填写准确的中英文书名、作者、断行和插画路径即可。插画路径相对于 JSON 所在目录；输出两种语言的完整 PNG、WebP 与来源记录。不会自动加入公开画廊，也不会默认覆盖已有成品。
 
 封面原始尺寸为 1024 × 1536。更大的导出尺寸属于放大排版输出，不会凭空增加插画细节。`npm run export -- --help` 查看参数。
 

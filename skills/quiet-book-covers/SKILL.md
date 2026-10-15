@@ -7,6 +7,12 @@ description: Design restrained literary covers with warm paper, spare printmakin
 
 Turn a book's emotional tension into one inhabitable image. This is a particular editorial direction, not a universal rule for good covers. Respect a user's requested format, palette and subject.
 
+## Deliver a complete cover
+
+A request for a **book cover** means a finished image with the **exact book title and author integrated into its composition**. Make that the default, even when the user does not repeat those requirements. A text-free illustration is an intermediate layer, not a finished cover. Deliver artwork alone only when the user explicitly asks for it.
+
+Resolve the title, author and intended language from the request and existing project. In a bilingual collection, deliver a separately composed cover for each language. Plan the title silhouette and author position before generating the picture; assess the picture and lettering together. More decorative type cannot rescue an image with nowhere for the words to live.
+
 ## Find the image
 
 Identify the work and author. If the title is ambiguous, resolve it before choosing imagery. Use the user's description or reliable knowledge of the work; verify unfamiliar plot details rather than inventing them. Do not claim a scene occurs in the book when it is your visual interpretation.
@@ -25,7 +31,7 @@ Start from [prompt template](references/prompt-template.txt), replacing the brac
 
 - Warm ivory paper, about two main ink colours, spare printmaking edges and light grain.
 - A quiet upper area for titles; a scene across the lower middle; a clean author margin at the bottom. The 43% / 47–87% / 9% values are layout targets, not proof of success.
-- No generated lettering. Keep the art separate from title and author typography.
+- Generate the picture without lettering, then **always complete the typography step** for a cover request. Separate source layers are a production method; the final exported cover combines both.
 - The image should read at roughly 180 px wide. Reduce competing shapes before adding detail or texture.
 
 When a reference image is supplied, describe its role (style reference or edit target) and inspect it first. Preserve the required composition during edits. Save selected artwork in the user's project; never leave a project asset dependent on a private temporary path.
@@ -49,7 +55,9 @@ Inspect both the full cover and thumbnail:
 
 Revise the specific failure. For example, repair an invaded author margin without adding a new illustration concept. A generation prompt is not proof that the output follows it.
 
-Deliver the selected art, typeset cover when requested, exact prompt, and generation/edit provenance. State whether the result is a fresh generation or revision. Image generation is stochastic; promise a reproducible process, not identical pixels or a guaranteed interpretation.
+Deliver the **complete typeset cover first**, previewing the actual exported image with its title and author. Include the editable type plan, selected source art, exact prompt and generation/edit provenance as supporting materials. For a bilingual project, label the Chinese and English exports clearly. On a website, use these complete covers as the default images; do not add a second browser text overlay or link only to the source illustrations. If generation or typesetting is blocked, name the missing step and do not call the cover complete.
+
+State whether the artwork is a fresh generation or a revision. Image generation is stochastic; promise a reproducible process, not identical pixels or a guaranteed interpretation.
 
 ## Useful examples
 

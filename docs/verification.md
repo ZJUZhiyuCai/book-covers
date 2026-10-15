@@ -22,3 +22,10 @@ GitHub Actions repeats the automated tests and build on the published source; it
 - Build output remains twenty PNG downloads and twenty-three HTML pages. The interface font subset is about 214 KiB.
 - The typography skill reference includes a six-cover specimen; original font files have provenance hashes and their OFL notices. The skill validator accepts the revised package.
 - A fifth promotional sheet compares the v1.0 and v1.1 text layers on the same illustrations.
+
+## v1.2 complete-cover delivery
+
+- Eleven tests pass, including the new external composition workflow. Both languages require exact titles and authors; tests inspect exported title and author pixels, intact source artwork, WebP dimensions and accidental-overwrite protection.
+- Runtime composition now rejects overlapping lettering and incorrectly sized source images. The existing twenty layouts still pass; all ten original illustration hashes are unchanged.
+- The skill validator passes. The skill now makes the combined, typeset image the default deliverable, with raw artwork explicitly an intermediate layer. The locally installed copy matches the repository.
+- The new CLI was also used for nine independent website books: eighteen complete covers, including two newly generated illustrations. Chinese desktop and English mobile previews were inspected at 1280 px and 390 px, with all nine correct-language covers loaded and no horizontal overflow. The consuming website uses exported WebP files and has no runtime dependency on this project.

@@ -2,6 +2,8 @@
 
 Read this when creating a typeset cover or revising its title and author. The founding layout used one body-oriented serif for everything; it was legible but felt like annotation. The revised direction gives each script its own letterforms and each title its own shape.
 
+Typography is a required part of a cover deliverable. Start by sketching the title's silhouette and the author's place, then generate art that leaves room for both. Judge and show the combined result, not the two layers independently. Export the lettering into the final image so its intended faces and positions survive download, sharing and website display.
+
 ![Chinese and English typography specimens](images/typography.jpg)
 
 Top row: engraved, brush and vertical Chinese setting. Bottom row: English roman/italic contrasts. These are decision examples, not a grid to impose on every book.
@@ -46,6 +48,8 @@ Use actual ink bounds, including italic overhangs and CJK sidebearings. Font adv
 
 For a revision, compare before and after on identical artwork. Check reading order, exact spelling, diacritics, margin clearance, line collisions and contrast. New decorative detail does not compensate for weak hierarchy. Keep source artwork intact when changing only the type layer.
 
+Before delivery, open the actual exported file: both title and author must be present in its pixels, readable, correctly spelled and part of a clear hierarchy. Check the second language independently. A filename, caption or HTML label containing the title does not replace title lettering on the cover.
+
 ## Reference implementation
 
 The Quiet Covers repository uses `titleLines.zh/en` for semantic text breaks, and optional `typography.zh/en` plans for their treatment:
@@ -56,6 +60,8 @@ The Quiet Covers repository uses `titleLines.zh/en` for semantic text breaks, an
 - Chinese `face`: `zhuque` or `brush`; English uses separate roman and italic files. `ink` is an optional dark six-digit hex colour drawn from the composition.
 
 The renderer derives the secondary title and author roles and checks real glyph bounds. These plans are editable starting points, not a universal layout algorithm. `npm test` and `npm run build` verify all current covers; still inspect the rendered output visually. Font outlines and positions are stable, but different native rasterizers can produce tiny antialiasing differences across operating systems.
+
+For a book outside the public catalog, the repository also provides `npm run compose -- --spec book.json --out covers`. Start from `examples/complete-cover.json`: exact bilingual titles/authors, meaningful title lines, an artwork path relative to that JSON file, and optional typography plans. It writes two complete PNGs, two WebP previews and a receipt with artwork/font provenance. It rejects missing names, changed titles, overlapping type and images that are not 1024 × 1536. Existing files require an explicit `--force`. A website consumes the exported images, not a runtime dependency on this tool.
 
 ## Font sources
 
