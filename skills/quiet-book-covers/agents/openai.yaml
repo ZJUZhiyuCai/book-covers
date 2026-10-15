@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quiet Covers · 纸间"
+  short_description: "为文学作品设计有留白、有叙事空间的系列封面与独立插画"
+  default_prompt: "使用 $quiet-book-covers 为《边城》设计一张留白充足的文学封面，先提炼叙事空间，再生成插画并排版。"

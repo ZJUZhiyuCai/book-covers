@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "books": [
+    {
+      "id": "ordinary-world",
+      "number": "01",
+      "group": "chinese",
+      "title": {
+        "zh": "平凡的世界",
+        "en": "Ordinary World"
+      },
+      "author": {
+        "zh": "路遥",
+        "en": "Lu Yao"
+      },
+      "titleLines": {
+        "zh": ["平凡的世界"],
+        "en": ["Ordinary", "World"]
+      },
+      "mood": {
+        "zh": "平凡生活中的韧性。",
+        "en": "The quiet resilience of everyday life."
+      },
+      "concept": {
+        "zh": "一条小路，通往黄土坡上的一孔窑洞。用大地的弧线承载生活的重量，把希望留给那道门。",
+        "en": "A narrow path climbs a loess hillside toward a cave dwelling. The earth carries the weight of daily life; a small doorway leaves room for hope."
+      },
+      "restraint": {
+        "zh": "没有人物肖像，也没有乡村元素的堆叠。",
+        "en": "No portraits or catalogue of rural objects."
+      },
+      "alt": {
+        "zh": "赭色黄土坡、蜿蜒的白色小路和深蓝色窑洞入口。",
+        "en": "Ochre loess terraces, a winding ivory path and a dark blue cave doorway."
+      },
+      "palette": ["#bd9152", "#30454f"],
+      "artwork": "artwork/ordinary-world.png",
+      "prompt": "prompts/ordinary-world.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "founding-study",
+        "revision": null
+      },
+      "sha256": "87b06b6d242544a2657a8f911e72b01b403615474024a71b280a7a8e5bc1f53f"
+    },
+    {
+      "id": "monte-cristo",
+      "number": "02",
+      "group": "world",
+      "title": {
+        "zh": "基督山伯爵",
+        "en": "The Count of Monte Cristo"
+      },
+      "author": {
+        "zh": "大仲马",
+        "en": "Alexandre Dumas"
+      },
+      "titleLines": {
+        "zh": ["基督山伯爵"],
+        "en": ["The Count of", "Monte Cristo"]
+      },
+      "mood": {
+        "zh": "孤绝之中，仍有一个出口。",
+        "en": "Isolation, with the possibility of escape."
+      },
+      "concept": {
+        "zh": "深蓝海水环绕一座孤岛。城堡只留一扇暖色的窗，海面的弧线让禁锢与自由同时存在。",
+        "en": "Dark water encircles an island fortress. One warm opening interrupts its silence; the curve of the sea holds confinement and freedom together."
+      },
+      "restraint": {
+        "zh": "舍去剑、锁链和王冠，让空间讲故事。",
+        "en": "Swords, chains and crowns give way to a spatial story."
+      },
+      "alt": {
+        "zh": "深蓝色海水环绕孤岛城堡，窗内透出一点赭色光。",
+        "en": "An island fortress surrounded by ink-blue sea, with a small ochre-lit window."
+      },
+      "palette": ["#1f4154", "#b98a48"],
+      "artwork": "artwork/monte-cristo.png",
+      "prompt": "prompts/monte-cristo.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "founding-study",
+        "revision": null
+      },
+      "sha256": "5e29963d53d52ae7f5f30d587dfb6b8aec64efb076c51667f3e28dd7912e2f4c"
+    },
+    {
+      "id": "border-town",
+      "number": "03",
+      "group": "chinese",
+      "title": {
+        "zh": "边城",
+        "en": "Border Town"
+      },
+      "author": {
+        "zh": "沈从文",
+        "en": "Shen Congwen"
+      },
+      "titleLines": {
+        "zh": ["边城"],
+        "en": ["Border Town"]
+      },
+      "mood": {
+        "zh": "水一直流，人还在等。",
+        "en": "The river moves; someone waits."
+      },
+      "concept": {
+        "zh": "小路在水边停下，渡船停在两岸之间。斜斜的渡绳让画面有了牵挂，空出的河面留下等待的时间。",
+        "en": "A path stops at the water. A ferry waits between two banks. Its diagonal rope creates a delicate connection across an otherwise empty river."
+      },
+      "restraint": {
+        "zh": "不画翠翠的肖像，也不把风景画满。",
+        "en": "No portrait of Cuicui; the landscape stays open."
+      },
+      "alt": {
+        "zh": "蓝色河流穿过赭色河岸，一条细绳牵着无人的渡船。",
+        "en": "A blue river between ochre banks, with an empty ferry on a slender crossing rope."
+      },
+      "palette": ["#527287", "#c7a05f"],
+      "artwork": "artwork/border-town.png",
+      "prompt": "prompts/border-town.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": null
+      },
+      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5"
+    },
+    {
+      "id": "steel-tempered",
+      "number": "04",
+      "group": "world",
+      "title": {
+        "zh": "钢铁是怎样炼成的",
+        "en": "How the Steel Was Tempered"
+      },
+      "author": {
+        "zh": "尼古拉·奥斯特洛夫斯基",
+        "en": "Nikolai Ostrovsky"
+      },
+      "titleLines": {
+        "zh": ["钢铁是怎样", "炼成的"],
+        "en": ["How the Steel", "Was Tempered"]
+      },
+      "mood": {
+        "zh": "寒冷中向前的力量。",
+        "en": "Endurance through the cold."
+      },
+      "concept": {
+        "zh": "铁轨向雪地尽头收束。纸的本色成为积雪，一线铜色停在消失点，把艰难与继续前行放进同一幅画。",
+        "en": "Railway tracks converge through a snowy landscape. Unprinted paper becomes snow; a small copper glint at the vanishing point suggests continued effort."
+      },
+      "restraint": {
+        "zh": "不靠口号、旗帜或工业全景表达力量。",
+        "en": "Resolve without slogans, flags or an industrial panorama."
+      },
+      "alt": {
+        "zh": "两条铁轨穿过灰蓝色雪地，延伸向远方一点铜色光。",
+        "en": "Two railway tracks converge through slate-blue snowbanks toward a small copper clearing."
+      },
+      "palette": ["#607582", "#b68250"],
+      "artwork": "artwork/steel-tempered.png",
+      "prompt": "prompts/steel-tempered.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "founding-study",
+        "revision": null
+      },
+      "sha256": "434b7402b7527a5805311966c6d9af3f447dac53e7458a794224e404f2748334"
+    },
+    {
+      "id": "white-horse",
+      "number": "05",
+      "group": "chinese",
+      "title": {
+        "zh": "白马啸西风",
+        "en": "White Horse Neighs in the West Wind"
+      },
+      "author": {
+        "zh": "金庸",
+        "en": "Jin Yong"
+      },
+      "titleLines": {
+        "zh": ["白马啸西风"],
+        "en": ["White Horse", "Neighs in the", "West Wind"]
+      },
+      "mood": {
+        "zh": "辽阔，也是一种孤独。",
+        "en": "An open landscape, a private solitude."
+      },
+      "concept": {
+        "zh": "一匹白马经过低低的沙丘，身后的细小足迹渐渐远去。把马画小，风和距离就有了位置。",
+        "en": "A small ivory horse crosses a low dune, leaving a delicate trail. Its modest scale lets wind and distance carry the emotion."
+      },
+      "restraint": {
+        "zh": "白马属于沙漠，不把它画成徽章。",
+        "en": "The horse belongs to the desert, rather than becoming a crest."
+      },
+      "alt": {
+        "zh": "一匹小小的白马经过赭色沙丘，留下细细的足迹。",
+        "en": "A small white horse crosses an ochre dune, leaving a fine trail."
+      },
+      "palette": ["#c4a365", "#655c4e"],
+      "artwork": "artwork/white-horse.png",
+      "prompt": "prompts/white-horse.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "founding-study",
+        "revision": null
+      },
+      "sha256": "6725c6744a23a4acb1bb7f4e18260fefeecaace257ae44d9b1f9ea898067abcc"
+    },
+    {
+      "id": "old-man-sea",
+      "number": "06",
+      "group": "world",
+      "title": {
+        "zh": "老人与海",
+        "en": "The Old Man and the Sea"
+      },
+      "author": {
+        "zh": "欧内斯特·海明威",
+        "en": "Ernest Hemingway"
+      },
+      "titleLines": {
+        "zh": ["老人与海"],
+        "en": ["The Old Man", "and the Sea"]
+      },
+      "mood": {
+        "zh": "人很小，决心可以很大。",
+        "en": "A small boat, an unbroken resolve."
+      },
+      "concept": {
+        "zh": "让海面占据整个画面的重量，小船只留一点。钓线向深处延伸，力量藏在比例之中。",
+        "en": "The sea carries almost all the visual weight. A small skiff and a fine descending line let scale express persistence."
+      },
+      "restraint": {
+        "zh": "不画巨大的鱼，不把故事变成捕鱼图解。",
+        "en": "No oversized fish or diagram of fishing gear."
+      },
+      "alt": {
+        "zh": "深蓝色海面上的一叶小舟，细细的钓线沉入水中。",
+        "en": "A tiny ivory skiff on a broad blue sea, with a fine line descending into the water."
+      },
+      "palette": ["#23475b", "#ac7244"],
+      "artwork": "artwork/old-man-sea.png",
+      "prompt": "prompts/old-man-sea.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": {
+          "input": "process/old-man-sea-v1.png",
+          "prompt": "prompts/margin-revision.txt",
+          "reason": "Clear an author margin while preserving the illustration."
+        }
+      },
+      "sha256": "53e7ef42edd6af2e3a9ba6baf5d4266c190bcf503315612fa57e8fbd70fa6f98"
+    },
+    {
+      "id": "red-chamber",
+      "number": "07",
+      "group": "chinese",
+      "title": {
+        "zh": "红楼梦",
+        "en": "Dream of the Red Chamber"
+      },
+      "author": {
+        "zh": "曹雪芹",
+        "en": "Cao Xueqin"
+      },
+      "titleLines": {
+        "zh": ["红楼梦"],
+        "en": ["Dream of the", "Red Chamber"]
+      },
+      "mood": {
+        "zh": "繁华散去，庭院仍在。",
+        "en": "Beauty passes; the courtyard remains."
+      },
+      "concept": {
+        "zh": "两重空庭，一道月门，几片落花。用褪去的胭脂色与没有人的空间，留下盛衰之后的回声。",
+        "en": "An empty courtyard opens into another through a moon gate. A few fallen petals and faded rose ink suggest the echo of a vanished season."
+      },
+      "restraint": {
+        "zh": "舍去繁复服饰与人物群像，保留一处空庭。",
+        "en": "An empty courtyard takes the place of elaborate costumes and a cast of characters."
+      },
+      "alt": {
+        "zh": "褪红色庭墙与月门，纸白色地面上落着几片花瓣。",
+        "en": "A faded rose courtyard wall and moon gate, with a few petals on an ivory floor."
+      },
+      "palette": ["#c58276", "#793b34"],
+      "artwork": "artwork/red-chamber.png",
+      "prompt": "prompts/red-chamber.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": null
+      },
+      "sha256": "78b2d8c2081e2d31b3a277e4270c9931a7e043a9b18fa0842e94c7d45350a7eb"
+    },
+    {
+      "id": "metamorphosis",
+      "number": "08",
+      "group": "world",
+      "title": {
+        "zh": "变形记",
+        "en": "The Metamorphosis"
+      },
+      "author": {
+        "zh": "弗朗茨·卡夫卡",
+        "en": "Franz Kafka"
+      },
+      "titleLines": {
+        "zh": ["变形记"],
+        "en": ["The", "Metamorphosis"]
+      },
+      "mood": {
+        "zh": "在自己家里，成为局外人。",
+        "en": "Estrangement inside one's own home."
+      },
+      "concept": {
+        "zh": "一扇关着的门，门外一片无法归属的阴影。把昆虫从画面里拿走，陌生感便留在房间本身。",
+        "en": "A closed door and an unclaimed shadow occupy an austere room. Removing the insect lets the room itself become unfamiliar."
+      },
+      "restraint": {
+        "zh": "不用甲虫剪影解释书名，也不堆叠超现实符号。",
+        "en": "No beetle silhouette or surreal collage to spell out the title."
+      },
+      "alt": {
+        "zh": "灰色空房间里，一扇关着的深色门投下长长的阴影。",
+        "en": "A closed dark door and a long angular shadow in an empty grey room."
+      },
+      "palette": ["#878173", "#3f3d37"],
+      "artwork": "artwork/metamorphosis.png",
+      "prompt": "prompts/metamorphosis.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": {
+          "input": "process/metamorphosis-v1.png",
+          "prompt": "prompts/margin-revision.txt",
+          "reason": "Clear an author margin while preserving the illustration."
+        }
+      },
+      "sha256": "8557a881576a6f8ea35917c759ed0b9cf511fda545bbb7e7cc66f3e7eb87522b"
+    },
+    {
+      "id": "rickshaw-boy",
+      "number": "09",
+      "group": "chinese",
+      "title": {
+        "zh": "骆驼祥子",
+        "en": "Rickshaw Boy"
+      },
+      "author": {
+        "zh": "老舍",
+        "en": "Lao She"
+      },
+      "titleLines": {
+        "zh": ["骆驼祥子"],
+        "en": ["Rickshaw Boy"]
+      },
+      "mood": {
+        "zh": "一直向前，却越来越窄。",
+        "en": "Always moving, with less room ahead."
+      },
+      "concept": {
+        "zh": "高墙把一条小巷越挤越窄。车停在画面的边缘，大块阴影压下来，日常的街道有了生活的阻力。",
+        "en": "High walls narrow an empty lane. A rickshaw waits at the edge while a broad shadow presses into the street, making ordinary space feel difficult."
+      },
+      "restraint": {
+        "zh": "不画骆驼，避免按书名逐字配物。",
+        "en": "No literal camel chosen merely from the Chinese title."
+      },
+      "alt": {
+        "zh": "灰蓝色高墙围住狭窄小巷，一辆空人力车停在左侧。",
+        "en": "High grey-blue walls compress a narrow lane, with an empty rickshaw at its left edge."
+      },
+      "palette": ["#9c9582", "#304651"],
+      "artwork": "artwork/rickshaw-boy.png",
+      "prompt": "prompts/rickshaw-boy.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": null
+      },
+      "sha256": "9336ee88adbcc0e72015ced0da919ea61c70e8885623fc30d7dc407ffe148a44"
+    },
+    {
+      "id": "to-the-lighthouse",
+      "number": "10",
+      "group": "world",
+      "title": {
+        "zh": "到灯塔去",
+        "en": "To the Lighthouse"
+      },
+      "author": {
+        "zh": "弗吉尼亚·伍尔夫",
+        "en": "Virginia Woolf"
+      },
+      "titleLines": {
+        "zh": ["到灯塔去"],
+        "en": ["To the", "Lighthouse"]
+      },
+      "mood": {
+        "zh": "远处的地方，心里的距离。",
+        "en": "A distant place, close in the mind."
+      },
+      "concept": {
+        "zh": "灯塔缩到远岸的一点。曲折的白色水道从近处伸向那里，让抵达的愿望占据整片海面。",
+        "en": "The lighthouse shrinks to a point on a distant headland. A winding ivory channel moves toward it, giving longing the shape of water."
+      },
+      "restraint": {
+        "zh": "不把灯塔放大成地标插画，也不增加装饰光束。",
+        "en": "No oversized landmark or decorative beam of light."
+      },
+      "alt": {
+        "zh": "灰蓝潮水之间的白色水道，通向远岸一座极小的灯塔。",
+        "en": "An ivory channel through slate-blue tidal water leads toward a tiny distant lighthouse."
+      },
+      "palette": ["#7d9099", "#999487"],
+      "artwork": "artwork/to-the-lighthouse.png",
+      "prompt": "prompts/to-the-lighthouse.txt",
+      "generation": {
+        "date": "2026-10-15",
+        "tool": "OpenAI built-in image generation",
+        "model": "not exposed by tool",
+        "origin": "new-study",
+        "revision": null
+      },
+      "sha256": "c54438aafb6ca6c643d20fbfdc5ae25b48a4c4d6b44050dd5bfb0e5cdb93bc19"
+    }
+  ]
+}

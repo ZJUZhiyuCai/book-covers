@@ -1,0 +1,26 @@
+{
+  "name": "quiet-covers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A book, distilled to one image. An open literary-cover skill, collection, and studio.",
+  "author": "Zhiyu Cai",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "export": "node scripts/export.mjs",
+    "skill:install": "node scripts/install-skill.mjs",
+    "check": "npm test && npm run build"
+  },
+  "devDependencies": {
+    "fontkit": "2.0.4",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "subset-font": "2.9.0"
+  }
+}
