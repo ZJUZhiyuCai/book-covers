@@ -8,6 +8,8 @@ Propose a work and a visual relationship, not just a collection of objects. Read
 4. Run `npm test`, `npm run build`, and inspect both languages at full size and at 180 px wide. The gallery should work on a narrow phone and with keyboard navigation.
 5. Open a PR with the image, a short design explanation and the generation/edit record. Contributor-supplied artworks must be eligible for the artwork license; code and prompts use MIT.
 
+For type revisions, keep the illustration unchanged. `titleLines` preserves exact wording and semantic breaks; optional per-language `typography` plans control type treatment. See the [typography reference](skills/quiet-book-covers/references/typography.md#reference-implementation) for modes, coordinates and font roles. Verify ink bounds, not only advance widths, and check short Chinese columns from right to left. Font additions need their source and redistribution license; record the original file hash in `fonts/SOURCES.json`.
+
 Do not add novel text, publisher cover reproductions, secrets or private local paths. Avoid automatic social posting or remote generation as part of the build. Image generation happens separately; building the gallery must remain offline after dependencies are installed.
 
 The first collection is curated, not a contest for the largest image count. New interpretations should add a distinct literary space. A revision that improves one existing cover is welcome.

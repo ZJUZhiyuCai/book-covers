@@ -14,7 +14,7 @@
         "en": "Lu Yao"
       },
       "titleLines": {
-        "zh": ["平凡的世界"],
+        "zh": ["平凡的", "世界"],
         "en": ["Ordinary", "World"]
       },
       "mood": {
@@ -43,7 +43,22 @@
         "origin": "founding-study",
         "revision": null
       },
-      "sha256": "87b06b6d242544a2657a8f911e72b01b403615474024a71b280a7a8e5bc1f53f"
+      "sha256": "87b06b6d242544a2657a8f911e72b01b403615474024a71b280a7a8e5bc1f53f",
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "sizes": [112, 148],
+          "baselines": [242, 402],
+          "offsets": [0, 146],
+          "tracking": 10
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [136, 154],
+          "baselines": [250, 402],
+          "italicLines": [1]
+        }
+      }
     },
     {
       "id": "monte-cristo",
@@ -58,7 +73,7 @@
         "en": "Alexandre Dumas"
       },
       "titleLines": {
-        "zh": ["基督山伯爵"],
+        "zh": ["基督山", "伯爵"],
         "en": ["The Count of", "Monte Cristo"]
       },
       "mood": {
@@ -87,7 +102,24 @@
         "origin": "founding-study",
         "revision": null
       },
-      "sha256": "5e29963d53d52ae7f5f30d587dfb6b8aec64efb076c51667f3e28dd7912e2f4c"
+      "sha256": "5e29963d53d52ae7f5f30d587dfb6b8aec64efb076c51667f3e28dd7912e2f4c",
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "sizes": [112, 144],
+          "baselines": [242, 399],
+          "offsets": [0, 154],
+          "tracking": 10,
+          "ink": "#253d49"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [74, 134],
+          "baselines": [218, 368],
+          "italicLines": [0],
+          "ink": "#253d49"
+        }
+      }
     },
     {
       "id": "border-town",
@@ -103,7 +135,7 @@
       },
       "titleLines": {
         "zh": ["边城"],
-        "en": ["Border Town"]
+        "en": ["Border", "Town"]
       },
       "mood": {
         "zh": "水一直流，人还在等。",
@@ -131,7 +163,21 @@
         "origin": "new-study",
         "revision": null
       },
-      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5"
+      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5",
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "sizes": [182],
+          "baselines": [325],
+          "tracking": 32
+        },
+        "en": {
+          "mode": "centered",
+          "sizes": [152, 154],
+          "baselines": [256, 405],
+          "italicLines": [1]
+        }
+      }
     },
     {
       "id": "steel-tempered",
@@ -147,7 +193,7 @@
       },
       "titleLines": {
         "zh": ["钢铁是怎样", "炼成的"],
-        "en": ["How the Steel", "Was Tempered"]
+        "en": ["How the", "Steel", "Was Tempered"]
       },
       "mood": {
         "zh": "寒冷中向前的力量。",
@@ -175,7 +221,24 @@
         "origin": "founding-study",
         "revision": null
       },
-      "sha256": "434b7402b7527a5805311966c6d9af3f447dac53e7458a794224e404f2748334"
+      "sha256": "434b7402b7527a5805311966c6d9af3f447dac53e7458a794224e404f2748334",
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "sizes": [100, 142],
+          "baselines": [245, 399],
+          "offsets": [0, 154],
+          "tracking": 8,
+          "ink": "#344650"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [68, 160, 82],
+          "baselines": [206, 365, 466],
+          "italicLines": [0],
+          "ink": "#344650"
+        }
+      }
     },
     {
       "id": "white-horse",
@@ -190,7 +253,7 @@
         "en": "Jin Yong"
       },
       "titleLines": {
-        "zh": ["白马啸西风"],
+        "zh": ["白马", "啸西风"],
         "en": ["White Horse", "Neighs in the", "West Wind"]
       },
       "mood": {
@@ -219,7 +282,26 @@
         "origin": "founding-study",
         "revision": null
       },
-      "sha256": "6725c6744a23a4acb1bb7f4e18260fefeecaace257ae44d9b1f9ea898067abcc"
+      "sha256": "6725c6744a23a4acb1bb7f4e18260fefeecaace257ae44d9b1f9ea898067abcc",
+      "typography": {
+        "zh": {
+          "mode": "vertical",
+          "face": "brush",
+          "size": 120,
+          "centers": [570, 414],
+          "topOffsets": [0, 24],
+          "top": 156,
+          "leading": 126,
+          "ink": "#493e30"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [112, 66, 126],
+          "baselines": [243, 341, 465],
+          "italicLines": [1],
+          "ink": "#493e30"
+        }
+      }
     },
     {
       "id": "old-man-sea",
@@ -267,7 +349,23 @@
           "reason": "Clear an author margin while preserving the illustration."
         }
       },
-      "sha256": "53e7ef42edd6af2e3a9ba6baf5d4266c190bcf503315612fa57e8fbd70fa6f98"
+      "sha256": "53e7ef42edd6af2e3a9ba6baf5d4266c190bcf503315612fa57e8fbd70fa6f98",
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "sizes": [142],
+          "baselines": [306],
+          "tracking": 18,
+          "ink": "#2e4650"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [70, 128],
+          "baselines": [214, 365],
+          "italicLines": [0],
+          "ink": "#2e4650"
+        }
+      }
     },
     {
       "id": "red-chamber",
@@ -311,7 +409,24 @@
         "origin": "new-study",
         "revision": null
       },
-      "sha256": "78b2d8c2081e2d31b3a277e4270c9931a7e043a9b18fa0842e94c7d45350a7eb"
+      "sha256": "78b2d8c2081e2d31b3a277e4270c9931a7e043a9b18fa0842e94c7d45350a7eb",
+      "typography": {
+        "zh": {
+          "mode": "vertical",
+          "size": 120,
+          "centers": [512],
+          "top": 156,
+          "leading": 128,
+          "ink": "#683a40"
+        },
+        "en": {
+          "mode": "centered",
+          "sizes": [74, 126],
+          "baselines": [223, 374],
+          "italicLines": [0],
+          "ink": "#683a40"
+        }
+      }
     },
     {
       "id": "metamorphosis",
@@ -359,7 +474,21 @@
           "reason": "Clear an author margin while preserving the illustration."
         }
       },
-      "sha256": "8557a881576a6f8ea35917c759ed0b9cf511fda545bbb7e7cc66f3e7eb87522b"
+      "sha256": "8557a881576a6f8ea35917c759ed0b9cf511fda545bbb7e7cc66f3e7eb87522b",
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "sizes": [154],
+          "baselines": [303],
+          "tracking": 22
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [70, 112],
+          "baselines": [213, 355],
+          "italicLines": [0]
+        }
+      }
     },
     {
       "id": "rickshaw-boy",
@@ -375,7 +504,7 @@
       },
       "titleLines": {
         "zh": ["骆驼祥子"],
-        "en": ["Rickshaw Boy"]
+        "en": ["Rickshaw", "Boy"]
       },
       "mood": {
         "zh": "一直向前，却越来越窄。",
@@ -403,7 +532,21 @@
         "origin": "new-study",
         "revision": null
       },
-      "sha256": "9336ee88adbcc0e72015ced0da919ea61c70e8885623fc30d7dc407ffe148a44"
+      "sha256": "9336ee88adbcc0e72015ced0da919ea61c70e8885623fc30d7dc407ffe148a44",
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "sizes": [154],
+          "baselines": [303],
+          "tracking": 16
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [134, 158],
+          "baselines": [247, 403],
+          "italicLines": [1]
+        }
+      }
     },
     {
       "id": "to-the-lighthouse",
@@ -447,7 +590,23 @@
         "origin": "new-study",
         "revision": null
       },
-      "sha256": "c54438aafb6ca6c643d20fbfdc5ae25b48a4c4d6b44050dd5bfb0e5cdb93bc19"
+      "sha256": "c54438aafb6ca6c643d20fbfdc5ae25b48a4c4d6b44050dd5bfb0e5cdb93bc19",
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "sizes": [142],
+          "baselines": [306],
+          "tracking": 18,
+          "ink": "#304953"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [74, 140],
+          "baselines": [220, 376],
+          "italicLines": [0],
+          "ink": "#304953"
+        }
+      }
     }
   ]
 }

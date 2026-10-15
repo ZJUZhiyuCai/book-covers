@@ -16,7 +16,7 @@ Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 - **生成方法**：[quiet-book-covers](skills/quiet-book-covers/SKILL.md) 包含视觉规范、四张参考图、完整提示词模板和审图标准；可独立安装。
 - **排版与导出**：书名和作者单独排版，字体转为路径，不依赖本机字体，不让生图模型拼写书名。
 - **完整过程**：实际使用的提示词、生成记录、原图校验值，以及两张封面修正前的首稿。
-- **展示素材**：四张 1440 × 1920 竖版作品图与 GitHub 横版介绍图，见 [press/](press/)。
+- **展示素材**：五张 1440 × 1920 竖版作品图与 GitHub 横版介绍图，见 [press/](press/)。
 
 插画使用 OpenAI 内置生图工具制作；图像生成具有随机性。本项目开放的是可复用的方法和实际素材，不承诺用同一提示词生成完全相同的像素。画廊本身不调用生图 API，也不需要密钥。
 
@@ -34,7 +34,7 @@ Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 
 ## 安装 Skill
 
-需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `quiet-book-covers-v1.0.0.zip`，将里面的 `quiet-book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
+需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `quiet-book-covers-v1.1.0.zip`，将里面的 `quiet-book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
 
 也可以从项目安装（Node.js 22+）：
 
@@ -75,7 +75,7 @@ npm run dev
 ```sh
 npm test                    # 元数据、渲染、源图完整性、HTTP 行为
 npm run build               # 双语静态画廊、WebP 预览、20 张 PNG 下载
-npm run export              # 四张竖版作品图 + 横版介绍图 → output/
+npm run export              # 五张竖版作品图 + 横版介绍图 → output/
 npm run export -- --book ordinary-world --lang en
 npm run export -- --book border-town --lang zh --width 2048
 ```
@@ -100,13 +100,13 @@ process/                  两次作者留白修正的输入图
 src/                      静态页面、样式、渐进增强交互
 scripts/                  生成页面、字体排版、导出与本地预览
 press/                    可分享作品图与文案草稿
-fonts/                    Noto Serif SC 与 OFL 许可
+fonts/                    中英文字体、来源校验值与 OFL 许可
 tests/                    内容、渲染与服务行为验证
 ```
 
 ## 设计与实现
 
-插画与文字是两层。插画负责空间、质感与情绪；排版器负责准确的字形、语言、行宽和留白。中文与英文分别设置断行。下载文件使用字体路径，网页字体按实际字符生成小型 WOFF2 子集。
+插画与文字是两层。插画负责空间、质感与情绪；排版器负责准确的字形、语言、行宽和留白。中文与英文分别设计字形和断行：朱雀仿宋的刻本气质、少量毛笔竖排，以及 Cormorant 正斜体的节奏。书名、译名、作者各有层次，具体选择写入可编辑的排版数据。下载文件使用字体路径，网页字体按实际字符生成小型 WOFF2 子集。
 
 画廊使用静态 HTML/CSS 和少量原生 JavaScript。筛选和图层切换是渐进增强；书目、作品页面与下载链接无需客户端框架。构建时验证每张源图的校验值和全部本地链接。GitHub Actions 运行检查，再部署到 GitHub Pages。更多取舍见 [设计说明](docs/design.md)。
 
@@ -114,4 +114,4 @@ tests/                    内容、渲染与服务行为验证
 
 代码、提示词和 Skill 指令使用 [MIT](LICENSE)。原创生成插画及其衍生图使用 [CC BY 4.0](LICENSE-ARTWORK)，以贡献者可许可的权利为限。字体使用 [OFL 1.1](fonts/OFL.txt)。完整素材来源与署名方式见 [ASSETS.md](ASSETS.md)。
 
-创作与策划：[蔡志宇 Zhiyu Cai](https://caizhiyu.com/)。字体来自 [Noto Serif SC / Google Fonts](https://github.com/google/fonts/tree/main/ofl/notoserifsc)。
+创作与策划：[蔡志宇 Zhiyu Cai](https://caizhiyu.com/)。字体来源与许可见 [ASSETS.md](ASSETS.md)。

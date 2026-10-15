@@ -9,3 +9,5 @@ Source and full provenance: https://github.com/ZJUZhiyuCai/quiet-covers/blob/mai
 License: https://creativecommons.org/licenses/by/4.0/
 
 The skill instructions and prompts use the MIT license included in the skill folder.
+
+`images/typography.jpg` shows six typeset derivatives from Quiet Covers v1.1. It uses Zhuque Fangsong, Ma Shan Zheng and Cormorant Garamond; no font binaries are included in this skill. Font sources and selection guidance appear in [typography.md](typography.md).

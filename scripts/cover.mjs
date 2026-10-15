@@ -4,15 +4,27 @@ import * as fontkit from 'fontkit';
 import sharp from 'sharp';
 import { ROOT, inside, LANGS } from './catalog.mjs';
 
-const family = fontkit.openSync(resolve(ROOT, 'fonts/NotoSerifSC.ttf'));
+const fontFiles = {
+  noto: 'fonts/NotoSerifSC.ttf',
+  zhuque: 'fonts/zhuque/ZhuqueFangsong-Regular.ttf',
+  brush: 'fonts/mashanzheng/MaShanZheng-Regular.ttf',
+  cormorant: 'fonts/cormorant/CormorantGaramond.ttf',
+  'cormorant-italic': 'fonts/cormorant/CormorantGaramond-Italic.ttf',
+};
+const families = new Map();
 const fonts = new Map();
-export function font(weight = 400) {
-  if (!fonts.has(weight)) fonts.set(weight, family.getVariation({ wght: weight }));
-  return fonts.get(weight);
+export function font(weight = 400, face = 'noto') {
+  if (!fontFiles[face]) throw new Error(`Unknown font face: ${face}`);
+  if (!families.has(face)) families.set(face, fontkit.openSync(resolve(ROOT, fontFiles[face])));
+  const family = families.get(face);
+  const key = `${face}/${weight}`;
+  if (!fonts.has(key))
+    fonts.set(key, family.variationAxes?.wght ? family.getVariation({ wght: weight }) : family);
+  return fonts.get(key);
 }
 
-export function textWidth(text, size, weight = 400, tracking = 0) {
-  const f = font(weight);
+export function textWidth(text, size, weight = 400, tracking = 0, face = 'noto') {
+  const f = font(weight, face);
   const run = f.layout(text);
   return (
     (run.positions.reduce((sum, p) => sum + p.xAdvance, 0) * size) / f.unitsPerEm +
@@ -20,10 +32,16 @@ export function textWidth(text, size, weight = 400, tracking = 0) {
   );
 }
 
-export function textPaths(text, x, baseline, size, { weight = 400, fill = '#292c29', tracking = 0 } = {}) {
-  const f = font(weight);
+export function textPaths(
+  text,
+  x,
+  baseline,
+  size,
+  { weight = 400, fill = '#292c29', tracking = 0, face = 'noto' } = {},
+) {
+  const f = font(weight, face);
   for (const ch of text)
-    if (!f.hasGlyphForCodePoint(ch.codePointAt(0))) throw new Error(`Font has no glyph for ${ch}`);
+    if (!f.hasGlyphForCodePoint(ch.codePointAt(0))) throw new Error(`Font ${face} has no glyph for ${ch}`);
   const { glyphs, positions } = f.layout(text);
   const scale = size / f.unitsPerEm;
   let pen = x;
@@ -55,35 +73,132 @@ export function wrapText(text, maxWidth, size, weight = 400) {
   return lines;
 }
 
+// Ink bounds include italic overhangs and glyph sidebearings, unlike advance width.
+export function textBounds(text, x, y, size, { face = 'noto', weight = 400, tracking = 0 } = {}) {
+  const f = font(weight, face),
+    scale = size / f.unitsPerEm;
+  const { glyphs, positions } = f.layout(text);
+  let pen = x,
+    left = Infinity,
+    top = Infinity,
+    right = -Infinity,
+    bottom = -Infinity;
+  glyphs.forEach((g, i) => {
+    const p = positions[i],
+      b = g.bbox;
+    if (b.maxX > b.minX && b.maxY > b.minY) {
+      left = Math.min(left, pen + (p.xOffset + b.minX) * scale);
+      right = Math.max(right, pen + (p.xOffset + b.maxX) * scale);
+      top = Math.min(top, y - (p.yOffset + b.maxY) * scale);
+      bottom = Math.max(bottom, y - (p.yOffset + b.minY) * scale);
+    }
+    pen += p.xAdvance * scale + tracking;
+  });
+  return { left, top, right, bottom, width: right - left, height: bottom - top };
+}
+
+function line(text, baseline, size, options = {}) {
+  const { anchor = 96, align = 'left', maxWidth = 832, ...style } = options;
+  let bounds = textBounds(text, 0, baseline, size, style);
+  while (bounds.width > maxWidth && size >= 24) {
+    size -= 0.5;
+    bounds = textBounds(text, 0, baseline, size, style);
+  }
+  if (bounds.width > maxWidth) throw new Error(`Text cannot fit: ${text}`);
+  const x = anchor - bounds.left - (align === 'center' ? bounds.width / 2 : 0);
+  return { text, x, y: baseline, size, ...style };
+}
+
 export function coverLayout(book, lang) {
   if (!LANGS.includes(lang)) throw new Error(`Unknown language: ${lang}`);
-  const lines = book.titleLines[lang];
-  const widest = Math.max(...lines.map((t) => textWidth(t, 1, 500)));
-  const size = Math.min(lang === 'zh' ? 84 : 76, 840 / widest);
-  if (size < 50) throw new Error(`Title too long; supply better line breaks: ${book.id}/${lang}`);
-  const leading = lang === 'zh' ? 114 : 94;
-  const title = lines.map((text, i) => ({ text, x: 92, y: 210 + leading * i, size, weight: 500 }));
+  const plan = book.typography?.[lang] || {};
+  const mode = plan.mode || 'left';
+  const centered = mode === 'centered' || mode === 'vertical';
+  const ink = plan.ink || '#30382f';
+  const title = [];
+  if (mode === 'vertical') {
+    if (lang !== 'zh') throw new Error('Vertical setting requires a Chinese title.');
+    book.titleLines.zh.forEach((column, col) => {
+      const size = plan.size || 126;
+      const centerX = plan.centers?.[col] ?? 512 - col * 150;
+      [...column].forEach((text, row) => {
+        const centerY =
+          (plan.top || 170) + (plan.topOffsets?.[col] || 0) + row * (plan.leading || 138) + size / 2;
+        const style = { face: plan.face || 'zhuque', weight: 400, fill: ink };
+        const b = textBounds(text, 0, 0, size, style);
+        title.push({
+          text,
+          x: centerX - (b.left + b.right) / 2,
+          y: centerY - (b.top + b.bottom) / 2,
+          size,
+          ...style,
+        });
+      });
+    });
+  } else {
+    book.titleLines[lang].forEach((text, i) => {
+      const face =
+        lang === 'zh'
+          ? plan.face || 'zhuque'
+          : plan.italicLines?.includes(i)
+            ? 'cormorant-italic'
+            : 'cormorant';
+      const e = line(text, plan.baselines?.[i] ?? 250 + i * 142, plan.sizes?.[i] ?? 126, {
+        face,
+        weight: lang === 'en' ? 500 : 400,
+        fill: ink,
+        tracking: plan.tracking || 0,
+        anchor: centered ? 512 : 96 + (plan.offsets?.[i] || 0),
+        align: centered ? 'center' : 'left',
+        maxWidth: 832 - (centered ? 0 : plan.offsets?.[i] || 0),
+      });
+      if (e.size < 60) throw new Error(`Title too long; supply better line breaks: ${book.id}/${lang}`);
+      title.push(e);
+    });
+  }
+  const titleBottom = Math.max(...title.map((e) => textBounds(e.text, e.x, e.y, e.size, e).bottom));
   const other = lang === 'zh' ? 'en' : 'zh';
-  const subtitle = wrapText(book.title[other], 800, 28).map((text, i) => ({
-    text,
-    x: 96,
-    y: title.at(-1).y + 67 + i * 42,
-    size: 28,
-    weight: 400,
-  }));
-  if (subtitle.at(-1).y > 610) throw new Error(`Typography enters artwork: ${book.id}/${lang}`);
-  const authorSize = Math.min(30, 810 / textWidth(book.author[lang], 1));
-  return {
-    title,
-    subtitle,
-    author: { text: book.author[lang], x: 96, y: 1466, size: authorSize, weight: 400 },
-  };
+  const translated = line(
+    book.title[other],
+    titleBottom + (mode === 'vertical' ? 52 : 72),
+    lang === 'zh' ? 38 : 32,
+    {
+      face: lang === 'zh' ? 'cormorant-italic' : 'zhuque',
+      weight: lang === 'zh' ? 500 : 400,
+      tracking: lang === 'en' ? 4 : 0,
+      fill: '#62655b',
+      anchor: centered ? 512 : 98,
+      align: centered ? 'center' : 'left',
+      maxWidth: 810,
+    },
+  );
+  const author = line(book.author[lang], 1468, lang === 'zh' ? 48 : 48, {
+    face: lang === 'zh' ? (plan.face === 'brush' ? 'brush' : 'zhuque') : 'cormorant-italic',
+    weight: lang === 'en' ? 500 : 400,
+    tracking: lang === 'zh' ? 8 : 0,
+    fill: ink,
+    anchor: centered ? 512 : 98,
+    align: centered ? 'center' : 'left',
+    maxWidth: 810,
+  });
+  const layout = { title, subtitle: [translated], author };
+  for (const e of [...title, translated, author]) {
+    const b = textBounds(e.text, e.x, e.y, e.size, e);
+    if (
+      ![b.left, b.right, b.top, b.bottom].every(Number.isFinite) ||
+      b.left < 70 ||
+      b.right > 954 ||
+      (e === author ? b.top < 1400 || b.bottom > 1500 : b.top < 130 || b.bottom > 610)
+    )
+      throw new Error(`Typography outside reserved region: ${book.id}/${lang}/${e.text}`);
+  }
+  return layout;
 }
 
 export function typographySVG(book, lang) {
   const { title, subtitle, author } = coverLayout(book, lang);
-  const p = (e) => textPaths(e.text, e.x, e.y, e.size, { weight: e.weight });
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">${textPaths(`QUIET COVERS  /  ${book.number}`, 96, 105, 22, { fill: '#69685e', tracking: 2 })}${title.map(p).join('')}${subtitle.map((e) => textPaths(e.text, e.x, e.y, e.size, { fill: '#65665e' })).join('')}${p(author)}</svg>`;
+  const p = (e) => textPaths(e.text, e.x, e.y, e.size, e);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">${textPaths(`QUIET COVERS  /  ${book.number}`, 96, 104, 23, { face: 'cormorant', weight: 600, fill: '#69685e', tracking: 3 })}${title.map(p).join('')}${subtitle.map(p).join('')}${p(author)}</svg>`;
 }
 
 export async function renderCover(book, lang, { width = 1024, format = 'png' } = {}) {

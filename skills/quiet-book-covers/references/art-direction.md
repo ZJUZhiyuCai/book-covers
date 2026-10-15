@@ -27,8 +27,8 @@ A large isolated dragon and a pair of crossed blades were readable but too much 
 
 ## Typography
 
-Treat the image as text-free artwork. Keep exact titles and author names in data. Use a serif with complete Chinese and Latin coverage; the reference implementation uses Noto Serif SC under OFL 1.1. A quiet sans-serif may be used for interface labels.
+Treat the image as text-free artwork. Keep exact titles and author names in data. Select Chinese and Latin faces separately; a CJK font's Latin glyphs need not carry the English edition. Read [typography direction](typography.md) for engraved Chinese forms, selective brush lettering, roman/italic interplay and the current specimens.
 
-Title, translated subtitle and author are three distinct roles. Long titles should wrap or reduce size within a deliberate range. Never let a typesetting fix obscure a failed composition.
+Title, translated subtitle and author are three distinct roles. Plan the title's silhouette, then use measured glyph bounds to fit it. Short names can take generous spacing; a long author name still needs readable size. Never let a typesetting fix obscure a failed composition.
 
 Reference-image reuse: see [asset provenance and license](ASSETS.md).

@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
 import { loadCatalog, ROOT, sha256 } from '../scripts/catalog.mjs';
-import { coverLayout, textWidth, textPaths, renderCover, wrapText } from '../scripts/cover.mjs';
+import { coverLayout, textBounds, textPaths, renderCover, wrapText } from '../scripts/cover.mjs';
 import { parseExportArgs } from '../scripts/export.mjs';
 const books = await loadCatalog({ verifyAssets: false });
 
@@ -13,15 +13,49 @@ test('all twenty layouts fit the reserved title and author regions', () => {
     for (const lang of ['zh', 'en']) {
       const layout = coverLayout(b, lang);
       for (const line of [...layout.title, ...layout.subtitle]) {
-        assert.ok(
-          line.x + textWidth(line.text, line.size, line.weight) <= 950,
-          `${b.id}/${lang} exceeds right margin`,
-        );
-        assert.ok(line.y < 615, `${b.id}/${lang} enters the picture`);
-        assert.doesNotThrow(() => textPaths(line.text, line.x, line.y, line.size, { weight: line.weight }));
+        const box = textBounds(line.text, line.x, line.y, line.size, line);
+        assert.ok(box.left >= 70 && box.right <= 954, `${b.id}/${lang} exceeds a side margin`);
+        assert.ok(box.top >= 130 && box.bottom < 615, `${b.id}/${lang} enters the picture`);
+        assert.doesNotThrow(() => textPaths(line.text, line.x, line.y, line.size, line));
       }
-      assert.ok(layout.author.y > 1400 && layout.author.y < 1500);
-      assert.ok(layout.author.x + textWidth(layout.author.text, layout.author.size) <= 950);
+      const a = layout.author,
+        box = textBounds(a.text, a.x, a.y, a.size, a);
+      assert.ok(box.top > 1400 && box.bottom < 1500);
+      assert.ok(box.left >= 70 && box.right <= 954);
+      assert.doesNotThrow(() => textPaths(a.text, a.x, a.y, a.size, a));
+      const boxes = [...layout.title, ...layout.subtitle].map((e) => textBounds(e.text, e.x, e.y, e.size, e));
+      for (let i = 0; i < boxes.length; i++)
+        for (let j = i + 1; j < boxes.length; j++) {
+          const a = boxes[i],
+            b = boxes[j];
+          assert.ok(
+            a.right <= b.left || b.right <= a.left || a.bottom <= b.top || b.bottom <= a.top,
+            'Typography overlaps',
+          );
+        }
+    }
+});
+
+test('vertical reading order and bilingual title content survive individual glyph placement', () => {
+  for (const b of books)
+    for (const lang of ['zh', 'en']) {
+      const layout = coverLayout(b, lang);
+      assert.equal(
+        layout.title
+          .map((l) => l.text)
+          .join('')
+          .replace(/\s/g, ''),
+        b.title[lang].replace(/\s/g, ''),
+      );
+      assert.equal(layout.author.text, b.author[lang]);
+      if (b.typography?.[lang]?.mode === 'vertical') {
+        const cells = layout.title;
+        for (let i = 1; i < cells.length; i++) {
+          const prev = cells[i - 1],
+            next = cells[i];
+          assert.ok(next.x < prev.x - 40 || next.y > prev.y + 40, 'Vertical reading order is reversed');
+        }
+      }
     }
 });
 test('PNG export has correct dimensions, adds typography, preserves the illustration and source file', async () => {

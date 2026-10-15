@@ -25,6 +25,15 @@ test('invalid, duplicate or incomplete metadata fails before building', () => {
   const path = structuredClone(data);
   path.books[0].artwork = '../private.png';
   assert.throws(() => validateCatalog(path), /Unexpected source path/);
+  const ink = structuredClone(data);
+  ink.books[0].typography.zh.ink = 'url(https://example.com)';
+  assert.throws(() => validateCatalog(ink), /typography ink/);
+  const reversed = structuredClone(data);
+  reversed.books.find((b) => b.id === 'white-horse').typography.zh.centers = [414, 570];
+  assert.throws(() => validateCatalog(reversed), /right to left/);
+  const incomplete = structuredClone(data);
+  incomplete.books[0].typography.zh.sizes = [100];
+  assert.throws(() => validateCatalog(incomplete), /typography sizes/);
 });
 test('filesystem helpers reject traversal and HTML helpers escape markup', () => {
   assert.throws(() => inside(ROOT, '../../secret'), /leaves project/);

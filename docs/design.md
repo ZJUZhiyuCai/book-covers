@@ -8,6 +8,12 @@
 
 The four founding studies were selected by Zhiyu Cai. Six new works test the same visual language across different narrative spaces. All illustrations are AI-generated; briefs, selection, revisions and typesetting form the design process. These are interpretations, not publisher editions.
 
-The gallery has no client framework, analytics, API keys or image-generation backend. `catalog.json` supplies the multilingual content. Build-time glyph outlines keep downloadable titles stable across machines. The web font is subsetted for the gallery; the original OFL font is retained for exports.
+The gallery has no client framework, analytics, API keys or image-generation backend. `catalog.json` supplies multilingual content and per-language type plans. Build-time glyph outlines preserve selected letterforms and positions; native rasterizers can still produce tiny antialiasing differences across systems. The interface font is subsetted for the gallery; original OFL font files are retained for exports.
+
+## Typography revision, v1.1
+
+The first version put title, translation and author in a single body-oriented serif. Its type read more like annotation than cover design. The revised covers choose faces per script: Zhuque Fangsong for most Chinese titles, Ma Shan Zheng for the written gesture of White Horse, and Cormorant Garamond roman/true italic for English. Author names have larger, deliberate settings.
+
+The collection shares paper, margins and imprint but varies the title silhouette: stepped Chinese phrases, open short titles, a few upright vertical columns, and English phrase hierarchies. All wording stays in `titleLines`; editable `typography` plans carry each language's composition. Optical bounds include italic overhangs and CJK sidebearings. Before/after comparisons retain identical illustration content. See [the reusable typography reference](../skills/quiet-book-covers/references/typography.md).
 
 Source illustrations stay intact. WebP previews are resized derivatives; PNG jackets add separately rendered title and author typography. Two new illustrations needed image-tool revisions to restore a clear author margin; their original drafts and revision prompt remain in `process/` and `prompts/`.

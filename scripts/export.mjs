@@ -124,7 +124,48 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     .composite(tiles)
     .png()
     .toFile(resolve(out, 'github-cover.png'));
-  console.log(`Exported four 1440×1920 press sheets and a GitHub banner to ${out}`);
+  let comparison =
+    textPaths('QUIET COVERS  /  TYPOGRAPHY', 84, 100, 26, { tracking: 1 }) +
+    textPaths('文字，也有自己的性格。', 84, 220, 65) +
+    textPaths('同一幅插画，重新安排书名与作者。', 88, 304, 28, { fill: '#62665e' });
+  const pairs = [
+      ['ordinary-world', 'zh'],
+      ['monte-cristo', 'en'],
+    ],
+    compareLayers = [];
+  for (let row = 0; row < 2; row++) {
+    const [id, lang] = pairs[row],
+      b = books.find((b) => b.id === id),
+      y = 430 + row * 650;
+    comparison +=
+      textPaths('V1.0  /  BEFORE', 210, y - 30, 23, { face: 'cormorant', tracking: 2 }) +
+      textPaths('V1.1  /  AFTER', 860, y - 30, 23, { face: 'cormorant', tracking: 2 });
+    compareLayers.push({
+      input: await sharp(resolve(ROOT, `process/typography-v1/${id}-${lang}.webp`))
+        .resize(350, 525)
+        .png()
+        .toBuffer(),
+      left: 210,
+      top: y,
+    });
+    compareLayers.push({
+      input: await sharp(await renderCover(b, lang))
+        .resize(350, 525)
+        .png()
+        .toBuffer(),
+      left: 860,
+      top: y,
+    });
+  }
+  comparison +=
+    textPaths('中文：舒展的笔形与错落的行距。', 84, 1744, 28) +
+    textPaths('英文：正斜体的节奏，与清楚的作者署名。', 84, 1800, 28) +
+    textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1864, 24, { fill: '#62665e' });
+  await sharp(plate(1440, 1920, comparison))
+    .composite(compareLayers)
+    .png()
+    .toFile(resolve(out, '05-typography.png'));
+  console.log(`Exported five 1440×1920 press sheets and a GitHub banner to ${out}`);
 }
 
 export function parseExportArgs(args) {

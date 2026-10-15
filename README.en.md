@@ -14,9 +14,9 @@ A path through heavy earth. Railway tracks into winter. A small boat within a la
 
 - A bilingual static gallery with a permanent page for every cover.
 - Original text-free artwork, design briefs, exact prompts and generation provenance.
-- An independently installable [quiet-book-covers skill](skills/quiet-book-covers/SKILL.md), including four visual references and a review method.
+- An independently installable [quiet-book-covers skill](skills/quiet-book-covers/SKILL.md), including four artwork references, bilingual type specimens and a review method.
 - A deterministic typesetting pipeline. Titles and author names use licensed font outlines, not AI-generated lettering.
-- Four 1440 × 1920 presentation sheets and a wide project banner in [press/](press/).
+- Five 1440 × 1920 presentation sheets and a wide project banner in [press/](press/).
 
 The illustrations were made with OpenAI's built-in image-generation tool. Generation is stochastic: the process and actual outputs are shared, but identical prompts do not guarantee identical pixels. The gallery has no generation API, backend account or API-key requirement.
 
@@ -34,7 +34,7 @@ Four founding studies came from the author's personal-library design exploration
 
 ## Install the skill
 
-The skill itself needs no Node runtime. Download `quiet-book-covers-v1.0.0.zip` from the latest release and place the enclosed `quiet-book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
+The skill itself needs no Node runtime. Download `quiet-book-covers-v1.1.0.zip` from the latest release and place the enclosed `quiet-book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
 
 Alternatively, with Node.js 22+:
 
@@ -79,10 +79,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow and [design
 
 ## Implementation
 
-Static HTML/CSS with a small progressive-enhancement script; no client framework or analytics. Every work has a real page and direct downloads. The renderer uses `fontkit` for glyph outlines and `sharp` for compositing. Noto Serif SC supplies both Chinese and Latin glyphs; `subset-font` produces a small gallery WOFF2. Builds validate artwork checksums and local links. GitHub Actions tests and deploys to GitHub Pages.
+Static HTML/CSS with a small progressive-enhancement script; no client framework or analytics. Every work has a real page and direct downloads. The renderer uses `fontkit` for glyph outlines and `sharp` for compositing. Cover faces are selected by language and role; Noto Serif SC remains the interface font, with `subset-font` producing a small gallery WOFF2. Builds validate artwork checksums and local links. GitHub Actions tests and deploys to GitHub Pages.
 
 ## Reuse and credits
 
 Code, prompts and skill instructions: [MIT](LICENSE). Original generated artwork and derivatives: [CC BY 4.0](LICENSE-ARTWORK), to the extent rights can be licensed. Font: [OFL 1.1](fonts/OFL.txt). See [ASSETS.md](ASSETS.md) for provenance, limitations and suggested credit.
 
-Created and curated by [Zhiyu Cai](https://caizhiyu.com/). Typography: [Noto Serif SC / Google Fonts](https://github.com/google/fonts/tree/main/ofl/notoserifsc).
+Created and curated by [Zhiyu Cai](https://caizhiyu.com/). Font sources and their OFL notices are listed in [ASSETS.md](ASSETS.md).
+
+## Typography in v1.1
+
+Chinese and English receive separate type direction: Zhuque Fangsong for engraved Chinese forms, selective Ma Shan Zheng brush lettering, and Cormorant Garamond roman/true italic for English. Editable per-language plans shape each title and give the author a deliberate place. The renderer measures actual ink bounds, preserves wording and source artwork, and rejects clipping or missing glyphs. See the [typography guide](skills/quiet-book-covers/references/typography.md) and [before/after sheet](press/05-typography.png).

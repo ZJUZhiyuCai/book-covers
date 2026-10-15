@@ -81,6 +81,9 @@ export async function build() {
   });
   await writeFile(resolve(out, 'assets/serif.woff2'), webFont);
   await cp(resolve(ROOT, 'fonts/OFL.txt'), resolve(out, 'assets/OFL.txt'));
+  await mkdir(resolve(out, 'assets/font-licenses'), { recursive: true });
+  for (const name of ['cormorant', 'zhuque', 'mashanzheng'])
+    await cp(resolve(ROOT, `fonts/${name}/OFL.txt`), resolve(out, `assets/font-licenses/${name}-OFL.txt`));
   await writeFile(resolve(out, 'catalog.json'), JSON.stringify({ version: 1, books }, null, 2) + '\n');
   await writeFile(resolve(out, '.nojekyll'), '');
   await writeFile(resolve(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}sitemap.xml\n`);

@@ -1,6 +1,6 @@
 # Release verification
 
-Local checks performed on 2026-10-16 (Asia/Shanghai):
+Local checks for v1.0 performed on 2026-10-16 (Asia/Shanghai):
 
 - `npm test`: eight passing tests, covering bilingual metadata, source hashes, rendering bounds, missing glyphs, unchanged illustration pixels and HTTP behavior.
 - `npm run build`: ten studies, twenty downloadable PNG covers and twenty-three HTML files; all local links resolve. The gallery font subset is about 216 KiB.
@@ -13,3 +13,12 @@ Local checks performed on 2026-10-16 (Asia/Shanghai):
 The image-generation process was reviewed visually rather than scored by an invented metric. Checks do not establish literary consensus or guarantee future model output. New images still require art-direction review.
 
 GitHub Actions repeats the automated tests and build on the published source; its actual run status is visible in the repository. The two main licenses and the font's OFL notice travel with the corresponding release packages.
+
+## v1.1 typography revision
+
+- Nine automated tests pass. Layout checks now use actual glyph ink bounds, cover all twenty layouts, reject collisions and retain exact title and author text. Vertical Chinese reading order is checked separately.
+- All ten illustration SHA-256 hashes remain unchanged; the image-region pixel invariant still passes.
+- Twenty revised covers were inspected together at 180 px width. The Chinese and English Ordinary World, White Horse, Monte Cristo and Red Chamber covers were also compared at a larger size.
+- Build output remains twenty PNG downloads and twenty-three HTML pages. The interface font subset is about 214 KiB.
+- The typography skill reference includes a six-cover specimen; original font files have provenance hashes and their OFL notices. The skill validator accepts the revised package.
+- A fifth promotional sheet compares the v1.0 and v1.1 text layers on the same illustrations.

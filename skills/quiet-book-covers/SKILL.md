@@ -1,6 +1,6 @@
 ---
 name: quiet-book-covers
-description: Design and generate restrained literary book covers with warm paper, spare printmaking imagery, narrative space, and separately typeset Chinese or English titles. Use for original literary cover series, reading-journal covers, or matching the Quiet Covers visual language.
+description: Design restrained literary covers with warm paper, spare printmaking imagery, and expressive Chinese or English typography. Use for literary cover series, reading-journal covers, or improving title and author lettering in the Quiet Covers style.
 ---
 
 # Quiet book covers
@@ -32,9 +32,11 @@ When a reference image is supplied, describe its role (style reference or edit t
 
 ## Typeset and review
 
-Use an actual licensed font and deterministic HTML/SVG/image composition for titles. Set Chinese and English intentionally; do not squeeze a long English title into the Chinese line breaks. Preserve spelling, diacritics and the author's name. Do not add publisher marks or pretend this is an official edition.
+Read [typography direction](references/typography.md) when designing or revising title and author lettering. Inspect its specimen image when image viewing is available. A literary cover needs a deliberate title silhouette, not just a body font placed on an illustration. Choose faces for each script, give long and short titles different rhythms, and set the author with enough presence to feel considered.
 
-If working inside the Quiet Covers repository, add the artwork and brief to `catalog.json`, save the exact prompt under `prompts/`, then use `npm run build` and `npm run export -- --book <id> --lang zh`. The renderer keeps the art and outlined typography separate and fails on missing glyphs. Outside the repository, use the host's normal layout/export tools; the skill itself requires no Node runtime.
+Use licensed fonts and deterministic HTML/SVG/image composition. Chinese engraved or brush forms and Latin display roman/true italic are useful directions, not mandatory choices for every work. Keep the exact title and author; do not turn decorative lettering into unreadable glyphs, fake signatures or a claimed official edition. When only typography needs improvement, preserve the selected illustration and compare the old and new text layers on the same art.
+
+Inside the Quiet Covers repository, `catalog.json` holds the book, semantic title breaks and optional per-language `typography` plans; see [implementation notes](references/typography.md#reference-implementation) before editing those plans. Save actual generation prompts under `prompts/`, then use `npm run build` and `npm run export -- --book <id> --lang zh`. The renderer keeps art and outlined type separate and rejects missing glyphs or out-of-bounds layouts. Outside the repository, use the host's normal layout/export tools; the skill itself requires no Node runtime.
 
 Inspect both the full cover and thumbnail:
 
@@ -43,6 +45,7 @@ Inspect both the full cover and thumbnail:
 - Is there one dominant spatial idea, with enough quiet paper around it?
 - Do ink, grain and contrast belong to the rest of the series?
 - Do both languages fit without truncation, invented translations or missing glyphs?
+- Does the title have a purposeful shape, and does the author remain legible at thumbnail size? Are vertical columns in reading order, italic overhangs clear, and the subtitle visibly secondary?
 
 Revise the specific failure. For example, repair an invaded author margin without adding a new illustration concept. A generation prompt is not proof that the output follows it.
 

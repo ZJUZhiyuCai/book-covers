@@ -31,11 +31,13 @@ def main():
             if not (ROOT / 'dist' / 'downloads' / f"{book['id']}-{lang}.png").is_file():
                 raise SystemExit('Run npm run build before packaging the release.')
     for name in ('01-introduction.png', '02-chinese-literature.png',
-                 '03-world-literature.png', '04-process.png', 'github-cover.png'):
+                 '03-world-literature.png', '04-process.png', '05-typography.png', 'github-cover.png'):
         if not (ROOT / 'press' / name).is_file():
             raise SystemExit('Run npm run export -- --out press before packaging.')
     OUT.mkdir(parents=True, exist_ok=True)
     common = [(ROOT / f, f) for f in ('ASSETS.md', 'LICENSE', 'LICENSE-ARTWORK')]
+    common += [(p, p.relative_to(ROOT)) for p in (ROOT / 'fonts').rglob('OFL.txt')]
+    common += [(ROOT / 'fonts/SOURCES.json', 'fonts/SOURCES.json')]
     skill = ROOT / 'skills'
     result = [archive(f'quiet-book-covers-v{VERSION}.zip',
                       [(p, p.relative_to(skill)) for p in files_under('skills/quiet-book-covers')])]
@@ -43,7 +45,6 @@ def main():
                           common + [(ROOT / 'catalog.json', 'catalog.json')]
                           + [(p, p.relative_to(ROOT)) for d in ('artwork', 'prompts', 'process') for p in files_under(d)]))
     result.append(archive(f'quiet-covers-typeset-v{VERSION}.zip', common
-                          + [(ROOT / 'fonts/OFL.txt', 'fonts/OFL.txt')]
                           + [(p, Path('covers') / p.name) for p in files_under('dist/downloads')]))
     result.append(archive(f'quiet-covers-press-v{VERSION}.zip', common
                           + [(p, p.relative_to(ROOT)) for p in files_under('press')]))
