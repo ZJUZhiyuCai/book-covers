@@ -27,11 +27,11 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     let design =
       textPaths('QUIET COVERS  /  纸间', 84, 100, 26, { tracking: 1 }) +
       lines(title, 84, 223, 65, 92) +
-      textPaths(subtitle, 88, 318, 27, { fill: '#6c7065' });
+      textPaths(subtitle, 88, 318, 27, { fill: '#62665e' });
     design +=
       '<path d="M84 1724H1356" stroke="#c9c6b9"/>' +
       textPaths('10 部文学作品 · AI 插画 × 独立排版 × 开源 Skill', 84, 1785, 26) +
-      textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#6c7065' });
+      textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#62665e' });
     const layers = [];
     const width = 370,
       height = 555;
@@ -74,7 +74,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   let method =
     textPaths('QUIET COVERS  /  THE METHOD', 84, 100, 26, { tracking: 1 }) +
     lines('从故事，到画面，\n再到封面。', 84, 240, 72, 108) +
-    textPaths('每一层都可拆开，每一个选择都有理由。', 88, 439, 28, { fill: '#6c7065' });
+    textPaths('每一层都可拆开，每一个选择都有理由。', 88, 439, 28, { fill: '#62665e' });
   const cards = [
     await sharp(resolve(ROOT, b.artwork)).resize(370, 555).png().toBuffer(),
     await sharp(plate(1024, 1536, typographySVG(b, 'zh').replace(/^<svg[^>]*>|<\/svg>$/g, '')))
@@ -90,11 +90,11 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   ];
   labels.forEach((a, i) => {
     method +=
-      textPaths(a[0], 84 + 450 * i, 1255, 30) + textPaths(a[1], 84 + 450 * i, 1317, 20, { fill: '#6c7065' });
+      textPaths(a[0], 84 + 450 * i, 1255, 30) + textPaths(a[1], 84 + 450 * i, 1317, 20, { fill: '#62665e' });
   });
   method +=
     lines('开放的不止是图片。\n还有提示词、选择过程，以及可以继续使用的 Skill。', 84, 1510, 30, 60) +
-    textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#6c7065' });
+    textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#62665e' });
   await sharp(plate(1440, 1920, method))
     .composite(cards.map((input, i) => ({ input, left: 84 + i * 450, top: 590 })))
     .png()
@@ -104,7 +104,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     lines('Quiet\nCovers', 84, 290, 119, 144) +
     textPaths('A book, distilled to one image.', 90, 549, 28) +
     textPaths('一本书，一幅留白。', 90, 620, 33) +
-    textPaths('ARTWORK  /  PROMPTS  /  AGENT SKILL', 90, 798, 18, { fill: '#6c7065', tracking: 1 });
+    textPaths('ARTWORK  /  PROMPTS  /  AGENT SKILL', 90, 798, 18, { fill: '#62665e', tracking: 1 });
   const bannerIDs = [
     'ordinary-world',
     'monte-cristo',

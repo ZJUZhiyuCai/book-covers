@@ -7,6 +7,7 @@ Local checks performed on 2026-10-16 (Asia/Shanghai):
 - The official skill-creator validator accepted `skills/quiet-book-covers/`; local installation also passed validation.
 - Browser review at desktop width 1280 and mobile width 390: no horizontal overflow; covers retain their 2:3 proportions; Chinese/World filters each show five entries; language switching stays on the corresponding book; artwork/typeset toggles work.
 - A real English PNG download was compared with the build output by SHA-256.
+- Secondary UI text was darkened to `#62665e`; contrast against the three light surfaces is 4.67:1–5.16:1.
 - Four 1440 × 1920 promotional sheets and the 1800 × 900 banner were generated. The introduction sheet, layer breakdown and banner were visually inspected.
 
 The image-generation process was reviewed visually rather than scored by an invented metric. Checks do not establish literary consensus or guarantee future model output. New images still require art-direction review.
