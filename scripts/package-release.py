@@ -39,14 +39,14 @@ def main():
     common += [(p, p.relative_to(ROOT)) for p in (ROOT / 'fonts').rglob('OFL.txt')]
     common += [(ROOT / 'fonts/SOURCES.json', 'fonts/SOURCES.json')]
     skill = ROOT / 'skills'
-    result = [archive(f'quiet-book-covers-v{VERSION}.zip',
-                      [(p, p.relative_to(skill)) for p in files_under('skills/quiet-book-covers')])]
-    result.append(archive(f'quiet-covers-artwork-v{VERSION}.zip',
+    result = [archive(f'book-covers-v{VERSION}.zip',
+                      [(p, p.relative_to(skill)) for p in files_under('skills/book-covers')])]
+    result.append(archive(f'book-covers-artwork-v{VERSION}.zip',
                           common + [(ROOT / 'catalog.json', 'catalog.json')]
                           + [(p, p.relative_to(ROOT)) for d in ('artwork', 'prompts', 'process') for p in files_under(d)]))
-    result.append(archive(f'quiet-covers-typeset-v{VERSION}.zip', common
+    result.append(archive(f'book-covers-typeset-v{VERSION}.zip', common
                           + [(p, Path('covers') / p.name) for p in files_under('dist/downloads')]))
-    result.append(archive(f'quiet-covers-press-v{VERSION}.zip', common
+    result.append(archive(f'book-covers-press-v{VERSION}.zip', common
                           + [(p, p.relative_to(ROOT)) for p in files_under('press')]))
     sums = ''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n' for p in result)
     (OUT / 'SHA256SUMS.txt').write_text(sums)

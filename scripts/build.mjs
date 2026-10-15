@@ -105,9 +105,9 @@ export async function build() {
   }
   await writeFile(
     resolve(out, '404.html'),
-    '<!doctype html><html lang="en"><meta charset="utf-8"><title>Not found · Quiet Covers</title><meta name="viewport" content="width=device-width"><body style="background:#f4f0e7;color:#303a35;font-family:Georgia,serif;padding:12vw"><h1>This page is still blank.</h1><p>这一页，暂时留白。</p><p><a href="' +
+    '<!doctype html><html lang="en"><meta charset="utf-8"><title>Not found · Book Covers</title><meta name="viewport" content="width=device-width"><body style="background:#f4f0e7;color:#303a35;font-family:Georgia,serif;padding:12vw"><h1>This page is still blank.</h1><p>这一页，暂时留白。</p><p><a href="' +
       SITE +
-      '">Return to Quiet Covers →</a></p></body></html>',
+      '">Return to Book Covers →</a></p></body></html>',
   );
   const hashes = {};
   for (const name of await readdir(resolve(out, 'downloads')))

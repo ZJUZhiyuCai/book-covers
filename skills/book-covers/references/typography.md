@@ -52,7 +52,7 @@ Before delivery, open the actual exported file: both title and author must be pr
 
 ## Reference implementation
 
-The Quiet Covers repository uses `titleLines.zh/en` for semantic text breaks, and optional `typography.zh/en` plans for their treatment:
+The Book Covers repository uses `titleLines.zh/en` for semantic text breaks, and optional `typography.zh/en` plans for their treatment:
 
 - `mode`: `left`, `centered`, or Chinese `vertical`.
 - Horizontal `sizes`, `baselines`, `offsets`: one numeric entry per title line, in the 1024 × 1536 coordinate system. `tracking` adjusts spacing; English `italicLines` contains zero-based indices.

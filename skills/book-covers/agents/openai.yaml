@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Covers"
+  short_description: "为文学作品设计融合原创插画、艺术性书名与作者排版的完整中英文封面"
+  default_prompt: "使用 $book-covers 为《边城》设计完整中英文封面，将书名与作者沈从文的艺术性字体融入留白充足的画面，并展示最终成品。"

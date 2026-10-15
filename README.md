@@ -1,19 +1,19 @@
-# Quiet Covers · 纸间
+# Book Covers
 
 **把一本书的余韵，留在一幅画里。**
 
-[在线画廊](https://zjuzhiyucai.github.io/quiet-covers/) · [English](README.en.md) · [安装 Skill](#安装-skill) · [下载发布包](https://github.com/ZJUZhiyuCai/quiet-covers/releases/latest)
+[在线画廊](https://zjuzhiyucai.github.io/book-covers/) · [English](README.en.md) · [安装 Skill](#安装-skill) · [下载发布包](https://github.com/ZJUZhiyuCai/book-covers/releases/latest)
 
-![Quiet Covers — 文学封面、提示词与可复用 Skill](press/github-cover.png)
+![Book Covers — 文学封面、提示词与可复用 Skill](press/github-cover.png)
 
-Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨色和有情绪的空间，重新想象中外文学作品的封面。首辑包含 **10 张原创生成插画、20 张中英文排版封面**，以及可以继续创作的 Agent Skill。
+Book Covers 是一个开放的文学封面实验：用暖白纸面、少量墨色和有情绪的空间，重新想象中外文学作品的封面。首辑包含 **10 张原创生成插画、20 张中英文排版封面**，以及可以继续创作的 Agent Skill。
 
 从《平凡的世界》的一条小路，到《老人与海》的一叶小舟，先找到故事里的关系，再决定画什么。
 
 ## 可以直接使用什么
 
 - **封面集**：每本书都有独立页面、构图说明、无字原图与中英文 PNG 下载。
-- **生成方法**：[quiet-book-covers](skills/quiet-book-covers/SKILL.md) 包含视觉规范、四张参考图、完整提示词模板和审图标准；可独立安装。
+- **生成方法**：[book-covers](skills/book-covers/SKILL.md) 包含视觉规范、四张参考图、完整提示词模板和审图标准；可独立安装。
 - **完整封面是默认交付**：原创插画、艺术性书名和作者一起导出。无字底图只是中间素材，只有明确要求时才单独交付。
 - **排版与导出**：书名和作者单独排版后合成完整图片，字体转为路径，不依赖浏览器字体。
 - **完整过程**：实际使用的提示词、生成记录、原图校验值，以及两张封面修正前的首稿。
@@ -35,13 +35,13 @@ Quiet Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 
 ## 安装 Skill
 
-需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `quiet-book-covers-v1.2.0.zip`，将里面的 `quiet-book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
+需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `book-covers-v1.2.1.zip`，将里面的 `book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
 
 也可以从项目安装（Node.js 22+）：
 
 ```sh
-git clone https://github.com/ZJUZhiyuCai/quiet-covers.git
-cd quiet-covers
+git clone https://github.com/ZJUZhiyuCai/book-covers.git
+cd book-covers
 npm ci
 npm run skill:install
 ```
@@ -49,12 +49,12 @@ npm run skill:install
 安装器保留已有同名 Skill，不会默认覆盖。审阅本地修改后，可以显式使用 `npm run skill:install -- --force` 更新。重新加载 Agent 会话后使用：
 
 ```text
-使用 $quiet-book-covers 为《边城》设计一张封面。
+使用 $book-covers 为《边城》设计一张封面。
 先从故事里提炼一种情绪和一处空间，生成无字插画，再排中文书名和作者。
 ```
 
 ```text
-Use $quiet-book-covers to design a cover for To the Lighthouse.
+Use $book-covers to design a cover for To the Lighthouse.
 Keep the lighthouse small and let distance carry the emotion.
 Deliver the artwork, English cover and exact generation prompt.
 ```
@@ -96,7 +96,7 @@ npm run compose -- --spec examples/complete-cover.json --out output/custom
 具体字段及贡献约定见 [CONTRIBUTING.md](CONTRIBUTING.md)。一张新作应带来不同的文学空间；不需要为了数量重复已有构图。
 
 ```text
-skills/quiet-book-covers/  可独立安装的视觉 Skill
+skills/book-covers/  可独立安装的视觉 Skill
 catalog.json              中英文书目、设计意图、图片校验值
 artwork/                  10 张保留原样的生成插画
 prompts/                  实际生成与修正提示词

@@ -1,10 +1,10 @@
-# Quiet Covers · 纸间
+# Book Covers
 
 **A book, distilled to one image.**
 
-[Live collection](https://zjuzhiyucai.github.io/quiet-covers/en/) · [中文](README.md) · [The skill](skills/quiet-book-covers/SKILL.md) · [Downloads](https://github.com/ZJUZhiyuCai/quiet-covers/releases/latest)
+[Live collection](https://zjuzhiyucai.github.io/book-covers/en/) · [中文](README.md) · [The skill](skills/book-covers/SKILL.md) · [Downloads](https://github.com/ZJUZhiyuCai/book-covers/releases/latest)
 
-![Quiet Covers — artwork, prompts and an agent skill](press/github-cover.png)
+![Book Covers — artwork, prompts and an agent skill](press/github-cover.png)
 
 An open literary-cover experiment built around warm paper, restrained ink and narrative space. The first collection contains **10 generated illustrations and 20 Chinese/English typeset covers**, together with a reusable agent skill.
 
@@ -14,7 +14,7 @@ A path through heavy earth. Railway tracks into winter. A small boat within a la
 
 - A bilingual static gallery with a permanent page for every cover.
 - Original text-free artwork, design briefs, exact prompts and generation provenance.
-- An independently installable [quiet-book-covers skill](skills/quiet-book-covers/SKILL.md), including four artwork references, bilingual type specimens and a review method.
+- An independently installable [book-covers skill](skills/book-covers/SKILL.md), including four artwork references, bilingual type specimens and a review method.
 - A deterministic typesetting pipeline. Titles and author names use licensed font outlines, not AI-generated lettering.
 - Five 1440 × 1920 presentation sheets and a wide project banner in [press/](press/).
 
@@ -34,13 +34,13 @@ Four founding studies came from the author's personal-library design exploration
 
 ## Install the skill
 
-The skill itself needs no Node runtime. Download `quiet-book-covers-v1.2.0.zip` from the latest release and place the enclosed `quiet-book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
+The skill itself needs no Node runtime. Download `book-covers-v1.2.1.zip` from the latest release and place the enclosed `book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
 
 Alternatively, with Node.js 22+:
 
 ```sh
-git clone https://github.com/ZJUZhiyuCai/quiet-covers.git
-cd quiet-covers
+git clone https://github.com/ZJUZhiyuCai/book-covers.git
+cd book-covers
 npm ci
 npm run skill:install
 ```
@@ -48,7 +48,7 @@ npm run skill:install
 Existing installations are preserved. After reviewing local edits, use `npm run skill:install -- --force` to update. Reload your agent session, then try:
 
 ```text
-Use $quiet-book-covers to design a cover for To the Lighthouse.
+Use $book-covers to design a cover for To the Lighthouse.
 Keep the lighthouse small and let distance carry the emotion.
 Deliver the artwork, English cover and exact generation prompt.
 ```
@@ -89,7 +89,7 @@ Created and curated by [Zhiyu Cai](https://caizhiyu.com/). Font sources and thei
 
 ## Typography in v1.1
 
-Chinese and English receive separate type direction: Zhuque Fangsong for engraved Chinese forms, selective Ma Shan Zheng brush lettering, and Cormorant Garamond roman/true italic for English. Editable per-language plans shape each title and give the author a deliberate place. The renderer measures actual ink bounds, preserves wording and source artwork, and rejects clipping or missing glyphs. See the [typography guide](skills/quiet-book-covers/references/typography.md) and [before/after sheet](press/05-typography.png).
+Chinese and English receive separate type direction: Zhuque Fangsong for engraved Chinese forms, selective Ma Shan Zheng brush lettering, and Cormorant Garamond roman/true italic for English. Editable per-language plans shape each title and give the author a deliberate place. The renderer measures actual ink bounds, preserves wording and source artwork, and rejects clipping or missing glyphs. See the [typography guide](skills/book-covers/references/typography.md) and [before/after sheet](press/05-typography.png).
 
 ## Complete covers for your own books
 
@@ -99,4 +99,4 @@ A cover request now delivers a finished image containing the exact title and aut
 npm run compose -- --spec examples/complete-cover.json --out output/custom
 ```
 
-Copy the example spec for a book outside the public catalog. Provide exact bilingual titles and authors, meaningful line breaks, an artwork path relative to the JSON file and optional typography plans. The command writes complete Chinese and English PNGs, WebP previews and an artwork/font provenance receipt. It validates both languages before writing, rejects overlaps and missing names, and requires `--force` to replace existing outputs. A website can copy these files without a runtime dependency on Quiet Covers.
+Copy the example spec for a book outside the public catalog. Provide exact bilingual titles and authors, meaningful line breaks, an artwork path relative to the JSON file and optional typography plans. The command writes complete Chinese and English PNGs, WebP previews and an artwork/font provenance receipt. It validates both languages before writing, rejects overlaps and missing names, and requires `--force` to replace existing outputs. A website can copy these files without a runtime dependency on Book Covers.

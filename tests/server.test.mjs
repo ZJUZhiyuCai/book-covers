@@ -6,9 +6,9 @@ import { resolve } from 'node:path';
 import { createStaticServer } from '../scripts/serve.mjs';
 
 test('static server serves pages and downloads; rejects traversal, malformed URLs and writes', async () => {
-  const dir = await mkdtemp(resolve(tmpdir(), 'quiet-covers-test-'));
+  const dir = await mkdtemp(resolve(tmpdir(), 'book-covers-test-'));
   await mkdir(resolve(dir, 'en'));
-  await writeFile(resolve(dir, 'index.html'), '<h1>Quiet Covers</h1>');
+  await writeFile(resolve(dir, 'index.html'), '<h1>Book Covers</h1>');
   await writeFile(resolve(dir, 'en/index.html'), '<h1>English</h1>');
   await writeFile(resolve(dir, 'art.png'), Buffer.from([137, 80, 78, 71]));
   const server = createStaticServer(dir);
@@ -17,7 +17,7 @@ test('static server serves pages and downloads; rejects traversal, malformed URL
   try {
     const page = await fetch(base + '/');
     assert.equal(page.status, 200);
-    assert.match(await page.text(), /Quiet Covers/);
+    assert.match(await page.text(), /Book Covers/);
     const redirect = await fetch(base + '/en', { redirect: 'manual' });
     assert.equal(redirect.status, 302);
     assert.equal(redirect.headers.get('location'), '/en/');

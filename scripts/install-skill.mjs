@@ -8,11 +8,11 @@ if (args.some((a) => !['--force', '--help'].includes(a)))
   throw new Error('Use npm run skill:install [-- --force]');
 if (args.includes('--help')) {
   console.log(
-    'Copy quiet-book-covers into $CODEX_HOME/skills (default ~/.codex/skills). Existing installs are preserved unless --force is supplied.',
+    'Copy book-covers into $CODEX_HOME/skills (default ~/.codex/skills). Existing installs are preserved unless --force is supplied.',
   );
 } else {
   const base = resolve(process.env.CODEX_HOME || resolve(homedir(), '.codex'), 'skills');
-  const target = resolve(base, 'quiet-book-covers');
+  const target = resolve(base, 'book-covers');
   let exists = false;
   try {
     await access(target);
@@ -23,12 +23,12 @@ if (args.includes('--help')) {
   if (exists && !args.includes('--force'))
     throw new Error('Skill already exists; review local edits before using --force.');
   await mkdir(base, { recursive: true });
-  await cp(resolve(ROOT, 'skills/quiet-book-covers'), target, {
+  await cp(resolve(ROOT, 'skills/book-covers'), target, {
     recursive: true,
     force: args.includes('--force'),
     errorOnExist: !args.includes('--force'),
   });
   console.log(
-    `Installed skill: ${target}\nRestart or reload your agent session to discover $quiet-book-covers.`,
+    `Installed skill: ${target}\nRestart or reload your agent session to discover $book-covers.`,
   );
 }

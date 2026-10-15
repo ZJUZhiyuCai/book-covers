@@ -1,4 +1,4 @@
-# Quiet Covers: design decisions
+# Book Covers: design decisions
 
 **Visual thesis:** warm paper and spare printed landscapes turn a literary shelf into a quiet, browsable exhibition.
 
@@ -14,6 +14,6 @@ The gallery has no client framework, analytics, API keys or image-generation bac
 
 The first version put title, translation and author in a single body-oriented serif. Its type read more like annotation than cover design. The revised covers choose faces per script: Zhuque Fangsong for most Chinese titles, Ma Shan Zheng for the written gesture of White Horse, and Cormorant Garamond roman/true italic for English. Author names have larger, deliberate settings.
 
-The collection shares paper, margins and imprint but varies the title silhouette: stepped Chinese phrases, open short titles, a few upright vertical columns, and English phrase hierarchies. All wording stays in `titleLines`; editable `typography` plans carry each language's composition. Optical bounds include italic overhangs and CJK sidebearings. Before/after comparisons retain identical illustration content. See [the reusable typography reference](../skills/quiet-book-covers/references/typography.md).
+The collection shares paper, margins and imprint but varies the title silhouette: stepped Chinese phrases, open short titles, a few upright vertical columns, and English phrase hierarchies. All wording stays in `titleLines`; editable `typography` plans carry each language's composition. Optical bounds include italic overhangs and CJK sidebearings. Before/after comparisons retain identical illustration content. See [the reusable typography reference](../skills/book-covers/references/typography.md).
 
 Source illustrations stay intact. WebP previews are resized derivatives; PNG jackets add separately rendered title and author typography. Two new illustrations needed image-tool revisions to restore a clear author margin; their original drafts and revision prompt remain in `process/` and `prompts/`.

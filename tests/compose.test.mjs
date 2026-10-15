@@ -27,7 +27,7 @@ test('complete-cover specs require exact titles, authors and intact meaningful b
 });
 
 test('external composition writes complete bilingual images, preserves art, and refuses accidental replacement', async () => {
-  const out = await mkdtemp(join(tmpdir(), 'quiet-covers-compose-'));
+  const out = await mkdtemp(join(tmpdir(), 'book-covers-compose-'));
   try {
     const original = await readFile(resolve(ROOT, 'artwork/ordinary-world.png'));
     const receipt = await composeFromSpec(specPath, out);

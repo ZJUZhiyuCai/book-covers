@@ -25,13 +25,13 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   for (const b of books) covers.set(b.id, await renderCover(b, 'zh'));
   async function sheet(name, title, subtitle, ids) {
     let design =
-      textPaths('QUIET COVERS  /  纸间', 84, 100, 26, { tracking: 1 }) +
+      textPaths('BOOK COVERS', 84, 100, 26, { tracking: 1 }) +
       lines(title, 84, 223, 65, 92) +
       textPaths(subtitle, 88, 318, 27, { fill: '#62665e' });
     design +=
       '<path d="M84 1724H1356" stroke="#c9c6b9"/>' +
       textPaths('10 部文学作品 · AI 插画 × 独立排版 × 开源 Skill', 84, 1785, 26) +
-      textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#62665e' });
+      textPaths('github.com/ZJUZhiyuCai/book-covers', 84, 1845, 24, { fill: '#62665e' });
     const layers = [];
     const width = 370,
       height = 555;
@@ -72,7 +72,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   );
   const b = books[0];
   let method =
-    textPaths('QUIET COVERS  /  THE METHOD', 84, 100, 26, { tracking: 1 }) +
+    textPaths('BOOK COVERS  /  THE METHOD', 84, 100, 26, { tracking: 1 }) +
     lines('从故事，到画面，\n再到封面。', 84, 240, 72, 108) +
     textPaths('每一层都可拆开，每一个选择都有理由。', 88, 439, 28, { fill: '#62665e' });
   const cards = [
@@ -94,14 +94,14 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   });
   method +=
     lines('开放的不止是图片。\n还有提示词、选择过程，以及可以继续使用的 Skill。', 84, 1510, 30, 60) +
-    textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1845, 24, { fill: '#62665e' });
+    textPaths('github.com/ZJUZhiyuCai/book-covers', 84, 1845, 24, { fill: '#62665e' });
   await sharp(plate(1440, 1920, method))
     .composite(cards.map((input, i) => ({ input, left: 84 + i * 450, top: 590 })))
     .png()
     .toFile(resolve(out, '04-process.png'));
   let banner =
-    textPaths('QUIET COVERS / 纸间', 88, 94, 20, { tracking: 1 }) +
-    lines('Quiet\nCovers', 84, 290, 119, 144) +
+    textPaths('BOOK COVERS', 88, 94, 20, { tracking: 1 }) +
+    lines('Book\nCovers', 84, 290, 119, 144) +
     textPaths('A book, distilled to one image.', 90, 549, 28) +
     textPaths('一本书，一幅留白。', 90, 620, 33) +
     textPaths('ARTWORK  /  PROMPTS  /  AGENT SKILL', 90, 798, 18, { fill: '#62665e', tracking: 1 });
@@ -125,7 +125,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     .png()
     .toFile(resolve(out, 'github-cover.png'));
   let comparison =
-    textPaths('QUIET COVERS  /  TYPOGRAPHY', 84, 100, 26, { tracking: 1 }) +
+    textPaths('BOOK COVERS  /  TYPOGRAPHY', 84, 100, 26, { tracking: 1 }) +
     textPaths('文字，也有自己的性格。', 84, 220, 65) +
     textPaths('同一幅插画，重新安排书名与作者。', 88, 304, 28, { fill: '#62665e' });
   const pairs = [
@@ -139,7 +139,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
       y = 430 + row * 650;
     comparison +=
       textPaths('V1.0  /  BEFORE', 210, y - 30, 23, { face: 'cormorant', tracking: 2 }) +
-      textPaths('V1.1  /  AFTER', 860, y - 30, 23, { face: 'cormorant', tracking: 2 });
+      textPaths('CURRENT  /  AFTER', 860, y - 30, 23, { face: 'cormorant', tracking: 2 });
     compareLayers.push({
       input: await sharp(resolve(ROOT, `process/typography-v1/${id}-${lang}.webp`))
         .resize(350, 525)
@@ -160,7 +160,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   comparison +=
     textPaths('中文：舒展的笔形与错落的行距。', 84, 1744, 28) +
     textPaths('英文：正斜体的节奏，与清楚的作者署名。', 84, 1800, 28) +
-    textPaths('github.com/ZJUZhiyuCai/quiet-covers', 84, 1864, 24, { fill: '#62665e' });
+    textPaths('github.com/ZJUZhiyuCai/book-covers', 84, 1864, 24, { fill: '#62665e' });
   await sharp(plate(1440, 1920, comparison))
     .composite(compareLayers)
     .png()

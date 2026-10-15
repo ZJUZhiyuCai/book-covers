@@ -1,9 +1,9 @@
 ---
-name: quiet-book-covers
-description: Design restrained literary covers with warm paper, spare printmaking imagery, and expressive Chinese or English typography. Use for literary cover series, reading-journal covers, or improving title and author lettering in the Quiet Covers style.
+name: book-covers
+description: Design restrained literary covers with warm paper, spare printmaking imagery, and expressive Chinese or English typography. Use for literary cover series, reading-journal covers, or improving title and author lettering in the Book Covers style.
 ---
 
-# Quiet book covers
+# Book Covers
 
 Turn a book's emotional tension into one inhabitable image. This is a particular editorial direction, not a universal rule for good covers. Respect a user's requested format, palette and subject.
 
@@ -42,7 +42,7 @@ Read [typography direction](references/typography.md) when designing or revising
 
 Use licensed fonts and deterministic HTML/SVG/image composition. Chinese engraved or brush forms and Latin display roman/true italic are useful directions, not mandatory choices for every work. Keep the exact title and author; do not turn decorative lettering into unreadable glyphs, fake signatures or a claimed official edition. When only typography needs improvement, preserve the selected illustration and compare the old and new text layers on the same art.
 
-Inside the Quiet Covers repository, `catalog.json` holds the book, semantic title breaks and optional per-language `typography` plans; see [implementation notes](references/typography.md#reference-implementation) before editing those plans. Save actual generation prompts under `prompts/`, then use `npm run build` and `npm run export -- --book <id> --lang zh`. The renderer keeps art and outlined type separate and rejects missing glyphs or out-of-bounds layouts. Outside the repository, use the host's normal layout/export tools; the skill itself requires no Node runtime.
+Inside the Book Covers repository, `catalog.json` holds the book, semantic title breaks and optional per-language `typography` plans; see [implementation notes](references/typography.md#reference-implementation) before editing those plans. Save actual generation prompts under `prompts/`, then use `npm run build` and `npm run export -- --book <id> --lang zh`. The renderer keeps art and outlined type separate and rejects missing glyphs or out-of-bounds layouts. Outside the repository, use the host's normal layout/export tools; the skill itself requires no Node runtime.
 
 Inspect both the full cover and thumbnail:
 

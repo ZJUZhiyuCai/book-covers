@@ -74,6 +74,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const port = Number(process.env.PORT || 4187);
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid PORT');
   createStaticServer(resolve(ROOT, 'dist')).listen(port, '127.0.0.1', () =>
-    console.log(`Quiet Covers: http://127.0.0.1:${port}/`),
+    console.log(`Book Covers: http://127.0.0.1:${port}/`),
   );
 }

@@ -55,7 +55,7 @@ export async function composeFromSpec(specPath, out, { force = false } = {}) {
   const { version } = JSON.parse(await readFile(resolve(ROOT, 'package.json'), 'utf8'));
   const fonts = JSON.parse(await readFile(resolve(ROOT, 'fonts/SOURCES.json'), 'utf8'));
   const receipt = {
-    renderer: `quiet-covers/${version}`,
+    renderer: `book-covers/${version}`,
     artwork: basename(book.artwork),
     artworkSha256: sha256(artwork),
     title: book.title,

@@ -206,7 +206,7 @@ export function coverLayout(book, lang) {
 export function typographySVG(book, lang) {
   const { title, subtitle, author } = coverLayout(book, lang);
   const p = (e) => textPaths(e.text, e.x, e.y, e.size, e);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">${textPaths(`QUIET COVERS  /  ${book.number}`, 96, 104, 23, { face: 'cormorant', weight: 600, fill: '#69685e', tracking: 3 })}${title.map(p).join('')}${subtitle.map(p).join('')}${p(author)}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">${textPaths(`BOOK COVERS  /  ${book.number}`, 96, 104, 23, { face: 'cormorant', weight: 600, fill: '#69685e', tracking: 3 })}${title.map(p).join('')}${subtitle.map(p).join('')}${p(author)}</svg>`;
 }
 
 export async function renderCover(book, lang, { width = 1024, format = 'png' } = {}) {

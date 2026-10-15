@@ -1,6 +1,6 @@
 # Contributing a cover
 
-Propose a work and a visual relationship, not just a collection of objects. Read the [skill](skills/quiet-book-covers/SKILL.md) and inspect the founding studies before generating.
+Propose a work and a visual relationship, not just a collection of objects. Read the [skill](skills/book-covers/SKILL.md) and inspect the founding studies before generating.
 
 1. Make a text-free 1024 × 1536 PNG. Keep the source image intact and save it under `artwork/<slug>.png`.
 2. Add the full actual prompt to `prompts/<slug>.txt`. If you revise an image, preserve the relevant input and edit prompt.
@@ -8,7 +8,7 @@ Propose a work and a visual relationship, not just a collection of objects. Read
 4. Run `npm test`, `npm run build`, and inspect both languages at full size and at 180 px wide. The gallery should work on a narrow phone and with keyboard navigation.
 5. Open a PR with the image, a short design explanation and the generation/edit record. Contributor-supplied artworks must be eligible for the artwork license; code and prompts use MIT.
 
-For type revisions, keep the illustration unchanged. `titleLines` preserves exact wording and semantic breaks; optional per-language `typography` plans control type treatment. See the [typography reference](skills/quiet-book-covers/references/typography.md#reference-implementation) for modes, coordinates and font roles. Verify ink bounds, not only advance widths, and check short Chinese columns from right to left. Font additions need their source and redistribution license; record the original file hash in `fonts/SOURCES.json`.
+For type revisions, keep the illustration unchanged. `titleLines` preserves exact wording and semantic breaks; optional per-language `typography` plans control type treatment. See the [typography reference](skills/book-covers/references/typography.md#reference-implementation) for modes, coordinates and font roles. Verify ink bounds, not only advance widths, and check short Chinese columns from right to left. Font additions need their source and redistribution license; record the original file hash in `fonts/SOURCES.json`.
 
 Do not add novel text, publisher cover reproductions, secrets or private local paths. Avoid automatic social posting or remote generation as part of the build. Image generation happens separately; building the gallery must remain offline after dependencies are installed.
 
