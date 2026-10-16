@@ -17,3 +17,9 @@ The first version put title, translation and author in a single body-oriented se
 The collection shares paper, margins and imprint but varies the title silhouette: stepped Chinese phrases, open short titles, a few upright vertical columns, and English phrase hierarchies. All wording stays in `titleLines`; editable `typography` plans carry each language's composition. Optical bounds include italic overhangs and CJK sidebearings. Before/after comparisons retain identical illustration content. See [the reusable typography reference](../skills/book-covers/references/typography.md).
 
 Source illustrations stay intact. WebP previews are resized derivatives; PNG jackets add separately rendered title and author typography. Two new illustrations needed image-tool revisions to restore a clear author margin; their original drafts and revision prompt remain in `process/` and `prompts/`.
+
+## Agent installation and equal-scale Chinese titles · v1.3
+
+The primary entry is a copyable natural-language installation request pointing to the skill directory. Codex uses its native installer; other compatible agents can use their installer or the open Skills CLI. No gallery checkout or system font setup is required to use the skill.
+
+A Chinese title is one typographic unit: fit every line at the same size rather than promoting individual words. The reference renderer uses bundled font files directly and fits Chinese lines together. When local layout is unavailable, the standalone skill can generate lettering with the illustration and must check exact wording in the actual output. The no-font Ordinary World demonstration has separate provenance and does not replace the gallery original.

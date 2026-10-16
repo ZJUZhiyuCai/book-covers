@@ -43,6 +43,10 @@ export function validateTypography(plan, lines, lang) {
     if (plan[key] !== undefined && (!Number.isFinite(plan[key]) || plan[key] < 0 || plan[key] > 600))
       throw new Error(`Invalid typography ${key}.`);
   }
+  if (lang === 'zh' && plan.sizes?.some((size) => size !== plan.sizes[0]))
+    throw new Error('Chinese title characters must use one equal size; use size or equal sizes.');
+  if (lang === 'zh' && plan.size !== undefined && plan.sizes?.some((size) => size !== plan.size))
+    throw new Error('Chinese title size and sizes must agree.');
   if (plan.mode === 'vertical' && plan.centers?.some((x, i) => i && x >= plan.centers[i - 1]))
     throw new Error('Vertical columns must read from right to left.');
   if (

@@ -18,7 +18,7 @@ Top row: engraved, brush and vertical Chinese setting. Bottom row: English roman
 | English connective phrase or author | A real italic with its own drawn letterforms | Cormorant Garamond Italic |
 | Chinese author | A quiet engraved or written form with room around a short name | Usually the Chinese title family |
 
-These faces are examples. Another face may better suit the work or the user's preference. The three families above have OFL sources linked below; preserve their notices when distributing font files. The small standalone skill includes specimen images, not font binaries. Use available licensed fonts or retrieve them from the original distributors before rendering; never silently substitute and claim the intended face was used.
+These faces are examples. Another face may better suit the work or the user's preference. The three families above have OFL sources linked below; preserve their notices when distributing font files. The small standalone skill includes specimen images, not font binaries. Load available licensed font files directly; the repository bundles these faces and does not require a system font installation. If files or a renderer are inconvenient, use [generated lettering](generated-lettering.md) instead of making font setup a prerequisite. Never silently substitute and claim the intended face was used.
 
 Avoid fake slanting, horizontal stretching, faux bold and random glyph rotations. A brush font is not automatically more artistic, and neither a title nor an author's name should resemble an invented personal signature.
 
@@ -26,7 +26,7 @@ Avoid fake slanting, horizontal stretching, faux bold and random glyph rotations
 
 Start with exact wording and meaningful breaks. Choose a shape that responds to the picture's mass, horizon and empty field.
 
-- **Stepped horizontal Chinese:** `平凡的 / 世界` and `基督山 / 伯爵` let a second, larger line carry the noun. A modest offset gives the two lines a relationship. Do not break a word just to make an attractive rectangle.
+- **Equal-scale Chinese:** `平凡的世界`, `基督山伯爵` and `钢铁是怎样炼成的` are each one title. Use one character size and weight throughout, including when wrapping as `平凡的 / 世界` or `钢铁是怎样 / 炼成的`. A modest offset, line spacing or brush rhythm can shape the title without inventing a word hierarchy. Do not stretch a short line to match a long one or shrink only the longest line; fit the title as a unit.
 - **Open, short Chinese:** `边城` can occupy one generous line. Increase size before scattering two characters across the full page.
 - **Vertical Chinese:** `红楼梦` can form one upright column; `白马 / 啸西风` can form two, read down each column and from right to left. Keep glyphs upright. Do not rotate a horizontal string by 90°. Handle punctuation explicitly if it occurs; the reference renderer's vertical mode currently targets short unpunctuated Chinese titles.
 - **English phrase hierarchy:** in `The Count of / Monte Cristo`, the lighter italic phrase yields to the principal name. In `Ordinary / World`, a restrained italic second line creates a different rhythm. Use a few deliberate changes, not alternating fonts on every word.
@@ -55,7 +55,7 @@ Before delivery, open the actual exported file: both title and author must be pr
 The Book Covers repository uses `titleLines.zh/en` for semantic text breaks, and optional `typography.zh/en` plans for their treatment:
 
 - `mode`: `left`, `centered`, or Chinese `vertical`.
-- Horizontal `sizes`, `baselines`, `offsets`: one numeric entry per title line, in the 1024 × 1536 coordinate system. `tracking` adjusts spacing; English `italicLines` contains zero-based indices.
+- Horizontal Chinese `size`: one size for the whole title. Legacy `sizes` must have identical entries; the renderer fits all Chinese lines together. English `sizes` may vary by phrase. `baselines` and `offsets` have one entry per line, in the 1024 × 1536 coordinate system. `tracking` adjusts spacing; English `italicLines` contains zero-based indices.
 - Vertical `size`, `top`, `leading`, `centers`, `topOffsets`: positions for short Chinese columns; center coordinates descend from right to left. Individual glyphs remain upright and optically centered.
 - Chinese `face`: `zhuque` or `brush`; English uses separate roman and italic files. `ink` is an optional dark six-digit hex colour drawn from the composition.
 

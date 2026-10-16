@@ -47,10 +47,10 @@
       "typography": {
         "zh": {
           "mode": "left",
-          "sizes": [112, 148],
           "baselines": [242, 402],
           "offsets": [0, 146],
-          "tracking": 10
+          "tracking": 10,
+          "size": 132
         },
         "en": {
           "mode": "left",
@@ -106,11 +106,11 @@
       "typography": {
         "zh": {
           "mode": "left",
-          "sizes": [112, 144],
           "baselines": [242, 399],
           "offsets": [0, 154],
           "tracking": 10,
-          "ink": "#253d49"
+          "ink": "#253d49",
+          "size": 132
         },
         "en": {
           "mode": "left",
@@ -225,11 +225,11 @@
       "typography": {
         "zh": {
           "mode": "left",
-          "sizes": [100, 142],
           "baselines": [245, 399],
           "offsets": [0, 154],
           "tracking": 8,
-          "ink": "#344650"
+          "ink": "#344650",
+          "size": 124
         },
         "en": {
           "mode": "left",

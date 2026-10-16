@@ -2,17 +2,26 @@
   "id": "ordinary-world",
   "number": "01",
   "artwork": "../artwork/ordinary-world.png",
-  "title": { "zh": "平凡的世界", "en": "Ordinary World" },
-  "author": { "zh": "路遥", "en": "Lu Yao" },
-  "titleLines": { "zh": ["平凡的", "世界"], "en": ["Ordinary", "World"] },
+  "title": {
+    "zh": "平凡的世界",
+    "en": "Ordinary World"
+  },
+  "author": {
+    "zh": "路遥",
+    "en": "Lu Yao"
+  },
+  "titleLines": {
+    "zh": ["平凡的", "世界"],
+    "en": ["Ordinary", "World"]
+  },
   "typography": {
     "zh": {
       "mode": "left",
-      "sizes": [112, 148],
       "baselines": [242, 402],
       "offsets": [0, 146],
       "tracking": 10,
-      "ink": "#483c2d"
+      "ink": "#483c2d",
+      "size": 132
     },
     "en": {
       "mode": "left",

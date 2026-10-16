@@ -58,6 +58,26 @@ test('vertical reading order and bilingual title content survive individual glyp
       }
     }
 });
+test('Chinese titles keep one character scale across lines and when a long line needs fitting', () => {
+  for (const book of books) {
+    const layout = coverLayout(book, 'zh');
+    assert.equal(new Set(layout.title.map((line) => line.size)).size, 1, book.id);
+    assert.equal(new Set(layout.title.map((line) => line.weight)).size, 1, book.id);
+  }
+  const book = structuredClone(books.find((b) => b.id === 'ordinary-world'));
+  book.typography.zh = {
+    mode: 'left',
+    size: 170,
+    baselines: [260, 430],
+    offsets: [450, 0],
+    tracking: 10,
+  };
+  const title = coverLayout(book, 'zh').title;
+  assert.ok(title[0].size < 170, 'the constrained first line must fit its available width');
+  assert.equal(title[1].size, title[0].size, 'a short line must keep the same fitted size');
+  book.typography.zh.sizes = [112, 148];
+  assert.throws(() => coverLayout(book, 'zh'), /equal size/);
+});
 test('PNG export has correct dimensions, adds typography, preserves the illustration and source file', async () => {
   const b = books[0],
     path = resolve(ROOT, b.artwork),

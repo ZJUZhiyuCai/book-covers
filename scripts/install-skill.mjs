@@ -29,6 +29,6 @@ if (args.includes('--help')) {
     errorOnExist: !args.includes('--force'),
   });
   console.log(
-    `Installed skill: ${target}\nRestart or reload your agent session to discover $book-covers.`,
+    `Installed skill: ${target}\nThe skill is available on a subsequent turn after your agent refreshes skill discovery.`,
   );
 }

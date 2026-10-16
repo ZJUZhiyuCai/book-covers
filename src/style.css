@@ -468,6 +468,24 @@ a:hover {
   color: #b3bcaa;
   display: block;
 }
+.install-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin: 20px 0;
+  font-size: 11px;
+}
+.install-resources a {
+  text-underline-offset: 4px;
+}
+.install-cli {
+  border-top: 1px solid #64705f;
+  padding-top: 15px;
+  font-size: 11px;
+}
+.install-cli summary {
+  cursor: pointer;
+}
 .site-footer {
   padding: 40px 5%;
   display: flex;

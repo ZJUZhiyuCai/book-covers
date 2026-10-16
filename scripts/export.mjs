@@ -187,7 +187,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const options = parseExportArgs(process.argv.slice(2));
   if (options.help)
     console.log(
-      'npm run export [-- --book <id> --lang zh|en --width 1024 --out output]\nWithout --book, exports four press sheets and a GitHub banner.',
+      'npm run export [-- --book <id> --lang zh|en --width 1024 --out output]\nWithout --book, exports five press sheets and a GitHub banner.',
     );
   else if (options.book) {
     const books = await loadCatalog();

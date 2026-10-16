@@ -15,7 +15,7 @@ A path through heavy earth. Railway tracks into winter. A small boat within a la
 - A bilingual static gallery with a permanent page for every cover.
 - Original text-free artwork, design briefs, exact prompts and generation provenance.
 - An independently installable [book-covers skill](skills/book-covers/SKILL.md), including four artwork references, bilingual type specimens and a review method.
-- A deterministic typesetting pipeline. Titles and author names use licensed font outlines, not AI-generated lettering.
+- A deterministic typesetting pipeline. The reference gallery uses licensed font outlines; the standalone skill also supports image-generated lettering.
 - Five 1440 × 1920 presentation sheets and a wide project banner in [press/](press/).
 
 The illustrations were made with OpenAI's built-in image-generation tool. Generation is stochastic: the process and actual outputs are shared, but identical prompts do not guarantee identical pixels. The gallery has no generation API, backend account or API-key requirement.
@@ -32,28 +32,39 @@ The illustrations were made with OpenAI's built-in image-generation tool. Genera
 
 Four founding studies came from the author's personal-library design exploration; six were created for this project. These are independent interpretations, not publisher editions. No novel text is included.
 
-## Install the skill
+## Install with your agent
 
-The skill itself needs no Node runtime. Download `book-covers-v1.2.1.zip` from the latest release and place the enclosed `book-covers` directory in your agent's skills directory. Codex defaults to `~/.codex/skills/`, or `$CODEX_HOME/skills/` when configured.
-
-Alternatively, with Node.js 22+:
-
-```sh
-git clone https://github.com/ZJUZhiyuCai/book-covers.git
-cd book-covers
-npm ci
-npm run skill:install
-```
-
-Existing installations are preserved. After reviewing local edits, use `npm run skill:install -- --force` to update. Reload your agent session, then try:
+**Give this prompt to Codex or another skill-capable agent:**
 
 ```text
-Use $book-covers to design a cover for To the Lighthouse.
-Keep the lighthouse small and let distance carry the emotion.
-Deliver the artwork, English cover and exact generation prompt.
+Please install the Book Covers skill:
+https://github.com/ZJUZhiyuCai/book-covers/tree/main/skills/book-covers
+Use your native skill installer and include its resources.
+Preserve local edits before updating. Tell me how to invoke it.
 ```
 
-Other agents that support directory-based skills can read the same folder. Actual image generation and export depend on the host's capabilities. Without an image tool, the skill produces a finished prompt and reports that the image remains ungenerated.
+Codex can install this GitHub directory with its built-in `skill-installer`. There is no manual ZIP download, gallery dependency installation or system font setup. On the following turn, try:
+
+```text
+Use $book-covers to design a complete cover for Ordinary World by Lu Yao.
+Include the title and author; use equal character size and weight for 平凡的世界.
+```
+
+Other agents can use a native installer or the [Skills CLI](https://github.com/vercel-labs/skills):
+
+```sh
+npx skills add ZJUZhiyuCai/book-covers --skill book-covers
+```
+
+Select the intended agent and scope. This optional CLI route requires Node/npm; the skill does not. See [INSTALL.md](INSTALL.md) for installation and verification. Creating covers requires the host's image-generation capability; installing the skill does not install an image model.
+
+## Two ways to finish the lettering
+
+When local font files or layout tools are inconvenient, generate the exact title and author as part of the complete cover, then inspect every character. No font installation is required. See the [tested generated-lettering example](process/generated-lettering/ordinary-world-zh.png), [actual prompt](prompts/ordinary-world-generated-lettering.txt) and [provenance](process/generated-lettering/provenance.json).
+
+When a renderer is already available, compose with licensed font files for exact wording and repeatable layouts. This repository reads its bundled fonts directly, without installing them into the operating system. The ten reference-gallery covers retain this approach and their original artwork.
+
+Chinese titles use one character scale and weight across lines. Position, spacing, strokes and negative space carry the rhythm; a translated subtitle or author can remain secondary. English can retain deliberate phrase-level hierarchy and roman/italic contrast.
 
 ## Run and export
 

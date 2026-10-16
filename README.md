@@ -35,31 +35,38 @@ Book Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 
 ## 安装 Skill
 
-需要一个支持图片生成和本地技能的 Agent。**只使用 Skill 不需要 Node.js**：下载发布包中的 `book-covers-v1.2.1.zip`，将里面的 `book-covers` 文件夹放入你的技能目录。Codex 默认目录为 `~/.codex/skills/`；如果配置了 `CODEX_HOME`，使用其下的 `skills/`。
+**把下面这段话发给 Codex 或其他支持 Skills 的 Agent，让它完成安装：**
 
-也可以从项目安装（Node.js 22+）：
+```text
+请安装 Book Covers skill：
+https://github.com/ZJUZhiyuCai/book-covers/tree/main/skills/book-covers
+使用你原生的技能安装方式，包含引用素材；如已安装，保留本地修改后更新。
+完成后告诉我调用方式。
+```
+
+Codex 可通过内置 `skill-installer` 安装这个 GitHub 目录。安装单元只有 Skill 和它的参考素材；无需手动下载 ZIP、安装画廊依赖或系统字体。完成后，在下一轮对话中试试：
+
+```text
+使用 $book-covers 为路遥的《平凡的世界》设计一张完整封面。
+书名五个字等大、等重，把作者也融入画面。
+```
+
+其他 Agent 可以使用原生安装器，或让 Agent 执行 [Skills CLI](https://github.com/vercel-labs/skills) 命令并选择对应宿主：
 
 ```sh
-git clone https://github.com/ZJUZhiyuCai/book-covers.git
-cd book-covers
-npm ci
-npm run skill:install
+npx skills add ZJUZhiyuCai/book-covers --skill book-covers
 ```
 
-安装器保留已有同名 Skill，不会默认覆盖。审阅本地修改后，可以显式使用 `npm run skill:install -- --force` 更新。重新加载 Agent 会话后使用：
+这条可选 CLI 路径需要 Node/npm；Skill 本身不需要。完整的 Agent 安装说明、更新与核验方式见 [INSTALL.md](INSTALL.md)。实际创作需要宿主具备生图能力，安装 Skill 不会另外提供图像模型。
 
-```text
-使用 $book-covers 为《边城》设计一张封面。
-先从故事里提炼一种情绪和一处空间，生成无字插画，再排中文书名和作者。
-```
+## 字体不应成为门槛
 
-```text
-Use $book-covers to design a cover for To the Lighthouse.
-Keep the lighthouse small and let distance carry the emotion.
-Deliver the artwork, English cover and exact generation prompt.
-```
+- **直接生成完整书封**：没有方便的字体文件或排版工具时，由生图工具同时生成插画、准确书名和作者，逐字核对成品。无需安装字体。
+- **已有字体文件时排版**：本仓库直接读取随附的 OFL 字体，输出稳定、可编辑的文字层；不安装到系统，也不需要用户找字体。参考画廊继续使用这条路径，保留原插画像素。
 
-其他支持目录式技能的 Agent 可使用同一文件夹；图片生成与文件导出能力以具体宿主为准。没有生图能力时，Skill 会交付提示词并明确说明图片尚未生成。
+中文主标题的字等大、等重，换行时也不把“平凡的”缩小或把“世界”放大。艺术感来自笔形、间距、位置和留白。译名与作者可以有独立层级；英文仍按语义安排正斜体与节奏。
+
+[查看无需字体的《平凡的世界》实测示例](process/generated-lettering/ordinary-world-zh.png) · [完整提示词](prompts/ordinary-world-generated-lettering.txt) · [生成记录](process/generated-lettering/provenance.json)。此示例的文字由生图工具绘制；参考画廊里的对应作品仍使用字体文件排版。
 
 ## 本地运行与导出
 
@@ -110,7 +117,7 @@ tests/                    内容、渲染与服务行为验证
 
 ## 设计与实现
 
-插画与文字是两层。插画负责空间、质感与情绪；排版器负责准确的字形、语言、行宽和留白。中文与英文分别设计字形和断行：朱雀仿宋的刻本气质、少量毛笔竖排，以及 Cormorant 正斜体的节奏。书名、译名、作者各有层次，具体选择写入可编辑的排版数据。下载文件使用字体路径，网页字体按实际字符生成小型 WOFF2 子集。
+参考画廊的插画与文字分层保存。插画负责空间、质感与情绪；排版器负责准确的字形、语言、行宽和留白。中文整组书名等大等重，中英文分别设计字形和断行：朱雀仿宋的刻本气质、少量毛笔竖排，以及 Cormorant 正斜体的节奏。书名、译名、作者各有层次，具体选择写入可编辑的排版数据。下载文件使用字体路径，网页字体按实际字符生成小型 WOFF2 子集。
 
 画廊使用静态 HTML/CSS 和少量原生 JavaScript。筛选和图层切换是渐进增强；书目、作品页面与下载链接无需客户端框架。构建时验证每张源图的校验值和全部本地链接。GitHub Actions 运行检查，再部署到 GitHub Pages。更多取舍见 [设计说明](docs/design.md)。
 

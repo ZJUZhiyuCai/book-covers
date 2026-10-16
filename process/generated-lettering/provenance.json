@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-16",
+  "tool": "OpenAI built-in image generation",
+  "mode": "image edit with generated lettering",
+  "model": "not exposed by tool",
+  "input": "artwork/ordinary-world.png",
+  "inputSha256": "87b06b6d242544a2657a8f911e72b01b403615474024a71b280a7a8e5bc1f53f",
+  "output": "process/generated-lettering/ordinary-world-zh.png",
+  "outputSha256": "8e1712a5e13a8080d290acf45d889d55253d031fbee617b8287d33a3d76cb886",
+  "prompt": "prompts/ordinary-world-generated-lettering.txt",
+  "review": {
+    "title": "平凡的世界",
+    "subtitle": "Ordinary World",
+    "author": "路遥",
+    "imprint": "BOOK COVERS",
+    "text_checked_visually": true,
+    "title_scale": "Equal-scale Chinese characters on one line",
+    "scene": "Composition retained; image editing does not preserve every source pixel"
+  },
+  "use": "Optional no-font demonstration; the reference gallery retains deterministic font-file covers"
+}

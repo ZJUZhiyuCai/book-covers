@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import * as fontkit from 'fontkit';
 import sharp from 'sharp';
-import { ROOT, inside, LANGS } from './catalog.mjs';
+import { ROOT, inside, LANGS, validateTypography } from './catalog.mjs';
 
 const fontFiles = {
   noto: 'fonts/NotoSerifSC.ttf',
@@ -111,6 +111,7 @@ function line(text, baseline, size, options = {}) {
 
 export function coverLayout(book, lang) {
   if (!LANGS.includes(lang)) throw new Error(`Unknown language: ${lang}`);
+  validateTypography(book.typography?.[lang], book.titleLines[lang], lang);
   const plan = book.typography?.[lang] || {};
   const mode = plan.mode || 'left';
   const centered = mode === 'centered' || mode === 'vertical';
@@ -136,14 +137,14 @@ export function coverLayout(book, lang) {
       });
     });
   } else {
-    book.titleLines[lang].forEach((text, i) => {
+    const makeLine = (text, i, size) => {
       const face =
         lang === 'zh'
           ? plan.face || 'zhuque'
           : plan.italicLines?.includes(i)
             ? 'cormorant-italic'
             : 'cormorant';
-      const e = line(text, plan.baselines?.[i] ?? 250 + i * 142, plan.sizes?.[i] ?? 126, {
+      const e = line(text, plan.baselines?.[i] ?? 250 + i * 142, size, {
         face,
         weight: lang === 'en' ? 500 : 400,
         fill: ink,
@@ -153,8 +154,16 @@ export function coverLayout(book, lang) {
         maxWidth: 832 - (centered ? 0 : plan.offsets?.[i] || 0),
       });
       if (e.size < 60) throw new Error(`Title too long; supply better line breaks: ${book.id}/${lang}`);
-      title.push(e);
-    });
+      return e;
+    };
+    const fitted = book.titleLines[lang].map((text, i) =>
+      makeLine(text, i, lang === 'zh' ? (plan.size ?? plan.sizes?.[0] ?? 126) : (plan.sizes?.[i] ?? 126)),
+    );
+    // Fit the Chinese title as one unit: a longer line must not shrink on its own.
+    const commonSize = Math.min(...fitted.map((entry) => entry.size));
+    title.push(
+      ...(lang === 'zh' ? book.titleLines[lang].map((text, i) => makeLine(text, i, commonSize)) : fitted),
+    );
   }
   const titleBottom = Math.max(...title.map((e) => textBounds(e.text, e.x, e.y, e.size, e).bottom));
   const other = lang === 'zh' ? 'en' : 'zh';
