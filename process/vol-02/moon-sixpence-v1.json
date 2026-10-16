@@ -1,0 +1,81 @@
+{
+  "id": "moon-sixpence",
+  "number": "16",
+  "group": "world",
+  "title": {
+    "zh": "月亮与六便士",
+    "en": "The Moon and Sixpence"
+  },
+  "author": {
+    "zh": "威廉·萨默塞特·毛姆",
+    "en": "W. Somerset Maugham"
+  },
+  "titleLines": {
+    "zh": [
+      "月亮与",
+      "六便士"
+    ],
+    "en": [
+      "The Moon",
+      "and Sixpence"
+    ]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "size": 123,
+      "baselines": [
+        266,
+        410
+      ],
+      "tracking": 7,
+      "ink": "#324e59"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [
+        135,
+        111
+      ],
+      "baselines": [
+        262,
+        402
+      ],
+      "italicLines": [
+        1
+      ],
+      "ink": "#324e59"
+    }
+  },
+  "palette": [
+    "#3d6473",
+    "#bd8e54"
+  ],
+  "mood": {
+    "zh": "离开熟悉的一切，走向不可解释的热望。",
+    "en": "Leaving the familiar for an inexplicable longing."
+  },
+  "concept": {
+    "zh": "一块空白画布倚在房间里，敞开的窗外是一片深蓝海面。室内的赭色与窗外的冷色，留下选择的张力。",
+    "en": "An unpainted canvas leans inside an ochre room. Beyond an open window, a deep blue sea offers another kind of space."
+  },
+  "restraint": {
+    "zh": "舍去月亮、钱币和画家的肖像。",
+    "en": "No moon, coins or portrait of the painter."
+  },
+  "alt": {
+    "zh": "赭色房间里的空白画布，面向窗外深蓝色的海。",
+    "en": "A blank canvas in an ochre room faces a deep blue sea through an open window."
+  },
+  "volume": 2,
+  "artwork": "artwork/moon-sixpence.png",
+  "prompt": "prompts/moon-sixpence.txt",
+  "sha256": "c6d5e752be98339c580a8e2ee1934b75ee6836d3bcea79e36470a5b3d3a3ef53",
+  "generation": {
+    "date": "2026-10-16",
+    "tool": "OpenAI built-in image generation",
+    "model": "not exposed by tool",
+    "origin": "stability-vol-02",
+    "revision": null
+  }
+}

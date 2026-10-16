@@ -1,8 +1,8 @@
 {
   "id": "moon-sixpence",
   "number": "16",
-  "artwork": "../../../../artwork/moon-sixpence.png",
-  "prompt": "../../../../prompts/moon-sixpence.txt",
+  "artwork": "../../../../process/vol-02/moon-sixpence-v1.png",
+  "prompt": "../../../../process/vol-02/moon-sixpence-v1.prompt.txt",
   "title": {
     "zh": "月亮与六便士",
     "en": "The Moon and Sixpence"

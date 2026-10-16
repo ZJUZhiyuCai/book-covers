@@ -937,53 +937,54 @@
         "en": "W. Somerset Maugham"
       },
       "titleLines": {
-        "zh": ["月亮与", "六便士"],
+        "zh": ["月亮与六便士"],
         "en": ["The Moon", "and Sixpence"]
       },
       "typography": {
         "zh": {
           "mode": "centered",
-          "size": 123,
-          "baselines": [266, 410],
-          "tracking": 7,
-          "ink": "#324e59"
+          "size": 113,
+          "baselines": [323],
+          "tracking": 8,
+          "ink": "#314e59"
         },
         "en": {
           "mode": "left",
           "sizes": [135, 111],
           "baselines": [262, 402],
           "italicLines": [1],
-          "ink": "#324e59"
+          "ink": "#314e59"
         }
       },
-      "palette": ["#3d6473", "#bd8e54"],
+      "palette": ["#456c78", "#c2a06b"],
       "mood": {
-        "zh": "离开熟悉的一切，走向不可解释的热望。",
-        "en": "Leaving the familiar for an inexplicable longing."
+        "zh": "画布留白，海与光仍在。",
+        "en": "The canvas is empty; the sea and light remain."
       },
       "concept": {
-        "zh": "一块空白画布倚在房间里，敞开的窗外是一片深蓝海面。室内的赭色与窗外的冷色，留下选择的张力。",
-        "en": "An unpainted canvas leans inside an ochre room. Beyond an open window, a deep blue sea offers another kind of space."
+        "zh": "一张空白画布立在塔希提海边的阳光里，海面、远山与稀疏的树影围绕它展开。空白承接读者对结尾的理解：创作完成后的宁静，与不再执着于留下什么。",
+        "en": "An empty canvas rests in the sunlight of Tahiti, surrounded by sea, distant land and a sparse palm shadow. Its blank face gives form to a reader’s interpretation of the ending: peace after creating, without the need to leave something behind."
       },
       "restraint": {
-        "zh": "舍去月亮、钱币和画家的肖像。",
-        "en": "No moon, coins or portrait of the painter."
+        "zh": "保留画布空白，省去月亮、钱币、画家和作画工具。这是意象化的设计解读，并非小说原景复现。",
+        "en": "Keep the canvas blank; omit the moon, coins, painter and tools. This is a poetic interpretation, not a reconstruction of a literal scene."
       },
       "alt": {
-        "zh": "赭色房间里的空白画布，面向窗外深蓝色的海。",
-        "en": "A blank canvas in an ochre room faces a deep blue sea through an open window."
+        "zh": "塔希提蓝色海湾前，一张空白画布靠在低矮的赭色露台边，地面有稀疏的棕榈影。",
+        "en": "A blank canvas leans against a low ochre verandah above a blue Tahitian bay, with a sparse palm shadow on the sunlit ground."
       },
       "volume": 2,
       "artwork": "artwork/moon-sixpence.png",
       "prompt": "prompts/moon-sixpence.txt",
-      "sha256": "c6d5e752be98339c580a8e2ee1934b75ee6836d3bcea79e36470a5b3d3a3ef53",
+      "sha256": "cb7ef8acbb399527ef30285cf0c4689b992459871df027a18911429cd1f93e98",
       "generation": {
         "date": "2026-10-16",
         "tool": "OpenAI built-in image generation",
         "model": "not exposed by tool",
-        "origin": "stability-vol-02",
+        "origin": "reader-directed-redesign",
         "revision": null
-      }
+      },
+      "coverImprint": false
     },
     {
       "id": "hundred-years",

@@ -101,7 +101,7 @@ On 16 October 2026, ten works were produced with unchanged Skill 1.4.0. The agen
 | Same-environment repeat       | With fixed artwork, fonts and settings, all 40 delivery files had identical SHA-256 hashes |
 | Skill and gallery consistency | All 20 typeset PNGs and 10 prompt files matched                                            |
 
-**Typography and file delivery were consistent; the images still need individual judgment.** Some covers have excess texture, similar compositions or imprecise whitespace. The notes retain reservations about _My Memories of Old Beijing_ and _One Hundred Years of Solitude_. The gallery keeps the versions selected in this trial so they can be compared with the recorded results.
+**Typography and file delivery were consistent; the images still need individual judgment.** Some covers have excess texture, similar compositions or imprecise whitespace. The notes retain reservations about _My Memories of Old Beijing_ and _One Hundred Years of Solitude_. The gallery's _The Moon and Sixpence_ has since been [redesigned following reader feedback](docs/revisions/moon-sixpence-2026-10-16.md); the other covers retain their selected versions. The thumbnails and measurements above remain a record of the original trial.
 
 Repeating typography on saved artwork does not mean a fresh image generation will reproduce it. Nor do ten examples establish a success rate for other books, image models or environments. The [full observations](docs/stability/vol-02/README.en.md) include actual prompts, revisions, checksums and replay specs.
 

@@ -4,5 +4,6 @@ import { useFontDirectory, composeCover } from '../skills/book-covers/runtime/co
 useFontDirectory(ROOT);
 export * from '../skills/book-covers/runtime/cover.mjs';
 export async function renderCover(book, lang, options = {}) {
-  return composeCover(book, lang, await readFile(inside(ROOT, book.artwork)), options);
+  const visual = book.coverImprint === false ? { ...book, number: undefined } : book;
+  return composeCover(visual, lang, await readFile(inside(ROOT, book.artwork)), options);
 }

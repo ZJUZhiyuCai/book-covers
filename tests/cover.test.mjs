@@ -117,3 +117,18 @@ test('export rejects bad inputs and missing glyphs instead of making broken file
   });
   assert.deepEqual(wrapText('one two three', 90, 20), ['one two', 'three']);
 });
+
+test('a cover can omit its imprint while retaining its catalog number and all other pixels', async () => {
+  const book = { ...books[0], coverImprint: false };
+  const number = book.number;
+  const plain = await renderCover(book, 'zh');
+  const numbered = await renderCover({ ...book, coverImprint: true }, 'zh');
+  const source = await readFile(resolve(ROOT, book.artwork));
+  const header = { left: 0, top: 0, width: 1024, height: 120 };
+  const body = { left: 0, top: 120, width: 1024, height: 1416 };
+  const pixels = (data, area) => sharp(data).removeAlpha().extract(area).raw().toBuffer();
+  assert.deepEqual(await pixels(plain, header), await pixels(source, header));
+  assert.notDeepEqual(await pixels(numbered, header), await pixels(source, header));
+  assert.deepEqual(await pixels(plain, body), await pixels(numbered, body));
+  assert.equal(book.number, number);
+});

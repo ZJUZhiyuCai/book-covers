@@ -4,6 +4,8 @@
 
 16 October 2026. Ten new works were made with **Book Covers Skill 1.4.0**, keeping its instructions and renderer unchanged. Each work has text-free PNG artwork, separate Chinese and English typeset PNGs, and a standalone prompt TXT.
 
+Later update: _The Moon and Sixpence_ has been [redesigned following reader feedback](../../revisions/moon-sixpence-2026-10-16.md). Images, observations and hashes here still describe the original trial. Its replay spec now points to the archived original artwork and prompt.
+
 **Typography and file delivery were consistent. Restraint in the generated illustrations still required editorial judgment.** This is an agent-directed case series on one host, not a hands-off benchmark or a general success-rate estimate.
 
 ![The English covers reviewed at 180 px each](thumbnails-en.jpg)

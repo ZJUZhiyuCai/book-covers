@@ -4,6 +4,8 @@ All twenty illustrations in `artwork/` were generated with OpenAI's built-in ima
 
 `catalog.json` records each selected image's SHA-256, creation date, prompt path and origin. Four founding studies were selected from Zhiyu Cai's personal website; six were new studies for Volume I of Book Covers. Two first drafts are retained in `process/`, alongside their revision prompt in `prompts/margin-revision.txt`. Volume II adds ten studies made on 2026-10-16 with unchanged Skill 1.4.0. Its Fortress Besieged first draft is retained in `process/vol-02/`, with its exact refinement prompt and a separately labeled standalone recipe in `prompts/`. Detailed observations, provenance and checks are in [the stability record](docs/stability/vol-02/README.en.md). Re-running a prompt does not guarantee identical pixels.
 
+On 2026-10-16, _The Moon and Sixpence_ received a new generation following the reader's interpretation of clarity and absence in Tahiti. The selected image and exact prompt replace its current gallery assets; its original illustration, prompt and catalog entry are retained as `process/vol-02/moon-sixpence-v1.*`. This later design is separate from the initial stability trial. See [the revision record](docs/revisions/moon-sixpence-2026-10-16.md).
+
 ## Licenses
 
 | Material                                                                                                                                         | License                                                                                       |

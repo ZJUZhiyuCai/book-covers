@@ -33,6 +33,8 @@ export function validateCatalog(data) {
     if (!/^\d{2,3}$/.test(b.number) || numbers.has(b.number))
       throw new Error(`Invalid or duplicate number: ${b.number}`);
     numbers.add(b.number);
+    if (b.coverImprint !== undefined && typeof b.coverImprint !== 'boolean')
+      throw new Error(`Invalid cover imprint setting: ${b.id}`);
     if (!['chinese', 'world'].includes(b.group)) throw new Error(`Invalid group: ${b.id}`);
     for (const lang of LANGS) {
       for (const key of ['title', 'author', 'mood', 'concept', 'restraint', 'alt']) {

@@ -29,6 +29,9 @@ test('invalid, duplicate or incomplete metadata fails before building', () => {
   const ink = structuredClone(data);
   ink.books[0].typography.zh.ink = 'url(https://example.com)';
   assert.throws(() => validateCatalog(ink), /typography ink/);
+  const imprint = structuredClone(data);
+  imprint.books[0].coverImprint = 'false';
+  assert.throws(() => validateCatalog(imprint), /cover imprint/);
   const reversed = structuredClone(data);
   reversed.books.find((b) => b.id === 'white-horse').typography.zh.centers = [414, 570];
   assert.throws(() => validateCatalog(reversed), /right to left/);
