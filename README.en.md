@@ -2,77 +2,122 @@
 
 **A book, distilled to one image.**
 
-[Gallery](https://zjuzhiyucai.github.io/book-covers/en/) · [简体中文](README.md) · [Install](INSTALL.md) · [Releases](https://github.com/ZJUZhiyuCai/book-covers/releases)
+[Gallery](https://zjuzhiyucai.github.io/book-covers/en/) · [简体中文](README.md) · [Install and use](#install-and-use) · [Releases](https://github.com/ZJUZhiyuCai/book-covers/releases)
 
-![Book Covers](press/github-cover.png)
+![Book Covers — Literary covers, prompts and a reusable skill](press/github-cover.png)
 
-An open literary-cover experiment: warm paper, spare printed scenes and separately composed Chinese and English typography. The first collection contains **10 generated illustrations and 20 typeset covers**, plus an independently installable agent skill.
+Book Covers is an open collection of literary covers and a standalone agent skill. It pairs generated illustrations with titles and author names composed from real font files, giving the image and the lettering a deliberate place in the design.
 
-## Three default outputs
+The first collection contains **10 generated illustrations and 20 Chinese and English covers**. Warm paper, spare ink colours and open compositions give the series its visual character. Browse and download the work in the gallery, or install the skill in your own agent to design covers for other books.
 
-| Output | What it contains |
+## What you get
+
+| Output | Contents |
 |---|---|
-| Text-free PNG | The intact selected generated illustration |
-| Typeset PNG | Exact title and author composed from font files, not image-generated letters |
-| Generation prompt | Complete copyable text, also delivered as a TXT file |
+| Text-free PNG | The selected generated illustration, preserved intact |
+| Typeset PNG | The illustration with its title and author rendered from real font files |
+| Generation prompt | Complete copyable text, also supplied as a UTF-8 TXT file |
 
-A single-language brief produces exactly three files. A bilingual brief adds a second typeset PNG while sharing the artwork and prompt. Each gallery page exposes all three output types directly. Editable plans, receipts and WebP previews are optional working materials.
+A cover in one language produces three files. A bilingual brief shares the artwork and prompt, with a separate typeset cover for each language: four files in three categories. Every book page has download links and a prompt-copying control. Layout specs, WebP previews and provenance records are optional extras.
 
-## Install with your agent
+## Install and use
+
+Send this request to Codex or another agent that supports Skills:
 
 ```text
 Please install the Book Covers skill:
 https://github.com/ZJUZhiyuCai/book-covers/tree/main/skills/book-covers
-Use your native installer and include references and runtime.
-Preserve local edits before updating. Tell me how to invoke it.
+Use your native skill installer and include references and runtime.
+If already installed, preserve local edits before updating. Tell me how to invoke it.
 ```
 
-Codex can use its built-in skill installer. There is no manual ZIP download or full gallery checkout. After the host refreshes skill discovery, try:
+Codex can use its built-in `skill-installer`; no manual ZIP download or full gallery checkout is needed. Follow your agent's instructions to refresh its skill list, then try:
 
 ```text
 Use $book-covers to design an English cover for Ordinary World by Lu Yao.
-Deliver text-free PNG, deterministically typeset PNG, and a copyable generation prompt.
+Deliver the text-free PNG, a cover typeset with real fonts, and a copyable generation prompt.
 ```
 
-Other compatible agents can use their native installer or the [Skills CLI](https://github.com/vercel-labs/skills):
+Other compatible agents can also use the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```sh
 npx skills add ZJUZhiyuCai/book-covers --skill book-covers
 ```
 
-Creation needs the host's image generation and local execution. The portable renderer needs Node.js 22+; the agent prepares npm dependencies and downloads only required fonts from pinned, checksum-verified sources. No system font installation. Subsequent composition can run offline. See [installation verification](INSTALL.md) and [runtime usage](skills/book-covers/references/runtime.md). The skill does not install an image model or credentials.
+### Requirements
 
-## Typography and the collection
+- **Image generation:** supplied by the host agent. The skill includes creative guidance, reference images and a renderer, but no image model or API credits.
+- **Local execution:** the renderer needs Node.js 22+ and npm. The agent prepares its dependencies.
+- **Font files:** the renderer downloads pinned open-source fonts as needed and verifies their checksums. No system font installation or manual file search is required. Once dependencies and the fonts needed for a cover are cached, typesetting can run offline.
 
-The approved anchors are Dream of the Red Chamber, Border Town, To the Lighthouse and White Horse Neighs in the West Wind: vertical rhythm, open short titles, roman/italic phrasing and controlled brush strokes. Chinese main titles keep equal character size and weight across lines. Spacing, axes and negative space create the variation.
+See [installation details](INSTALL.md) and [runtime usage](skills/book-covers/references/runtime.md).
 
-v1.4 revises Chinese settings for Ordinary World, The Count of Monte Cristo and How the Steel Was Tempered, plus the English setting for The Old Man and the Sea. All original artwork and the eight approved bilingual anchor covers are preserved. The earlier generated-lettering experiment remains in `process/generated-lettering/` as history, outside the default workflow.
+## Image and type
 
-The other works are Rickshaw Boy and The Metamorphosis. These are independent interpretations, not publisher editions or novel texts. Illustrations use OpenAI's built-in image tool; its exact model version was not exposed. Prompts reproduce a process, not guaranteed identical pixels.
+Each cover begins with a spatial relationship: a path leading to a cave dwelling in the loess hills, or a white horse crossing a broad dune. A few forms carry the story's mood; the empty space leaves room for the title and the reader.
 
-[Typography guide](skills/book-covers/references/typography.md) · [Design and limits](docs/design.md) · [Adversarial review](docs/review-v1.4.0.md)
+Most Chinese titles use Zhuque Fangsong, while *White Horse Neighs in the West Wind* uses the brush forms of Ma Shan Zheng. Characters in a Chinese main title keep the same size and weight, with rhythm shaped by spacing, line breaks and alignment. English titles use Cormorant Garamond roman and its separately drawn italic, with hierarchy following the phrasing.
 
-## Run and export
+The vertical title of *Dream of the Red Chamber*, the open spacing of *Border Town*, the roman/italic pairing of *To the Lighthouse* and the brush strokes of *White Horse* show how the typography can vary within a series.
+
+[Art direction](skills/book-covers/references/art-direction.md) · [Typography guide](skills/book-covers/references/typography.md) · [Design decisions and limits](docs/design.md) · [Review](docs/review-v1.4.0.md)
+
+## Volume I: Stories and space
+
+| Chinese literature | International titles |
+|---|---|
+| *Ordinary World* · Lu Yao | *The Count of Monte Cristo* · Alexandre Dumas |
+| *Border Town* · Shen Congwen | *How the Steel Was Tempered* · Nikolai Ostrovsky |
+| *White Horse Neighs in the West Wind* · Jin Yong | *The Old Man and the Sea* · Ernest Hemingway |
+| *Dream of the Red Chamber* · Cao Xueqin | *The Metamorphosis* · Franz Kafka |
+| *Rickshaw Boy* · Lao She | *To the Lighthouse* · Virginia Woolf |
+
+These are independent cover studies, not publisher editions, and contain no novel texts. The illustrations were made with OpenAI's built-in image tool, which did not expose a specific model version. The repository preserves the original images and actual prompts; reusing a prompt will not necessarily reproduce the same image.
+
+## Local development and export
+
+To work on the gallery or compose a cover from the command line, clone the repository and run these commands from its root:
 
 ```sh
 npm ci
-npm run dev                 # http://127.0.0.1:4187/
-npm test                    # content, layout, output contract, input safety, HTTP behavior
-npm run build               # gallery, twenty typeset PNGs, artwork and prompt downloads
-npm run export              # five portrait sheets and a banner → output/
+npm run dev                 # Local preview: http://127.0.0.1:4187/
+npm test                    # Check catalog, layout, file protection and local server
+npm run build               # Build the gallery, covers and prompt downloads
+npm run export              # Five portrait sheets and a banner → output/
 npm run compose -- --spec examples/complete-cover.json --out output/custom
 ```
 
-Builds run offline after dependencies are prepared. The dev server builds once at startup; rebuild and reload after editing. Set `PORT` to change the port.
+The dev server builds once at startup. After editing, run `npm run build` and reload the browser. Use `PORT=4190 npm run dev` to choose another port. Gallery builds and exports run offline once dependencies are installed.
 
-`compose` accepts books outside the gallery. Copy the example spec, specify the requested languages and exact title/author, and provide artwork and prompt paths relative to that JSON file. Defaults are the three output types; use `--webp` or `--receipt audit.json` for optional extras. Existing outputs require `--force`; source inputs remain protected even then.
+For a book outside the collection, copy the [example spec](examples/complete-cover.json), supply the title, author and line breaks, and set artwork and prompt paths relative to the JSON file. The three output categories are the default; `--webp` adds 640 × 960 previews, and `--receipt audit.json` saves checksums and font provenance. Existing outputs are protected unless `--force` is used; input files remain protected even then.
 
-Source images are 1024 × 1536. Upscaling does not add illustration detail. These are screen-resolution front-cover studies, without print bleed, spine or colour-proofing.
+Source images are **1024 × 1536 pixels**, intended for screen display. Upscaling does not add illustration detail. Print preparation—including trim size, bleed, spine and colour-proofing—is outside the current scope.
 
-## Contribute and reuse
+## Structure and contributions
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Preserve actual generation/edit records and source checksums. The gallery and installed skill share one renderer: fontkit outlines real glyphs and sharp composites them. Local links, source integrity and actual ink bounds are checked before publishing. Static HTML/CSS and small progressive enhancements; no analytics or generation backend.
+New books and design ideas are welcome. The [contribution guide](CONTRIBUTING.md) explains how to preserve actual prompts, original images and revision records. Each new cover should find a literary space of its own.
 
-Code, prompts and skill instructions: [MIT](LICENSE). Original artwork and derivatives: [CC BY 4.0](LICENSE-ARTWORK), to the extent rights can be licensed. Fonts: [OFL](fonts/OFL.txt), with original notices bundled in the repository and skill. See [ASSETS.md](ASSETS.md).
+```text
+skills/book-covers/  Standalone skill, reference images and renderer
+catalog.json        Bilingual metadata, design notes, type plans and source checksums
+artwork/            Original generated illustrations
+prompts/            Actual generation and revision prompts
+process/            Past revisions, experimental inputs and evidence
+src/                Static page templates, styles and interactions
+scripts/            Build, composition, export and local preview
+press/              Shareable collection images
+fonts/              Font files, sources and OFL licenses
+tests/              Content, layout, file protection and server checks
+```
+
+The gallery uses static HTML/CSS and a little JavaScript, with no analytics or online generation backend. It shares a renderer with the skill: `fontkit` extracts glyph outlines and `sharp` composites PNGs, with actual ink bounds checked for clipping and overlap. `subset-font` creates WOFF2 subsets for the interface; GitHub Actions handles tests, builds and deployment.
+
+## License and credits
+
+- Code, prompts and skill instructions: [MIT](LICENSE).
+- Original artwork and derivatives: [CC BY 4.0](LICENSE-ARTWORK), to the extent rights can be licensed.
+- Fonts: [SIL Open Font License 1.1](fonts/OFL.txt), with original notices included in the repository and skill.
+
+See [ASSETS.md](ASSETS.md) for sources and attribution details.
 
 Created and curated by [Zhiyu Cai](https://caizhiyu.com/).
