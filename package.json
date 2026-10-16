@@ -1,6 +1,6 @@
 {
   "name": "book-covers",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "description": "A book, distilled to one image. An open literary-cover skill, collection, and studio.",

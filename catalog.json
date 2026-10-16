@@ -14,7 +14,7 @@
         "en": "Lu Yao"
       },
       "titleLines": {
-        "zh": ["平凡的", "世界"],
+        "zh": ["平凡的世界"],
         "en": ["Ordinary", "World"]
       },
       "mood": {
@@ -46,11 +46,11 @@
       "sha256": "87b06b6d242544a2657a8f911e72b01b403615474024a71b280a7a8e5bc1f53f",
       "typography": {
         "zh": {
-          "mode": "left",
-          "baselines": [242, 402],
-          "offsets": [0, 146],
+          "mode": "centered",
+          "size": 145,
+          "baselines": [325],
           "tracking": 10,
-          "size": 132
+          "ink": "#483c2d"
         },
         "en": {
           "mode": "left",
@@ -105,12 +105,13 @@
       "sha256": "5e29963d53d52ae7f5f30d587dfb6b8aec64efb076c51667f3e28dd7912e2f4c",
       "typography": {
         "zh": {
-          "mode": "left",
-          "baselines": [242, 399],
-          "offsets": [0, 154],
-          "tracking": 10,
-          "ink": "#253d49",
-          "size": 132
+          "mode": "vertical",
+          "size": 116,
+          "centers": [580, 424],
+          "topOffsets": [0, 64],
+          "top": 154,
+          "leading": 126,
+          "ink": "#253d49"
         },
         "en": {
           "mode": "left",
@@ -224,12 +225,11 @@
       "sha256": "434b7402b7527a5805311966c6d9af3f447dac53e7458a794224e404f2748334",
       "typography": {
         "zh": {
-          "mode": "left",
-          "baselines": [245, 399],
-          "offsets": [0, 154],
+          "mode": "centered",
+          "size": 128,
+          "baselines": [256, 417],
           "tracking": 8,
-          "ink": "#344650",
-          "size": 124
+          "ink": "#344650"
         },
         "en": {
           "mode": "left",
@@ -360,9 +360,9 @@
         },
         "en": {
           "mode": "left",
-          "sizes": [70, 128],
-          "baselines": [214, 365],
-          "italicLines": [0],
+          "sizes": [118, 126],
+          "baselines": [250, 405],
+          "italicLines": [1],
           "ink": "#2e4650"
         }
       }

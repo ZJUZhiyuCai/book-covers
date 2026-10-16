@@ -6,7 +6,7 @@ Typography is a required part of a cover deliverable. Start by sketching the tit
 
 ![Chinese and English typography specimens](images/typography.jpg)
 
-Top row: engraved, brush and vertical Chinese setting. Bottom row: English roman/italic contrasts. These are decision examples, not a grid to impose on every book.
+The four approved anchors are 红楼梦, 边城, 到灯塔去 and 白马啸西风. The top row shows Chinese setting; the bottom row shows the corresponding English setting. These are decision examples, not a grid to impose on every book.
 
 ## Choose the voice, then the face
 
@@ -18,7 +18,7 @@ Top row: engraved, brush and vertical Chinese setting. Bottom row: English roman
 | English connective phrase or author | A real italic with its own drawn letterforms | Cormorant Garamond Italic |
 | Chinese author | A quiet engraved or written form with room around a short name | Usually the Chinese title family |
 
-These faces are examples. Another face may better suit the work or the user's preference. The three families above have OFL sources linked below; preserve their notices when distributing font files. The small standalone skill includes specimen images, not font binaries. Load available licensed font files directly; the repository bundles these faces and does not require a system font installation. If files or a renderer are inconvenient, use [generated lettering](generated-lettering.md) instead of making font setup a prerequisite. Never silently substitute and claim the intended face was used.
+These faces are examples. Another face may better suit the work or the user's preference. The three families above have OFL sources linked below; preserve their notices when distributing font files. The standalone skill includes a portable renderer, specimens, pinned font hashes and OFL notices. It downloads only needed font files into a local cache and reads them directly; no OS font installation. See [runtime usage](runtime.md). Never silently substitute and claim the intended face was used.
 
 Avoid fake slanting, horizontal stretching, faux bold and random glyph rotations. A brush font is not automatically more artistic, and neither a title nor an author's name should resemble an invented personal signature.
 
@@ -26,7 +26,7 @@ Avoid fake slanting, horizontal stretching, faux bold and random glyph rotations
 
 Start with exact wording and meaningful breaks. Choose a shape that responds to the picture's mass, horizon and empty field.
 
-- **Equal-scale Chinese:** `平凡的世界`, `基督山伯爵` and `钢铁是怎样炼成的` are each one title. Use one character size and weight throughout, including when wrapping as `平凡的 / 世界` or `钢铁是怎样 / 炼成的`. A modest offset, line spacing or brush rhythm can shape the title without inventing a word hierarchy. Do not stretch a short line to match a long one or shrink only the longest line; fit the title as a unit.
+- **Equal-scale Chinese:** `平凡的世界`, `基督山伯爵` and `钢铁是怎样炼成的` are each one title. Use one character size and weight throughout, whether on one line (`平凡的世界`) or wrapped (`钢铁是怎样 / 炼成的`). A clear axis, line spacing or brush rhythm can shape the title without inventing a word hierarchy. Do not stretch a short line to match a long one or shrink only the longest line; fit the title as a unit.
 - **Open, short Chinese:** `边城` can occupy one generous line. Increase size before scattering two characters across the full page.
 - **Vertical Chinese:** `红楼梦` can form one upright column; `白马 / 啸西风` can form two, read down each column and from right to left. Keep glyphs upright. Do not rotate a horizontal string by 90°. Handle punctuation explicitly if it occurs; the reference renderer's vertical mode currently targets short unpunctuated Chinese titles.
 - **English phrase hierarchy:** in `The Count of / Monte Cristo`, the lighter italic phrase yields to the principal name. In `Ordinary / World`, a restrained italic second line creates a different rhythm. Use a few deliberate changes, not alternating fonts on every word.
@@ -61,7 +61,7 @@ The Book Covers repository uses `titleLines.zh/en` for semantic text breaks, and
 
 The renderer derives the secondary title and author roles and checks real glyph bounds. These plans are editable starting points, not a universal layout algorithm. `npm test` and `npm run build` verify all current covers; still inspect the rendered output visually. Font outlines and positions are stable, but different native rasterizers can produce tiny antialiasing differences across operating systems.
 
-For a book outside the public catalog, the repository also provides `npm run compose -- --spec book.json --out covers`. Start from `examples/complete-cover.json`: exact bilingual titles/authors, meaningful title lines, an artwork path relative to that JSON file, and optional typography plans. It writes two complete PNGs, two WebP previews and a receipt with artwork/font provenance. It rejects missing names, changed titles, overlapping type and images that are not 1024 × 1536. Existing files require an explicit `--force`. A website consumes the exported images, not a runtime dependency on this tool.
+For a book outside the public catalog, use the portable [runtime](runtime.md), also exposed as `npm run compose` in the gallery. It accepts one or both requested languages and emits three output types: intact text-free PNG, typeset PNG per language, and the supplied complete prompt TXT. WebP and a provenance receipt are opt-in. Existing outputs are protected, and input images are never overwritten.
 
 ## Font sources
 

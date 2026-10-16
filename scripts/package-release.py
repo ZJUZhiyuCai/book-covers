@@ -11,7 +11,9 @@ OUT = ROOT / 'output' / 'releases'
 
 
 def files_under(folder):
-    return sorted(p for p in (ROOT / folder).rglob('*') if p.is_file())
+    return sorted(p for p in (ROOT / folder).rglob('*') if p.is_file()
+                  and not any(part in {'node_modules', '.cache', '.DS_Store', '__pycache__'}
+                              for part in p.relative_to(ROOT).parts))
 
 
 def archive(name, entries):

@@ -1,5 +1,7 @@
 # Release verification
 
+Current verification: [v1.4 review](review-v1.4.0.md). The sections below are historical evidence, not current workflow instructions.
+
 Local checks for v1.0 performed on 2026-10-16 (Asia/Shanghai):
 
 - `npm test`: eight passing tests, covering bilingual metadata, source hashes, rendering bounds, missing glyphs, unchanged illustration pixels and HTTP behavior.

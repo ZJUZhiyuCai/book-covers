@@ -1,0 +1,20 @@
+{
+  "changedPixels": 14056,
+  "changesOutsideTextRegions": 0,
+  "changedPixelBounds": {
+    "minX": 344,
+    "maxX": 679,
+    "minY": 184,
+    "maxY": 1473
+  },
+  "nativeSize": [
+    1024,
+    1536
+  ],
+  "visualInspection": {
+    "source": true,
+    "typesetFullSize": true,
+    "typeset180px": true,
+    "reversedTitleReproduction": true
+  }
+}

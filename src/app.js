@@ -34,15 +34,23 @@ for (const link of document.querySelectorAll('[data-locale]'))
   });
 
 for (const button of document.querySelectorAll('[data-copy]')) {
+  const original = button.textContent;
+  let resetTimer;
+  button.setAttribute('aria-live', 'polite');
   button.addEventListener('click', async () => {
-    const original = button.textContent;
+    clearTimeout(resetTimer);
     try {
       await navigator.clipboard.writeText(button.dataset.copy);
       button.textContent = zh ? '已复制 ✓' : 'Copied ✓';
     } catch {
-      button.textContent = zh ? '请选中上方文字复制' : 'Select the text above to copy';
+      const details = document.getElementById(button.dataset.promptToggle);
+      if (details) {
+        details.open = true;
+        details.querySelector('pre')?.focus();
+      }
+      button.textContent = zh ? '请选中提示词复制' : 'Select the prompt to copy';
     }
-    setTimeout(() => {
+    resetTimer = setTimeout(() => {
       button.textContent = original;
     }, 2500);
   });

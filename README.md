@@ -2,24 +2,55 @@
 
 **把一本书的余韵，留在一幅画里。**
 
-[在线画廊](https://zjuzhiyucai.github.io/book-covers/) · [English](README.en.md) · [安装 Skill](#安装-skill) · [下载发布包](https://github.com/ZJUZhiyuCai/book-covers/releases/latest)
+[在线画廊](https://zjuzhiyucai.github.io/book-covers/) · [English](README.en.md) · [安装 Skill](#安装-skill) · [发布记录](https://github.com/ZJUZhiyuCai/book-covers/releases)
 
 ![Book Covers — 文学封面、提示词与可复用 Skill](press/github-cover.png)
 
-Book Covers 是一个开放的文学封面实验：用暖白纸面、少量墨色和有情绪的空间，重新想象中外文学作品的封面。首辑包含 **10 张原创生成插画、20 张中英文排版封面**，以及可以继续创作的 Agent Skill。
+Book Covers 是一个开放的文学封面实验：暖白纸面、少量墨色、有情绪的空间，以及单独设计的中英文标题。首辑包含 **10 张原创生成插画、20 张排版封面**，和可独立安装的 Agent Skill。
 
-从《平凡的世界》的一条小路，到《老人与海》的一叶小舟，先找到故事里的关系，再决定画什么。
+## 三项默认交付
 
-## 可以直接使用什么
+| 输出 | 内容 |
+|---|---|
+| 无字 PNG | 保留完整的生成插画 |
+| 带字 PNG | 用真实字体文件排入准确书名与作者，文字不交给生图模型绘制 |
+| 生图提示词 | 可直接复制的完整文本，同时提供 TXT 文件 |
 
-- **封面集**：每本书都有独立页面、构图说明、无字原图与中英文 PNG 下载。
-- **生成方法**：[book-covers](skills/book-covers/SKILL.md) 包含视觉规范、四张参考图、完整提示词模板和审图标准；可独立安装。
-- **完整封面是默认交付**：原创插画、艺术性书名和作者一起导出。无字底图只是中间素材，只有明确要求时才单独交付。
-- **排版与导出**：书名和作者单独排版后合成完整图片，字体转为路径，不依赖浏览器字体。
-- **完整过程**：实际使用的提示词、生成记录、原图校验值，以及两张封面修正前的首稿。
-- **展示素材**：五张 1440 × 1920 竖版作品图与 GitHub 横版介绍图，见 [press/](press/)。
+单语请求得到三个文件。双语请求分别排版，增加另一语言的带字 PNG；原图和提示词共用。每本书的画廊页面都有直接下载与复制入口。过程记录、可编辑排版方案和 WebP 预览可另行保留，不混入默认三项交付。
 
-插画使用 OpenAI 内置生图工具制作；图像生成具有随机性。本项目开放的是可复用的方法和实际素材，不承诺用同一提示词生成完全相同的像素。画廊本身不调用生图 API，也不需要密钥。
+## 安装 Skill
+
+**把这段话交给 Codex 或其他支持 Skills 的 Agent：**
+
+```text
+请安装 Book Covers skill：
+https://github.com/ZJUZhiyuCai/book-covers/tree/main/skills/book-covers
+使用你原生的技能安装方式，包含 references 和 runtime；如已安装，保留本地修改后更新。
+完成后告诉我调用方式。
+```
+
+Codex 可使用内置 `skill-installer`。无需手动下载 ZIP，也不用克隆整个画廊。安装后，在宿主刷新技能发现的下一轮对话中使用：
+
+```text
+使用 $book-covers 为路遥的《平凡的世界》设计中文封面。
+交付无字 PNG、含书名与作者的非生图排版 PNG、可复制的生图提示词。
+```
+
+其他 Agent 可用原生安装器，或 [Skills CLI](https://github.com/vercel-labs/skills)：
+
+```sh
+npx skills add ZJUZhiyuCai/book-covers --skill book-covers
+```
+
+创作需要宿主的生图能力和本地执行能力。随 Skill 安装的排版器需要 Node.js 22+；Agent 用 npm 准备依赖，自动下载有固定版本和 SHA-256 校验的开源字体。不要求安装系统字体，也不要求用户寻找字体文件。首次准备后可离线排版。详见 [安装核验](INSTALL.md) 与 [排版工具用法](skills/book-covers/references/runtime.md)。安装 Skill 不会附赠图像模型或 API 凭据。
+
+## 字体与构图
+
+《红楼梦》的竖排、《边城》的疏朗短题、《到灯塔去》的标题节奏，以及《白马啸西风》的毛笔字形，是当前保留的排版基准。中文主标题的字等大、等重；艺术感来自笔形、间距、轴线和留白。英文采用 Cormorant 正体与真正的斜体，按语义决定层级。
+
+[排版参考](skills/book-covers/references/typography.md) · [设计判断与局限](docs/design.md) · [本轮审查](docs/review-v1.4.0.md)
+
+v1.4 调整《平凡的世界》《基督山伯爵》《钢铁是怎样炼成的》的中文排版，以及《老人与海》的英文排版；保留全部原始插画与上述四套认可的中英文排版。过去的整图生成文字实验保留在 `process/generated-lettering/`，供追溯，已退出默认工作流。
 
 ## 第一辑：故事与留白
 
@@ -31,98 +62,46 @@ Book Covers 是一个开放的文学封面实验：用暖白纸面、少量墨�
 | 《红楼梦》· 曹雪芹 | 《变形记》· 弗朗茨·卡夫卡 |
 | 《骆驼祥子》· 老舍 | 《到灯塔去》· 弗吉尼亚·伍尔夫 |
 
-四张奠基作品来自个人网站书架的视觉探索；其余六张为本项目新作。这些是独立设计实验，不对应某个出版版本，也不提供小说全文。
-
-## 安装 Skill
-
-**把下面这段话发给 Codex 或其他支持 Skills 的 Agent，让它完成安装：**
-
-```text
-请安装 Book Covers skill：
-https://github.com/ZJUZhiyuCai/book-covers/tree/main/skills/book-covers
-使用你原生的技能安装方式，包含引用素材；如已安装，保留本地修改后更新。
-完成后告诉我调用方式。
-```
-
-Codex 可通过内置 `skill-installer` 安装这个 GitHub 目录。安装单元只有 Skill 和它的参考素材；无需手动下载 ZIP、安装画廊依赖或系统字体。完成后，在下一轮对话中试试：
-
-```text
-使用 $book-covers 为路遥的《平凡的世界》设计一张完整封面。
-书名五个字等大、等重，把作者也融入画面。
-```
-
-其他 Agent 可以使用原生安装器，或让 Agent 执行 [Skills CLI](https://github.com/vercel-labs/skills) 命令并选择对应宿主：
-
-```sh
-npx skills add ZJUZhiyuCai/book-covers --skill book-covers
-```
-
-这条可选 CLI 路径需要 Node/npm；Skill 本身不需要。完整的 Agent 安装说明、更新与核验方式见 [INSTALL.md](INSTALL.md)。实际创作需要宿主具备生图能力，安装 Skill 不会另外提供图像模型。
-
-## 字体不应成为门槛
-
-- **直接生成完整书封**：没有方便的字体文件或排版工具时，由生图工具同时生成插画、准确书名和作者，逐字核对成品。无需安装字体。
-- **已有字体文件时排版**：本仓库直接读取随附的 OFL 字体，输出稳定、可编辑的文字层；不安装到系统，也不需要用户找字体。参考画廊继续使用这条路径，保留原插画像素。
-
-中文主标题的字等大、等重，换行时也不把“平凡的”缩小或把“世界”放大。艺术感来自笔形、间距、位置和留白。译名与作者可以有独立层级；英文仍按语义安排正斜体与节奏。
-
-[查看无需字体的《平凡的世界》实测示例](process/generated-lettering/ordinary-world-zh.png) · [完整提示词](prompts/ordinary-world-generated-lettering.txt) · [生成记录](process/generated-lettering/provenance.json)。此示例的文字由生图工具绘制；参考画廊里的对应作品仍使用字体文件排版。
+这些是独立设计实验，非出版社版本，不提供小说全文。插画由 OpenAI 内置生图工具生成；具体模型版本未由工具提供。开放的是实际素材与可复用过程，不承诺相同提示词生成相同像素。
 
 ## 本地运行与导出
 
-Node.js 22+。安装依赖后，构建和导出均可离线执行。
-
 ```sh
 npm ci
-npm run dev
-# http://127.0.0.1:4187/
-```
-
-开发服务启动时构建一次。编辑内容后运行 `npm run build` 并刷新浏览器；可通过 `PORT=4190 npm run dev` 更换端口。
-
-```sh
-npm test                    # 元数据、渲染、源图完整性、HTTP 行为
-npm run build               # 双语静态画廊、WebP 预览、20 张 PNG 下载
-npm run export              # 五张竖版作品图 + 横版介绍图 → output/
-npm run export -- --book ordinary-world --lang en
-npm run export -- --book border-town --lang zh --width 2048
+npm run dev                 # http://127.0.0.1:4187/
+npm test                    # 内容、排版、三项交付、源图保护、HTTP 行为
+npm run build               # 画廊、20 张带字 PNG、无字原图与可复制提示词
+npm run export              # 五张竖版作品图与横版介绍图 → output/
 npm run compose -- --spec examples/complete-cover.json --out output/custom
 ```
 
-`compose` 可处理画廊之外的书籍：复制示例 JSON，填写准确的中英文书名、作者、断行和插画路径即可。插画路径相对于 JSON 所在目录；输出两种语言的完整 PNG、WebP 与来源记录。不会自动加入公开画廊，也不会默认覆盖已有成品。
+开发服务启动时构建一次，修改后执行 `npm run build` 并刷新。`PORT=4190 npm run dev` 可换端口。画廊依赖准备完成后，构建与导出不联网。
 
-封面原始尺寸为 1024 × 1536。更大的导出尺寸属于放大排版输出，不会凭空增加插画细节。`npm run export -- --help` 查看参数。
+`compose` 也能处理公开目录以外的书。复制示例 JSON，填写所需语言的书名、作者、断行，以及相对该 JSON 的插画和提示词路径。默认输出三类文件；`--webp` 与 `--receipt audit.json` 按需添加预览和来源记录。已有成品默认受保护，`--force` 也不能覆盖输入文件。
 
-## 继续做一本书
+源图为 1024 × 1536；放大导出不会增加插画细节。封面当前适合屏幕展示，尚不包含实体印刷需要的出血、书脊和色彩打样。
 
-1. 用 Skill 提炼 brief，再调用生图工具。保持标题区域和作者区域清楚。
-2. 将无字 PNG 放入 `artwork/`，实际提示词放入 `prompts/`。
-3. 在 `catalog.json` 添加中英文书目信息、断行、构图说明和生成记录。写入源文件 SHA-256。
-4. 运行检查与构建，查看大图和 180 px 缩略图，确认画面、文字和系列关系。
+## 贡献与实现
 
-具体字段及贡献约定见 [CONTRIBUTING.md](CONTRIBUTING.md)。一张新作应带来不同的文学空间；不需要为了数量重复已有构图。
+[贡献流程](CONTRIBUTING.md)要求保留实际提示词、源图和修正记录。每张新作应增加一个不同的文学空间，而不是为数量重复景物。
 
 ```text
-skills/book-covers/  可独立安装的视觉 Skill
-catalog.json              中英文书目、设计意图、图片校验值
-artwork/                  10 张保留原样的生成插画
-prompts/                  实际生成与修正提示词
-process/                  两次作者留白修正的输入图
-src/                      静态页面、样式、渐进增强交互
-scripts/                  生成页面、字体排版、导出与本地预览
-press/                    可分享作品图与文案草稿
-fonts/                    中英文字体、来源校验值与 OFL 许可
-tests/                    内容、渲染与服务行为验证
+skills/book-covers/  独立 Skill、参考图与便携排版工具
+catalog.json        中英文书目、设计意图、排版方案和源图校验值
+artwork/            10 张原始生成插画
+prompts/            实际生成与修正提示词
+process/            历史修正、实验输入与证据
+src/                静态页面、样式与渐进增强交互
+scripts/            构建、导出、本地预览
+press/              可分享作品图
+fonts/              画廊使用的字体文件、来源与 OFL 许可
+tests/              内容、导出与服务验证
 ```
 
-## 设计与实现
-
-参考画廊的插画与文字分层保存。插画负责空间、质感与情绪；排版器负责准确的字形、语言、行宽和留白。中文整组书名等大等重，中英文分别设计字形和断行：朱雀仿宋的刻本气质、少量毛笔竖排，以及 Cormorant 正斜体的节奏。书名、译名、作者各有层次，具体选择写入可编辑的排版数据。下载文件使用字体路径，网页字体按实际字符生成小型 WOFF2 子集。
-
-画廊使用静态 HTML/CSS 和少量原生 JavaScript。筛选和图层切换是渐进增强；书目、作品页面与下载链接无需客户端框架。构建时验证每张源图的校验值和全部本地链接。GitHub Actions 运行检查，再部署到 GitHub Pages。更多取舍见 [设计说明](docs/design.md)。
+画廊使用静态 HTML/CSS 和少量 JavaScript，没有分析追踪或生图后端。画廊与独立 Skill 共用排版核心：fontkit 生成字形路径，sharp 合成 PNG；实际墨迹边界用于检查重叠与越界。界面字体用 subset-font 制作小型 WOFF2。GitHub Actions 运行测试、构建和发布。
 
 ## 许可与致谢
 
-代码、提示词和 Skill 指令使用 [MIT](LICENSE)。原创生成插画及其衍生图使用 [CC BY 4.0](LICENSE-ARTWORK)，以贡献者可许可的权利为限。字体使用 [OFL 1.1](fonts/OFL.txt)。完整素材来源与署名方式见 [ASSETS.md](ASSETS.md)。
+代码、提示词和 Skill：[MIT](LICENSE)。原创插画及衍生图：[CC BY 4.0](LICENSE-ARTWORK)，以可许可权利为限。字体：[OFL](fonts/OFL.txt)，各字体原始声明随项目与 Skill 提供。完整来源和署名方式见 [ASSETS.md](ASSETS.md)。
 
-创作与策划：[蔡志宇 Zhiyu Cai](https://caizhiyu.com/)。字体来源与许可见 [ASSETS.md](ASSETS.md)。
+创作与策划：[蔡志宇 Zhiyu Cai](https://caizhiyu.com/)。

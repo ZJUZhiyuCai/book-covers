@@ -1,0 +1,53 @@
+{
+  "baseline": "6c71356c86f8a0b533012cceffcd1c4dbc9fd807",
+  "before": {
+    "ordinary-world-zh": "1f5525a0ebd3c743fe7272f4c8272b3866814949fdf82800e2ef825c2b680aba",
+    "ordinary-world-en": "df87d216a4f09b7092b77e240480655fc76f7605a380a522f3719f9d0d1ab955",
+    "monte-cristo-zh": "98522aade864f631c098b853c2e9e8a04556b7d7dbef0cc6991c6a381fdf5651",
+    "monte-cristo-en": "85cc7618d39d3be7e2e4b3a1374555439f37bb93f17898aa473a6c95b661582d",
+    "border-town-zh": "7d1adbe9d2ceca802f726be90ec6e92b39b0fcd2123dcbe3b64d55ceb5e86e9c",
+    "border-town-en": "f7c6b73dd191edc1c406217a1f0d9a2ac6edd7ff2b46b204a6d49bd65320d600",
+    "steel-tempered-zh": "8ec19aa6a999f21ce442ae13a47f9a31b2d878ce1de979d4c7b231dc877f2e3a",
+    "steel-tempered-en": "d02201af72537b95dbf445735c1e2be4e25261b25bc8c100e937ab99c0a1bf09",
+    "white-horse-zh": "cf15d6639ca066893401872461520a2210b66a50b026736e7daf6daf7d9e123d",
+    "white-horse-en": "aa61719c5dcc5c9975792da2d79d49e43d35541782aa821a21442360924008d2",
+    "old-man-sea-zh": "9cd6119a276e07a65860b9baecada15ff975fdc04e76d0d1d1b70a2f1ae0394b",
+    "old-man-sea-en": "e72504c888c41fb85396d3980cb4f4f0f364a7d9c3c5cc36fcb09d3065f16a96",
+    "red-chamber-zh": "0cf066aeeb7819cc045cfaf7a04d768743cf76561564148415bad2c6e990ea46",
+    "red-chamber-en": "e3ce2a5a378ef3a1002104f81e40789827c977abdac90023e19befcc2d24f68f",
+    "metamorphosis-zh": "27da0bf1ef6b34d46540b11d905f0a3ad0727e8d11193ad702ce2d893e8fee43",
+    "metamorphosis-en": "5ebd3f22473ae98bec946cc14c193a6ad543c3950b50d77e22482dc706b82377",
+    "rickshaw-boy-zh": "ad6e32a6a1bc9d0c754c581771c5bd64366bcbfde2fedaa1499fe53dd1d396a0",
+    "rickshaw-boy-en": "f6978e83b259550f71c46c0faca89cc90cc1dc7080f4de76dc7e5ac635bdb0ad",
+    "to-the-lighthouse-zh": "d0ff7e13b8a2a8d40e95fa1d55f23afc4d6c9d39d1f2f094e920ca36ae72610a",
+    "to-the-lighthouse-en": "9e1a52e0b82f285ae30702284fb23a660efe4c5260e0be809e1d6b359d5b453b"
+  },
+  "after": {
+    "ordinary-world-zh": "d062f06766f6e9854c92f8bcd944aaf7ac7c01d4ea094270dfe7f42a50f16bc0",
+    "ordinary-world-en": "df87d216a4f09b7092b77e240480655fc76f7605a380a522f3719f9d0d1ab955",
+    "monte-cristo-zh": "6a1c6d3fd138c66a27398ac5512d391b8fa875a426ffc211cae906c3dbb2f6ad",
+    "monte-cristo-en": "85cc7618d39d3be7e2e4b3a1374555439f37bb93f17898aa473a6c95b661582d",
+    "border-town-zh": "7d1adbe9d2ceca802f726be90ec6e92b39b0fcd2123dcbe3b64d55ceb5e86e9c",
+    "border-town-en": "f7c6b73dd191edc1c406217a1f0d9a2ac6edd7ff2b46b204a6d49bd65320d600",
+    "steel-tempered-zh": "6abc7050eddf95f8591e9e114169e4c504dad845ebbfa5b556d81012c882aad2",
+    "steel-tempered-en": "d02201af72537b95dbf445735c1e2be4e25261b25bc8c100e937ab99c0a1bf09",
+    "white-horse-zh": "cf15d6639ca066893401872461520a2210b66a50b026736e7daf6daf7d9e123d",
+    "white-horse-en": "aa61719c5dcc5c9975792da2d79d49e43d35541782aa821a21442360924008d2",
+    "old-man-sea-zh": "9cd6119a276e07a65860b9baecada15ff975fdc04e76d0d1d1b70a2f1ae0394b",
+    "old-man-sea-en": "139d00a1a519245908f155321e0b266a8b1213d2a1e155fb4fe7770d6d0c0462",
+    "red-chamber-zh": "0cf066aeeb7819cc045cfaf7a04d768743cf76561564148415bad2c6e990ea46",
+    "red-chamber-en": "e3ce2a5a378ef3a1002104f81e40789827c977abdac90023e19befcc2d24f68f",
+    "metamorphosis-zh": "27da0bf1ef6b34d46540b11d905f0a3ad0727e8d11193ad702ce2d893e8fee43",
+    "metamorphosis-en": "5ebd3f22473ae98bec946cc14c193a6ad543c3950b50d77e22482dc706b82377",
+    "rickshaw-boy-zh": "ad6e32a6a1bc9d0c754c581771c5bd64366bcbfde2fedaa1499fe53dd1d396a0",
+    "rickshaw-boy-en": "f6978e83b259550f71c46c0faca89cc90cc1dc7080f4de76dc7e5ac635bdb0ad",
+    "to-the-lighthouse-zh": "d0ff7e13b8a2a8d40e95fa1d55f23afc4d6c9d39d1f2f094e920ca36ae72610a",
+    "to-the-lighthouse-en": "9e1a52e0b82f285ae30702284fb23a660efe4c5260e0be809e1d6b359d5b453b"
+  },
+  "changed": [
+    "ordinary-world-zh",
+    "monte-cristo-zh",
+    "steel-tempered-zh",
+    "old-man-sea-en"
+  ]
+}

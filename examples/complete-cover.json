@@ -1,7 +1,6 @@
 {
   "id": "ordinary-world",
   "number": "01",
-  "artwork": "../artwork/ordinary-world.png",
   "title": {
     "zh": "平凡的世界",
     "en": "Ordinary World"
@@ -11,24 +10,24 @@
     "en": "Lu Yao"
   },
   "titleLines": {
-    "zh": ["平凡的", "世界"],
+    "zh": ["平凡的世界"],
     "en": ["Ordinary", "World"]
   },
   "typography": {
     "zh": {
-      "mode": "left",
-      "baselines": [242, 402],
-      "offsets": [0, 146],
+      "mode": "centered",
+      "size": 145,
+      "baselines": [325],
       "tracking": 10,
-      "ink": "#483c2d",
-      "size": 132
+      "ink": "#483c2d"
     },
     "en": {
       "mode": "left",
-      "sizes": [140, 156],
-      "baselines": [265, 423],
-      "italicLines": [1],
-      "ink": "#483c2d"
+      "sizes": [136, 154],
+      "baselines": [250, 402],
+      "italicLines": [1]
     }
-  }
+  },
+  "artwork": "../artwork/ordinary-world.png",
+  "prompt": "../prompts/ordinary-world.txt"
 }

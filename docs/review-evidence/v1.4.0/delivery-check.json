@@ -1,0 +1,92 @@
+{
+  "node": "v26.5.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "files": [
+    {
+      "path": "inputs/border-town.png",
+      "bytes": 2646302,
+      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5",
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 2646302,
+        "width": 1024,
+        "height": 1536,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": false,
+        "autoOrient": {
+          "width": 1024,
+          "height": 1536
+        }
+      }
+    },
+    {
+      "path": "deliverables/border-town-artwork.png",
+      "bytes": 2646302,
+      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5",
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 2646302,
+        "width": 1024,
+        "height": 1536,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": false,
+        "autoOrient": {
+          "width": 1024,
+          "height": 1536
+        }
+      }
+    },
+    {
+      "path": "deliverables/border-town-zh.png",
+      "bytes": 2825607,
+      "sha256": "29c1e8baf4160e21d107d17c1589f24e6475d2612cf0f7883a05a31daef4944b",
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 2825607,
+        "width": 1024,
+        "height": 1536,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 1536
+        }
+      }
+    },
+    {
+      "path": "inputs/border-town.txt",
+      "bytes": 1698,
+      "sha256": "0b4611c47c27983b1d6b0b7aa75ac222a9436c7cc6c8ee6cc7006b98acc11f06"
+    },
+    {
+      "path": "deliverables/border-town-prompt.txt",
+      "bytes": 1698,
+      "sha256": "0b4611c47c27983b1d6b0b7aa75ac222a9436c7cc6c8ee6cc7006b98acc11f06"
+    }
+  ]
+}

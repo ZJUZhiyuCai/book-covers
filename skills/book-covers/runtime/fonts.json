@@ -1,0 +1,52 @@
+[
+  {
+    "family": "Noto Serif SC",
+    "file": "fonts/NotoSerifSC.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+    "license": "fonts/OFL.txt",
+    "sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+    "face": "noto",
+    "download": "https://raw.githubusercontent.com/ZJUZhiyuCai/book-covers/6c71356c86f8a0b533012cceffcd1c4dbc9fd807/fonts/NotoSerifSC.ttf",
+    "bundledLicense": "licenses/noto-OFL.txt"
+  },
+  {
+    "family": "Zhuque Fangsong v0.212",
+    "file": "fonts/zhuque/ZhuqueFangsong-Regular.ttf",
+    "source": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip",
+    "license": "fonts/zhuque/OFL.txt",
+    "sha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
+    "face": "zhuque",
+    "download": "https://raw.githubusercontent.com/ZJUZhiyuCai/book-covers/6c71356c86f8a0b533012cceffcd1c4dbc9fd807/fonts/zhuque/ZhuqueFangsong-Regular.ttf",
+    "bundledLicense": "licenses/zhuque-OFL.txt"
+  },
+  {
+    "family": "Cormorant Garamond",
+    "file": "fonts/cormorant/CormorantGaramond.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf",
+    "license": "fonts/cormorant/OFL.txt",
+    "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+    "face": "cormorant",
+    "download": "https://raw.githubusercontent.com/ZJUZhiyuCai/book-covers/6c71356c86f8a0b533012cceffcd1c4dbc9fd807/fonts/cormorant/CormorantGaramond.ttf",
+    "bundledLicense": "licenses/cormorant-OFL.txt"
+  },
+  {
+    "family": "Cormorant Garamond Italic",
+    "file": "fonts/cormorant/CormorantGaramond-Italic.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/CormorantGaramond-Italic%5Bwght%5D.ttf",
+    "license": "fonts/cormorant/OFL.txt",
+    "sha256": "0f48ea6abb2084537854f7174c470991a463b13036309e3b50a81511611c530d",
+    "face": "cormorant-italic",
+    "download": "https://raw.githubusercontent.com/ZJUZhiyuCai/book-covers/6c71356c86f8a0b533012cceffcd1c4dbc9fd807/fonts/cormorant/CormorantGaramond-Italic.ttf",
+    "bundledLicense": "licenses/cormorant-OFL.txt"
+  },
+  {
+    "family": "Ma Shan Zheng",
+    "file": "fonts/mashanzheng/MaShanZheng-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+    "license": "fonts/mashanzheng/OFL.txt",
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+    "face": "brush",
+    "download": "https://raw.githubusercontent.com/ZJUZhiyuCai/book-covers/6c71356c86f8a0b533012cceffcd1c4dbc9fd807/fonts/mashanzheng/MaShanZheng-Regular.ttf",
+    "bundledLicense": "licenses/mashanzheng-OFL.txt"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "book-covers-runtime",
+  "version": "1.4.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "fontkit": "2.0.4",
+    "sharp": "0.35.5"
+  }
+}

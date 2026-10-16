@@ -1,75 +1,60 @@
 ---
 name: book-covers
-description: Design restrained literary covers with warm paper, spare printmaking imagery, and expressive Chinese or English typography. Use for literary cover series, reading-journal covers, or improving title and author lettering in the Book Covers style.
+description: Design restrained literary book covers with warm paper, spare printmaking imagery and expressive Chinese or English typography. Deliver text-free PNG artwork, a PNG with deterministically typeset title and author, and a copyable generation prompt. Use for literary covers, reading-journal covers or revisions in the Book Covers style.
 ---
 
 # Book Covers
 
-Turn a book's emotional tension into one inhabitable image. This is a particular editorial direction, not a universal rule for good covers. Respect a user's requested format, palette and subject.
+Turn a book's emotional tension into one inhabitable image, then compose its exact title and author. This is a particular editorial direction, not a universal rule for good covers. Respect the user's format and preserve approved artwork during type-only revisions.
 
-## Deliver a complete cover
+## Three outputs, by default
 
-A request for a **book cover** means a finished image with the **exact book title and author integrated into its composition**. Make that the default, even when the user does not repeat those requirements. A text-free illustration is an intermediate layer, not a finished cover. Deliver artwork alone only when the user explicitly asks for it.
+1. **Text-free PNG:** the selected generated illustration, preserved intact.
+2. **Typeset PNG:** that illustration plus the exact title and author, composed from real font files. Do not generate the letters with the image model or substitute browser text above an image.
+3. **Generation prompt:** a complete, standalone prompt for the text-free illustration, provided as a UTF-8 `.txt` file **and a fenced text block for copying**. No unresolved placeholders or private paths.
 
-Resolve the title, author and intended language from the request and existing project. In a bilingual collection, deliver a separately composed cover for each language. Plan the title silhouette and author position before generating the picture; assess the picture and lettering together. More decorative type cannot rescue an image with nowhere for the words to live.
+Use the requested language. Do not invent an English title just to satisfy a template. If both languages are requested, supply separate Chinese and English typeset PNGs; the shared artwork and prompt remain single files. That is four files in three categories. Keep specs and audit receipts as working material unless requested; do not bury the three deliverables in a large technical bundle.
 
-## Find the image
+If an explicit request asks for image-generated lettering, treat it as an additional experimental variant, not a replacement for the deterministic typeset PNG. A host missing image generation or image export cannot complete the contract: retain the usable work and state exactly what remains missing.
 
-Identify the work and author. If the title is ambiguous, resolve it before choosing imagery. Use the user's description or reliable knowledge of the work; verify unfamiliar plot details rather than inventing them. Do not claim a scene occurs in the book when it is your visual interpretation.
+## Find the image and title shape together
 
-Write a compact design brief: **emotional tension → spatial scene → one visual decision → what to leave out**. An interpretation such as “smallness against resolve → a small boat within a large sea” is more useful than a list of objects from the title.
+Resolve the work, author and exact wording from the request and project. Verify unfamiliar plot details instead of inventing them. Keep visual interpretation distinct from claims about the story.
 
-Prefer relationships that can carry meaning: a path toward a doorway, tracks into snow, a horse small within a desert, water around an island. A single object can work when its scale, placement and surroundings create a story. A floating dragon emblem, crossed weapons, or an isolated prop often loses that depth in this series. Do not simply ban all animals or objects.
+Write a compact brief: **emotional tension → spatial relationship → title silhouette → what to leave out**. A small boat within a large sea says more than a list of objects. A path, doorway, bank or shadow is useful only when its relation carries meaning; do not repeat one mechanically across unrelated books.
 
-Read [the visual reference](references/art-direction.md) when matching the series. Inspect the four small reference images in `references/images/` when image viewing is available. They are original generated studies, not publisher covers to imitate.
+Read [art direction](references/art-direction.md) and inspect relevant reference images. Before a type revision, read [typography direction](references/typography.md) and inspect `references/images/typography.jpg`. The approved typography anchors are **红楼梦, 边城, 到灯塔去 and 白马啸西风**. Their useful qualities are distinct: upright vertical rhythm, open short-title spacing, English roman/italic phrasing, and controlled brush strokes. Preserve an accepted treatment unless the new request calls for changing it.
 
-## Choose a production route
+For a weaker title, compare two or three small layout studies on the same artwork. Prefer a clear axis, meaningful line break or calmer spacing to random offsets or extra decoration. All characters in one Chinese main title use the same size and weight, including across lines. Translation and author may be secondary. English hierarchy follows syntax, not arbitrary word-by-word font changes.
 
-The skill needs the host's image tool, not a font installation or a clone of the whole gallery. Read [typography direction](references/typography.md) for the title treatment, then choose the shortest route that can deliver an accurate finished cover:
+## Generate and preserve the artwork
 
-- **Image-generated lettering:** when font files/layout tools are unavailable, or the user wants custom drawn letters, generate the illustration, exact title and author together. Use [complete-cover prompting](references/generated-lettering.md). No Node runtime or system fonts are required. Inspect every character; the model's output is not proof of accurate spelling. Do not describe generated letterforms as a particular installed font.
-- **Font-file composition:** when a working renderer or licensed font files are already available, generate the illustration and compose the text deterministically. Load fonts directly by file path; no operating-system font installation is needed. This is preferred for revisions that must preserve the selected illustration pixel-for-pixel and for long or repeated text. The repository already bundles its fonts.
+Use the host's image-generation tool; in Codex prefer its built-in tool. Do not silently switch to a paid API or replace requested generated artwork with a code drawing. Inspect reference images before using them as edit targets.
 
-Do not make the user install fonts just to start. Both routes must deliver a complete image containing title and author. A single Chinese title normally has equal character scale and weight, even across lines: `平凡的世界` is one title, not a small phrase plus a large `世界`. Express rhythm through position, spacing, strokes and negative space. A distinct subtitle may be secondary. Respect a user-requested expressive exception.
+Adapt [the prompt template](references/prompt-template.txt) to the work and planned layout. Default: 2:3 portrait, warm ivory, roughly two ink colours, spare printed forms, light grain, quiet title space and a clear author margin. The renderer's reference canvas is **1024 × 1536 PNG**. The upper title region ends at y=610; the author's ink sits within y=1400–1500. Those are production constraints, not proof that an image has sufficient visual quiet.
 
-## Generate the cover or illustration
+Select and inspect the actual output. Preserve the selected original; do not crop, stretch or paint over artwork just to fit a template. If generation returns another size, retain the original and make a clearly identified working export through the host's image tools with the user's framing intact. Save the actual prompt and any edit input/prompt separately. When an edit was needed, the copyable final prompt should describe the intended final scene without requiring an unavailable input image; label it a reusable recipe, not the verbatim historical prompt.
 
-Use the host's available image-generation capability. In Codex, prefer its built-in image-generation tool. One distinct artwork needs one generation request; a batch is not a collage. Do not silently switch to a paid API or substitute a hand-coded drawing for requested generated artwork. If no image tool is available, provide the finished prompt and report that generation remains undone.
+## Compose without installing system fonts
 
-For the font-file route, start from [illustration-layer template](references/prompt-template.txt). For image-generated lettering, use the complete-cover template above instead. Replace the work, emotion, scene, palette and exclusions. The defaults fit a 2:3 portrait jacket:
+The installed skill includes a portable font-file renderer. Read [runtime usage](references/runtime.md), then let the agent prepare and run it. It needs Node.js 22+, npm and network access for first-time dependencies/fonts. Font files download on demand from pinned sources, are SHA-256 verified and read directly; nothing is installed into the operating system. The gallery checkout is not required. Use existing host equivalents if needed, but do not switch to generated letters because a font needs preparing.
 
-- Warm ivory paper, about two main ink colours, spare printmaking edges and light grain.
-- A quiet upper area for titles; a scene across the lower middle; a clean author margin at the bottom. The 43% / 47–87% / 9% values are layout targets, not proof of success.
-- With separate layers, generate the picture without lettering and complete the typography step. With image-generated lettering, reserve the same quiet areas and supply exact title/author strings in the prompt. The final cover always contains both.
-- The image should read at roughly 180 px wide. Reduce competing shapes before adding detail or texture.
+Create a spec from `references/example-cover.json`, using exact title/author, semantic line breaks, the selected artwork path and the complete prompt path. Both input paths resolve relative to the spec. Start from an appropriate type plan, not the same layout for every book. Omit the optional gallery series number for an independent user's cover.
 
-When a reference image is supplied, describe its role (style reference or edit target) and inspect it first. Preserve the required composition during edits. Save selected artwork in the user's project; never leave a project asset dependent on a private temporary path.
+The tool validates glyphs, actual ink bounds, title scale, reading order and overlaps before writing. It preserves the source artwork and refuses accidental replacement. These checks do not evaluate whether a title is artistically good or whether the generated scene matches the brief; inspect both yourself.
 
-## Typeset and review
+Inside the gallery repository, use `catalog.json` for public records, `npm run build` for pages/downloads and `npm run compose -- --spec … --out …` for an external brief. The gallery and installed skill share one renderer.
 
-Read [typography direction](references/typography.md) when designing or revising title and author lettering. Inspect its specimen image when image viewing is available. A literary cover needs a deliberate title silhouette, not just a body font placed on an illustration. Choose faces for each script, give long and short titles different rhythms, and set the author with enough presence to feel considered.
+## Review the actual deliverables
 
-Chinese engraved or brush forms and Latin display roman/true italic are useful directions, not mandatory choices for every work. For font-file composition, use licensed fonts and deterministic HTML/SVG/image composition. For generated lettering, review real output at full size and thumbnail size, checking exact characters and equal Chinese title scale. Do not turn decorative lettering into unreadable glyphs, fake signatures or a claimed official edition. When only typography needs improvement, preserve the selected illustration and compare before/after; disclose any image-edit changes to it.
+Open the exported typeset PNG at full size and at about 180 px wide, and inspect the text-free PNG separately:
 
-Inside the Book Covers repository, `catalog.json` holds the book, semantic title breaks and optional per-language `typography` plans; see [implementation notes](references/typography.md#reference-implementation) before editing those plans. Save actual generation prompts under `prompts/`, then use `npm run build` and `npm run export -- --book <id> --lang zh`. The renderer keeps art and outlined type separate and rejects missing glyphs or out-of-bounds layouts. Outside the repository, use the host's normal layout/export tools; the skill itself requires no Node runtime.
+- Is there one emotional relationship, or just a recognisable noun? Does the new work add something beyond the series' usual landscape?
+- Does the title's shape relate to the illustration? Is its quiet space genuinely clear?
+- Are every title character, author name, punctuation mark and diacritic correct? Are vertical columns upright and read right to left? Is the Chinese main title equal in scale and weight?
+- Is the author readable without colliding with art? Does the translated subtitle deserve its space, or should a single-language cover omit it?
+- Are all three outputs real files? Does the prompt generate text-free art, match the selected concept and contain no placeholders? Have type-only edits kept the artwork intact?
 
-Inspect both the full cover and thumbnail:
+Revise the specific failure and re-export. Do not claim a successful render is proof of top-tier design. Preview the typeset result first, link all three deliverables clearly, include the copyable prompt, and briefly explain the design decision and any remaining limitation. These are screen-resolution front-cover studies; do not describe them as press-ready jackets without trim, bleed, spine, colour and print checks.
 
-- Does the emotional relationship survive when small, or is the image just a recognisable noun?
-- Is the title space actually clear? Can the author be read without covering the illustration?
-- Is there one dominant spatial idea, with enough quiet paper around it?
-- Do ink, grain and contrast belong to the rest of the series?
-- Do both languages fit without truncation, invented translations or missing glyphs?
-- Does the title have a purposeful shape without arbitrarily enlarging some Chinese words? Does the author remain legible at thumbnail size? Are vertical columns in reading order, italic overhangs clear, and the subtitle visibly secondary?
-
-Revise the specific failure. For example, repair an invaded author margin without adding a new illustration concept. A generation prompt is not proof that the output follows it.
-
-Deliver the **complete cover first**, previewing the actual exported image with its title and author. Include the exact text, selected source art, prompt and generation/edit provenance; include an editable type plan when that route produced one. For a bilingual project, label the Chinese and English exports clearly. On a website, use these complete covers as the default images; do not add a second browser text overlay or link only to the source illustrations. If generation or typesetting is blocked, name the missing step and do not call the cover complete.
-
-State whether the artwork is a fresh generation or a revision. Image generation is stochastic; promise a reproducible process, not identical pixels or a guaranteed interpretation.
-
-## Useful examples
-
-Read [worked briefs](references/briefs.md) for the four founding studies and two examples of moving beyond a literal title. They illustrate decisions; do not reuse their scenery for every book.
-
-Publication, social posting and repository changes follow the user's actual request. Using this visual skill alone does not authorize them.
+Read [worked briefs](references/briefs.md) only when another conceptual example would help. Publishing, posting and repository changes follow the user's actual authorization; the skill itself does not grant it.

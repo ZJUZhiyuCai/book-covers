@@ -13,3 +13,5 @@ For type revisions, keep the illustration unchanged. `titleLines` preserves exac
 Do not add novel text, publisher cover reproductions, secrets or private local paths. Avoid automatic social posting or remote generation as part of the build. Image generation happens separately; building the gallery must remain offline after dependencies are installed.
 
 The first collection is curated, not a contest for the largest image count. New interpretations should add a distinct literary space. A revision that improves one existing cover is welcome.
+
+The default skill contract is text-free PNG + font-file typeset PNG + copyable prompt TXT. For a revised illustration, keep historical prompts untouched and make the reusable recipe self-contained. Single-language private briefs are supported through the portable runtime; public catalog entries remain bilingual. Keep the installed runtime self-contained, share the renderer with the gallery, and exclude node_modules/cache from release archives. Run an isolated installed-skill composition when changing that runtime.

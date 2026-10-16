@@ -1004,3 +1004,71 @@ a:hover {
     transition: none !important;
   }
 }
+
+/* Three deliverables, one quiet index. */
+.deliverables {
+  margin-top: 2.4rem;
+  border-top: 1px solid var(--line, #d7d5c9);
+}
+.deliverables > h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1.4rem 0 0.5rem;
+}
+.delivery-row {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 1.05rem 0;
+}
+.delivery-number {
+  font-size: 0.67rem;
+  color: #7b7b70;
+  align-self: start;
+  padding-top: 0.2rem;
+}
+.delivery-row h3 {
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin: 0 0 0.3rem;
+}
+.delivery-row p {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #686d62;
+  line-height: 1.6;
+}
+.delivery-row > a {
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.delivery-row svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.3;
+}
+.delivery-row .copy-button {
+  margin: 0;
+  font-size: 0.74rem;
+  max-width: 9rem;
+}
+.other-language-download {
+  display: block;
+  margin: -0.3rem 0 0.3rem 2.4rem;
+  font-size: 0.72rem;
+  color: #686d62;
+}
+@media (max-width: 400px) {
+  .delivery-row {
+    grid-template-columns: 1.3rem minmax(0, 1fr) auto;
+    gap: 0.35rem;
+  }
+  .delivery-row .copy-button {
+    padding: 0.55rem 0.4rem;
+  }
+}

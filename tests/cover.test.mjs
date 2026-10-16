@@ -65,6 +65,7 @@ test('Chinese titles keep one character scale across lines and when a long line 
     assert.equal(new Set(layout.title.map((line) => line.weight)).size, 1, book.id);
   }
   const book = structuredClone(books.find((b) => b.id === 'ordinary-world'));
+  book.titleLines.zh = ['平凡的', '世界'];
   book.typography.zh = {
     mode: 'left',
     size: 170,

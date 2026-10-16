@@ -1,0 +1,11 @@
+{
+  "id": "border-town",
+  "artwork": "artwork.png",
+  "prompt": "prompt.txt",
+  "title": { "zh": "边城" },
+  "author": { "zh": "沈从文" },
+  "titleLines": { "zh": ["边城"] },
+  "typography": {
+    "zh": { "mode": "centered", "size": 166, "baselines": [320], "tracking": 24, "ink": "#30382f" }
+  }
+}

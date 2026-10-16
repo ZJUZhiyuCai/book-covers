@@ -1,0 +1,70 @@
+{
+  "conclusion": "All reproduced defects are fixed in the copied final revision within tested scope.",
+  "checks": [
+    {
+      "file": "border-town-artwork.png",
+      "byteIdentical": true,
+      "sha256": "8d2053d34fbc015284f38a763ef72ad1e1e48cc2b091676b5f5525f4d72148a5"
+    },
+    {
+      "file": "border-town-zh.png",
+      "byteIdentical": true,
+      "sha256": "29c1e8baf4160e21d107d17c1589f24e6475d2612cf0f7883a05a31daef4944b"
+    },
+    {
+      "file": "border-town-prompt.txt",
+      "byteIdentical": true,
+      "sha256": "0b4611c47c27983b1d6b0b7aa75ac222a9436c7cc6c8ee6cc7006b98acc11f06"
+    }
+  ],
+  "negativeCases": [
+    {
+      "name": "existing-output-protection",
+      "status": "rejected",
+      "message": "Output exists: border-town-artwork.png. Choose another directory or use --force."
+    },
+    {
+      "name": "horizontal-reading-order",
+      "status": "rejected",
+      "message": "Horizontal title lines must read from top to bottom."
+    },
+    {
+      "name": "unsupported-glyph",
+      "status": "rejected",
+      "message": "Font zhuque has no glyph for 🛶"
+    },
+    {
+      "name": "source-protection-with-force",
+      "status": "rejected",
+      "message": "Refusing to overwrite a source: border-town-artwork.png"
+    },
+    {
+      "name": "receipt-alias-collision",
+      "status": "rejected",
+      "message": "Output names collide, including directory aliases."
+    },
+    {
+      "name": "overlapping-title-lines",
+      "status": "rejected",
+      "message": "Typography overlaps: overlapping-title-lines/zh"
+    }
+  ],
+  "caseAlias": {
+    "status": "rejected",
+    "message": "Output names collide, including directory aliases."
+  },
+  "updatedFiles": [
+    {
+      "file": "runtime/compose.mjs",
+      "sha256": "42520d7c21235537de862b4da7efdd89a3331f4eab0b22588a655c96f57e8e91"
+    },
+    {
+      "file": "runtime/validation.mjs",
+      "sha256": "21d6f31ca3aa6a8dfe0f85f1e7eaab0a63b695a8b5f4d34e2d59a3f245602813"
+    },
+    {
+      "file": "references/runtime.md",
+      "sha256": "6b0eb5c6679a2959d353b4605581df1e8fff8d0acadcd3be8e93156574e150bb"
+    }
+  ]
+}

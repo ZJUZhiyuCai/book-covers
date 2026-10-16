@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import subsetFont from 'subset-font';
 import { loadCatalog, ROOT, LANGS, sha256 } from './catalog.mjs';
+import { reusablePrompt } from './prompts.mjs';
 import { renderCover } from './cover.mjs';
 import { homePage, detailPage, SITE } from '../src/templates.mjs';
 
@@ -52,6 +53,10 @@ export async function build() {
       .webp({ quality: 86 })
       .toFile(resolve(out, 'previews', `${b.id}.webp`));
     const prompt = await readFile(resolve(ROOT, b.prompt), 'utf8');
+    await writeFile(
+      resolve(out, 'downloads', `${b.id}-prompt.txt`),
+      reusablePrompt(prompt, Boolean(b.generation.revision)),
+    );
     for (const lang of LANGS) {
       const png = await renderCover(b, lang);
       await writeFile(resolve(out, 'downloads', `${b.id}-${lang}.png`), png);
