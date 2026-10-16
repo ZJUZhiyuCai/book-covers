@@ -36,6 +36,7 @@
 - 更新安装脚本：先备份再完整替换，避免合并时残留旧规则；发布包排除依赖目录和字体缓存。
 - 修改画廊下载区域：三项输出常驻，提示词可直接复制或下载；修正后的可复用生成配方与历史实际提示词分开标明。
 - 同步中英文 README、安装说明、排版参考、Skill 元数据、视觉样张和设计文档。旧版本发布说明明确作为历史记录保留。
+- 发布实测发现 Pages 组件仍使用已弃用的 Node 20；核对官方发行记录后，将 [configure-pages](https://github.com/actions/configure-pages/releases/tag/v6.0.0)、[upload-pages-artifact](https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0)、[deploy-pages](https://github.com/actions/deploy-pages/releases/tag/v5.0.1) 更新到对应的新版主版本。项目测试仍使用受支持的 Node 22，不将 Action 自身的运行时与项目运行时混淆。
 
 ## 验证与范围
 

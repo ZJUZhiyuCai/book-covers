@@ -8,4 +8,6 @@ Four targeted title refinements preserve all ten source illustrations and the ei
 
 Independent forward-testing found and helped fix two classes of defects: reversed horizontal reading order and receipt/output path collisions (including directory aliases and case-insensitive filenames). Tests cover both regressions. See [the review, evidence and remaining design limits](review-v1.4.0.md).
 
+Pages configuration, upload and deployment actions have also been upgraded from their deprecated Node 20 runtimes to the current official versions. Application tests continue to run on Node 22.
+
 The primary install route remains an instruction to the user's agent pointing at `skills/book-covers/`. Release ZIPs are optional portable archives, not the main installation experience. The package excludes node_modules and font caches. Image generation still requires an image-capable host; deterministic rendering needs Node.js 22+ and first-time dependency/font preparation.
