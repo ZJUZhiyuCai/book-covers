@@ -8,7 +8,7 @@
 
 Book Covers is an open collection of literary covers and a standalone agent skill. It pairs generated illustrations with titles and author names composed from real font files, giving the image and the lettering a deliberate place in the design.
 
-Two volumes contain **20 generated illustrations and 40 Chinese and English covers**. Warm paper, spare ink colours and open compositions give the series its visual character. Browse and download the work in the gallery, or install the skill in your own agent to design covers for other books.
+The current skill is **version 1.4.0**, with two volumes containing **20 generated illustrations and 40 Chinese and English covers**. Warm paper, spare ink colours and open compositions give the series its visual character. Browse and download the work in the gallery, or install the skill in your own agent to design covers for other books.
 
 ## What you get
 
@@ -56,6 +56,8 @@ See [installation details](INSTALL.md) and [runtime usage](skills/book-covers/re
 
 Each cover begins with a spatial relationship: a path leading to a cave dwelling in the loess hills, or a white horse crossing a broad dune. A few forms carry the story's mood; the empty space leaves room for the title and the reader.
 
+Restraint serves the story. Judge a cover by its sense of place, scale and typography, rather than by how few elements remain. A little paper texture can contribute to the image; texture that competes with the subject needs editing. Review the covers together too: a new colour or prop alone does not make a composition distinct.
+
 Most Chinese titles use Zhuque Fangsong, while _White Horse Neighs in the West Wind_ uses the brush forms of Ma Shan Zheng. Characters in a Chinese main title keep the same size and weight, with rhythm shaped by spacing, line breaks and alignment. English titles use Cormorant Garamond roman and its separately drawn italic, with hierarchy following the phrasing.
 
 The vertical title of _Dream of the Red Chamber_, the open spacing of _Border Town_, the roman/italic pairing of _To the Lighthouse_ and the brush strokes of _White Horse_ show how the typography can vary within a series.
@@ -86,7 +88,22 @@ These are independent cover studies, not publisher editions, and contain no nove
 
 [Browse Volume II](https://zjuzhiyucai.github.io/book-covers/en/?shelf=volume-2#collection) · [Ten-cover stability observations](docs/stability/vol-02/README.en.md)
 
-This batch used unchanged Skill 1.4.0. One illustration needed a simplification edit; all initial Chinese and English layouts exported successfully. All 40 files matched on a repeated export in the same environment. The record also documents excess texture, similar compositions and imprecise whitespace, rather than treating ten examples as a general success rate.
+![The ten English covers in Volume II](docs/stability/vol-02/thumbnails-en.jpg)
+
+## Observed results and current limits
+
+On 16 October 2026, ten works were produced with unchanged Skill 1.4.0. The agent developed a visual brief and type plan for each book, then reviewed the generated results. The record includes editorial selection and revision.
+
+| Check                         | Result in this batch                                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------ |
+| Illustration generation       | 10 new generations, plus one simplification edit to _Fortress Besieged_                    |
+| Bilingual typesetting         | All 20 initial layouts exported successfully, without changes to the type plans            |
+| Same-environment repeat       | With fixed artwork, fonts and settings, all 40 delivery files had identical SHA-256 hashes |
+| Skill and gallery consistency | All 20 typeset PNGs and 10 prompt files matched                                            |
+
+**Typography and file delivery were consistent; the images still need individual judgment.** Some covers have excess texture, similar compositions or imprecise whitespace. The notes retain reservations about _My Memories of Old Beijing_ and _One Hundred Years of Solitude_. The gallery keeps the versions selected in this trial so they can be compared with the recorded results.
+
+Repeating typography on saved artwork does not mean a fresh image generation will reproduce it. Nor do ten examples establish a success rate for other books, image models or environments. The [full observations](docs/stability/vol-02/README.en.md) include actual prompts, revisions, checksums and replay specs.
 
 ## Local development and export
 
