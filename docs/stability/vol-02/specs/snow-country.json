@@ -1,0 +1,35 @@
+{
+  "id": "snow-country",
+  "number": "18",
+  "artwork": "../../../../artwork/snow-country.png",
+  "prompt": "../../../../prompts/snow-country.txt",
+  "title": {
+    "zh": "雪国",
+    "en": "Snow Country"
+  },
+  "author": {
+    "zh": "川端康成",
+    "en": "Yasunari Kawabata"
+  },
+  "titleLines": {
+    "zh": ["雪国"],
+    "en": ["Snow", "Country"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "vertical",
+      "size": 150,
+      "centers": [512],
+      "top": 170,
+      "leading": 162,
+      "ink": "#485966"
+    },
+    "en": {
+      "mode": "centered",
+      "sizes": [154, 145],
+      "baselines": [257, 414],
+      "italicLines": [1],
+      "ink": "#485966"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "to-live",
+  "number": "11",
+  "artwork": "../../../../artwork/to-live.png",
+  "prompt": "../../../../prompts/to-live.txt",
+  "title": {
+    "zh": "活着",
+    "en": "To Live"
+  },
+  "author": {
+    "zh": "余华",
+    "en": "Yu Hua"
+  },
+  "titleLines": {
+    "zh": ["活着"],
+    "en": ["To Live"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "face": "brush",
+      "size": 184,
+      "baselines": [334],
+      "tracking": 24,
+      "ink": "#45382f"
+    },
+    "en": {
+      "mode": "centered",
+      "sizes": [166],
+      "baselines": [326],
+      "italicLines": [0],
+      "ink": "#45382f"
+    }
+  }
+}

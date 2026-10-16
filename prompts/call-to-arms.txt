@@ -1,0 +1,12 @@
+Use case: illustration-story.
+Create ONE original literary cover ILLUSTRATION LAYER, not a finished cover. Exact title and author will be typeset later from font files. Portrait 2:3, exactly 1024 by 1536 pixels, PNG preferred. Flat edge-to-edge paper, no book mockup.
+Art direction: quiet mid-century printmaking, broad confident shapes, irregular ink edges, very fine natural paper grain, matte warm ivory (#f1ede3). No more than TWO muted ink colours plus graphite linework and paper. Very few small details. An inhabitable spatial scene with weather, distance or absence, never a floating icon, logo, sticker or decorative emblem.
+PRODUCTION COMPOSITION: reserve the ENTIRE TOP 43% (y=0 through660) as empty warm ivory for separate typography. All meaningful illustration occupies y=720 through1330, roughly 47%–87%. Entire bottom 9% (y=1398 through1536) stays clean, empty warm ivory for the author line. Scene may reach left/right edges inside its own area. No border or artificially white rectangle pasted over an image. Quiet space is part of the composition. Coherent at 180 pixels wide.
+No text, letterlike marks, digits, signature, watermark, publisher logo, frames, collage, glossy 3D, photorealism, cute cartoon, ornate ornament or heavy distressed texture. No green. Make an original interpretation, not a copy of a published cover.
+
+Work: Call to Arms / 呐喊, by Lu Xun.
+Emotional tension: The pressure of collective silence and the urgent possibility of awakening.
+Scene: A powerful, sparse interior: a broad near-charcoal slate wall occupies the lower illustration field, with a partly open, plain dusty red door near the right third. The door is seen at an angle, leaving a very narrow vertical ivory slit; this opens into a long triangular wedge of untouched paper across the empty floor. The wall has no bricks or windows. Three broad printed planes total, with irregular edges and just enough scraped ink to feel human. The wall begins around y=735 and the floor ends by y=1320. No object floating on blank paper; this is a room you could enter.
+Visual decision: A dense dark enclosure interrupted by one thin opening, the paper light widening toward the reader.
+Palette: #3d464a and #a05b4e. Render as restrained printed inks, not glossy gradients.
+Omit: Mouths, fists, slogans, typography, people, literal flames, ornamental cracks, props.

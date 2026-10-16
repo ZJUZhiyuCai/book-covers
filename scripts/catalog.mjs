@@ -65,6 +65,14 @@ export function validateCatalog(data) {
     if (b.generation.revision) {
       inside(ROOT, b.generation.revision.input);
       inside(ROOT, b.generation.revision.prompt);
+      if (b.generation.revision.recipe) inside(ROOT, b.generation.revision.recipe);
+      if (b.generation.revision.reason && typeof b.generation.revision.reason !== 'string')
+        for (const lang of LANGS)
+          if (
+            typeof b.generation.revision.reason[lang] !== 'string' ||
+            !b.generation.revision.reason[lang].trim()
+          )
+            throw new Error(`Missing revision reason.${lang}: ${b.id}`);
     }
   }
   return data.books;
@@ -83,6 +91,11 @@ export async function loadCatalog({ verifyAssets = true } = {}) {
       if (b.generation.revision) {
         await readFile(inside(ROOT, b.generation.revision.input));
         await readFile(inside(ROOT, b.generation.revision.prompt));
+        if (
+          b.generation.revision.recipe &&
+          !(await readFile(inside(ROOT, b.generation.revision.recipe), 'utf8')).trim()
+        )
+          throw new Error(`Empty revision recipe: ${b.id}`);
       }
     }
   return books;

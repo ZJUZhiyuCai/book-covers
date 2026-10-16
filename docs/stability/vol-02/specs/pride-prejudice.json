@@ -1,0 +1,34 @@
+{
+  "id": "pride-prejudice",
+  "number": "19",
+  "artwork": "../../../../artwork/pride-prejudice.png",
+  "prompt": "../../../../prompts/pride-prejudice.txt",
+  "title": {
+    "zh": "傲慢与偏见",
+    "en": "Pride and Prejudice"
+  },
+  "author": {
+    "zh": "简·奥斯汀",
+    "en": "Jane Austen"
+  },
+  "titleLines": {
+    "zh": ["傲慢与偏见"],
+    "en": ["Pride", "and Prejudice"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "size": 141,
+      "baselines": [327],
+      "tracking": 7,
+      "ink": "#51464e"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [166, 112],
+      "baselines": [265, 410],
+      "italicLines": [1],
+      "ink": "#51464e"
+    }
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "date": "2026-10-16",
+  "environment": {
+    "node": "v26.5.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "sharp": {
+      "aom": "3.15.1",
+      "archive": "3.8.9",
+      "cairo": "1.18.6",
+      "cgif": "0.5.4",
+      "exif": "0.6.26",
+      "expat": "2.8.5",
+      "ffi": "3.8.0",
+      "fontconfig": "2.18.3",
+      "freetype": "2.14.3",
+      "fribidi": "1.0.17",
+      "glib": "2.90.0",
+      "harfbuzz": "14.5.0",
+      "heif": "1.23.5",
+      "highway": "1.4.0",
+      "imagequant": "2.4.1",
+      "lcms": "2.19.1",
+      "mozjpeg": "0826579",
+      "pango": "1.58.2",
+      "pixman": "0.46.4",
+      "png": "1.6.58",
+      "proxy-libintl": "0.5",
+      "rsvg": "2.63.2",
+      "tiff": "4.7.2",
+      "uhdr": "2.0.2",
+      "vips": "8.18.7",
+      "webp": "1.6.0",
+      "xml2": "2.15.4",
+      "zlib-ng": "2.3.3",
+      "sharp": "0.35.5"
+    }
+  },
+  "scope": "Same macOS host and pinned font files; not a cross-platform or stochastic image reproducibility test.",
+  "installedSkillVersion": "1.4.0",
+  "installedSkillHashes": {
+    "SKILL.md": {
+      "sha256": "dfae6ea0ca020ead60cf9fa20fa2dd7f0542b0821b05cb536b123ed64e05971e",
+      "matchesRepository": true
+    },
+    "runtime/cover.mjs": {
+      "sha256": "c52c9041328ef2a74f4d5dfffd11281f498f1f438d8b0e3866a1ea6f2f6a0a29",
+      "matchesRepository": true
+    },
+    "runtime/compose.mjs": {
+      "sha256": "42520d7c21235537de862b4da7efdd89a3331f4eab0b22588a655c96f57e8e91",
+      "matchesRepository": true
+    },
+    "runtime/prepare-fonts.mjs": {
+      "sha256": "6bc56e69f610971ff4222c31f142f8617fbca33f7ac1138145f740211ab866ff",
+      "matchesRepository": true
+    },
+    "runtime/fonts.json": {
+      "sha256": "6aa8929f2be2ece2d85a7230c664158b84a262348aa12f74c9f58010a00bc034",
+      "matchesRepository": true
+    },
+    "runtime/package-lock.json": {
+      "sha256": "df3cd81bdd0ab29348d70e352984d02ff61c869f14848dd0d9b59fd8c0dcb48c",
+      "matchesRepository": true
+    }
+  },
+  "books": [
+    {
+      "id": "to-live",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "baf2aa9fd385c9a4c7d1a15bb3dcb97161c98f71f6d28c6a7642048e0ddfa2b0",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "活着",
+          "author": "余华",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 427.2013333333333,
+          "authorBounds": {
+            "left": 464.89182608695654,
+            "top": 1428.8491428571429,
+            "right": 559.1081739130435,
+            "bottom": 1473.184,
+            "width": 94.21634782608697,
+            "height": 44.33485714285712
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "To Live",
+          "author": "Yu Hua",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 404.164,
+          "authorBounds": {
+            "left": 448.2863308454241,
+            "top": 1438,
+            "right": 575.7136691545759,
+            "bottom": 1468.624,
+            "width": 127.42733830915176,
+            "height": 30.624000000000024
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "fortress-besieged",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "84925dc1169fc329cd7df4b0d4b3a6a91d7009eada12347dca71d73b6a65f720",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "围城",
+          "author": "钱锺书",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 428.942,
+          "authorBounds": {
+            "left": 435.12,
+            "top": 1428.496,
+            "right": 588.8800000000001,
+            "bottom": 1473.664,
+            "width": 153.7600000000001,
+            "height": 45.16799999999989
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Fortress Besieged",
+          "author": "Qian Zhongshu",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 518.8,
+          "authorBounds": {
+            "left": 98,
+            "top": 1433.168,
+            "right": 358.7708087784521,
+            "bottom": 1481.488,
+            "width": 260.7708087784521,
+            "height": 48.320000000000164
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "hulan-river",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "cdcab857ad15dfeaeba784128da2e6127162f4ad9f5e48b2e7aada9a80d06823",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "呼兰河传",
+          "author": "萧红",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 543.95,
+          "authorBounds": {
+            "left": 462.808,
+            "top": 1429.408,
+            "right": 561.192,
+            "bottom": 1474.336,
+            "width": 98.38400000000001,
+            "height": 44.92800000000011
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Tales of Hulan River",
+          "author": "Xiao Hong",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 462.324,
+          "authorBounds": {
+            "left": 419.57878417968755,
+            "top": 1438,
+            "right": 604.4212158203126,
+            "bottom": 1481.488,
+            "width": 184.84243164062502,
+            "height": 43.488000000000056
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "old-beijing",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "468efd856a1ab7f0369ffb40b795054209307077e0009347928d7bb14a9c885b",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "城南旧事",
+          "author": "林海音",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 427.361,
+          "authorBounds": {
+            "left": 98,
+            "top": 1429.264,
+            "right": 254.30400000000003,
+            "bottom": 1473.376,
+            "width": 156.30400000000003,
+            "height": 44.11200000000008
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "My Memories of Old Beijing",
+          "author": "Lin Haiyin",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 497.123,
+          "authorBounds": {
+            "left": 98,
+            "top": 1438,
+            "right": 287.12654534040183,
+            "bottom": 1481.488,
+            "width": 189.12654534040183,
+            "height": 43.488000000000056
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "call-to-arms",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "2703225693662bbc5c0be06b7443444bdfd89be638d7f9b16c73a45ebb357c33",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "呐喊",
+          "author": "鲁迅",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 416.18,
+          "authorBounds": {
+            "left": 98,
+            "top": 1428.4951272727274,
+            "right": 192.9856,
+            "bottom": 1473.590153846154,
+            "width": 94.9856,
+            "height": 45.095026573426594
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Call to Arms",
+          "author": "Lu Xun",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 497.284,
+          "authorBounds": {
+            "left": 98,
+            "top": 1438,
+            "right": 227.1817377232143,
+            "bottom": 1468.624,
+            "width": 129.1817377232143,
+            "height": 30.624000000000024
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "moon-sixpence",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "c6d5e752be98339c580a8e2ee1934b75ee6836d3bcea79e36470a5b3d3a3ef53",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "月亮与六便士",
+          "author": "威廉·萨默塞特·毛姆",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 505.00142857142856,
+          "authorBounds": {
+            "left": 262.23199999999997,
+            "top": 1428.976,
+            "right": 761.768,
+            "bottom": 1473.856,
+            "width": 499.53600000000006,
+            "height": 44.87999999999988
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "The Moon and Sixpence",
+          "author": "W. Somerset Maugham",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 508.41285714285715,
+          "authorBounds": {
+            "left": 98,
+            "top": 1433.168,
+            "right": 485.8857236328126,
+            "bottom": 1481.488,
+            "width": 387.8857236328126,
+            "height": 48.320000000000164
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "hundred-years",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "9936435456526896dc6c5ebb82a44a4ed20702a0a15369fdd694ae167be6f394",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "百年孤独",
+          "author": "加夫列尔·加西亚·马尔克斯",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 427.40999999999997,
+          "authorBounds": {
+            "left": 177.10399999999996,
+            "top": 1428.832,
+            "right": 846.8960000000001,
+            "bottom": 1473.6672,
+            "width": 669.7920000000001,
+            "height": 44.835199999999986
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "One Hundred Years of Solitude",
+          "author": "Gabriel García Márquez",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 572.816,
+          "authorBounds": {
+            "left": 98,
+            "top": 1432.884,
+            "right": 511.088566781851,
+            "bottom": 1481.2068571428572,
+            "width": 413.088566781851,
+            "height": 48.322857142857174
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "snow-country",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "4236e6afebe84164a955502d2f9b5e6a7f76b633ac0f6f4a4cca34785f6f123f",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "雪国",
+          "author": "川端康成",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 535.4530000000001,
+          "authorBounds": {
+            "left": 407.144,
+            "top": 1429.0720000000001,
+            "right": 616.856,
+            "bottom": 1473.808,
+            "width": 209.712,
+            "height": 44.735999999999876
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Snow Country",
+          "author": "Yasunari Kawabata",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 530.073,
+          "authorBounds": {
+            "left": 344.00508133370533,
+            "top": 1433.168,
+            "right": 679.9949186662947,
+            "bottom": 1468.624,
+            "width": 335.98983733258933,
+            "height": 35.45600000000013
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "pride-prejudice",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "a344e88daf2f98ccfdf5b40a88f56c8a0e94c1a261aaedcbfab4c0c1cb7d281c",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "傲慢与偏见",
+          "author": "简·奥斯汀",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 423.973,
+          "authorBounds": {
+            "left": 391.864,
+            "top": 1427.2,
+            "right": 632.1359999999999,
+            "bottom": 1474.288,
+            "width": 240.27199999999988,
+            "height": 47.087999999999965
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 516.096,
+          "authorBounds": {
+            "left": 98,
+            "top": 1437.3803636363637,
+            "right": 302.9017963169643,
+            "bottom": 1477.272,
+            "width": 204.9017963169643,
+            "height": 39.89163636363628
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    },
+    {
+      "id": "unknown-woman",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "artworkSha256": "fecea84d91add34a64d938a8b3f56db5e496b9e5b1d812fdf3c1da9ad16cb341",
+      "promptMatchesGallery": true,
+      "languages": [
+        {
+          "lang": "zh",
+          "title": "一个陌生女人的来信",
+          "author": "斯特凡·茨威格",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 500.53999999999996,
+          "authorBounds": {
+            "left": 98,
+            "top": 1428.544,
+            "right": 455.312,
+            "bottom": 1473.856,
+            "width": 357.312,
+            "height": 45.3119999999999
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        },
+        {
+          "lang": "en",
+          "title": "Letter from an Unknown Woman",
+          "author": "Stefan Zweig",
+          "glyphsAndLayoutValidated": true,
+          "titleBottom": 587.605,
+          "authorBounds": {
+            "left": 98,
+            "top": 1433.152,
+            "right": 317.9856638671875,
+            "bottom": 1481.488,
+            "width": 219.9856638671875,
+            "height": 48.33600000000001
+          },
+          "sourceArtPixelsUnchanged": true,
+          "galleryMatchesInstalledRuntime": true
+        }
+      ]
+    }
+  ],
+  "repeatFilesMatched": 40,
+  "repeatFilesTotal": 40,
+  "initialFontPreparation": "Three required faces were already cached; Zhuque was absent and downloaded successfully. The initial command was not precisely timed, so it is excluded from warm timing statistics.",
+  "integrationIssue": "First gallery test run rejected the legacy string revision.reason after a new bilingual-object check. Kept legacy string compatibility and added regression coverage. No portable renderer change.",
+  "browserChecks": {
+    "environment": "Codex in-app browser, local production build",
+    "desktop": {
+      "volume2Visible": 10,
+      "allWorksVisible": 20,
+      "languageSwitchPreservesFilter": true,
+      "artworkToggle": true,
+      "fortressRevisionAndRecipeCorrect": true,
+      "copyPayloadMatchesDisplayedPrompt": true
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "galleryDocumentWidth": 390,
+      "galleryScrollWidth": 390,
+      "longEnglishTitleDocumentWidth": 390,
+      "longEnglishTitleScrollWidth": 390,
+      "longTitleCoverLoaded": true
+    },
+    "limits": [
+      "Download links and copy payload inspected; no browser download or clipboard round-trip assertion.",
+      "Viewport override reset after responsive checks."
+    ]
+  }
+}

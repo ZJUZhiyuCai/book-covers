@@ -45,7 +45,6 @@ export async function build() {
     await cp(resolve(ROOT, dir), resolve(out, dir), { recursive: true });
   for (const name of ['style.css', 'app.js', 'mark.svg'])
     await cp(resolve(ROOT, 'src', name), resolve(out, 'assets', name));
-  const revision = await readFile(resolve(ROOT, 'prompts/margin-revision.txt'), 'utf8');
   const pages = [];
   for (const b of books) {
     await sharp(resolve(ROOT, b.artwork))
@@ -53,10 +52,13 @@ export async function build() {
       .webp({ quality: 86 })
       .toFile(resolve(out, 'previews', `${b.id}.webp`));
     const prompt = await readFile(resolve(ROOT, b.prompt), 'utf8');
-    await writeFile(
-      resolve(out, 'downloads', `${b.id}-prompt.txt`),
-      reusablePrompt(prompt, Boolean(b.generation.revision)),
-    );
+    const revision = b.generation.revision
+      ? await readFile(resolve(ROOT, b.generation.revision.prompt), 'utf8')
+      : '';
+    const recipe = b.generation.revision?.recipe
+      ? await readFile(resolve(ROOT, b.generation.revision.recipe), 'utf8')
+      : reusablePrompt(prompt, Boolean(revision));
+    await writeFile(resolve(out, 'downloads', `${b.id}-prompt.txt`), recipe);
     for (const lang of LANGS) {
       const png = await renderCover(b, lang);
       await writeFile(resolve(out, 'downloads', `${b.id}-${lang}.png`), png);
@@ -65,7 +67,7 @@ export async function build() {
         .webp({ quality: 87 })
         .toFile(resolve(out, 'covers', `${b.id}-${lang}.webp`));
       const path = `${lang === 'en' ? 'en/' : ''}books/${b.id}/`;
-      const html = detailPage(b, books, lang, prompt, b.generation.revision ? revision : '');
+      const html = detailPage(b, books, lang, prompt, revision, recipe);
       await mkdir(resolve(out, path), { recursive: true });
       await writeFile(resolve(out, path, 'index.html'), html);
       pages.push({ path, html });

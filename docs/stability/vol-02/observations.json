@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "e177a920978348d9a529f887de7c72b0f51024f2",
+  "skillVersion": "1.4.0",
+  "generationTool": "OpenAI built-in image generation",
+  "model": "Not exposed by tool",
+  "date": "2026-10-16",
+  "generationConcurrency": "Batches of 2–3 independent tool calls; elapsed times include tool service time and any queueing.",
+  "books": [
+    {
+      "id": "to-live",
+      "title": {
+        "zh": "活着",
+        "en": "To Live"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/to-live.txt",
+          "started": "2026-10-16T01:57:01.310Z",
+          "finished": "2026-10-16T01:57:31.236Z",
+          "elapsedSeconds": 30,
+          "selected": true,
+          "output": "artwork/to-live.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Clear ox/field relationship; furrow and soil texture is denser than the brief requested. Text-free and usable quiet zones.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "fortress-besieged",
+      "title": {
+        "zh": "围城",
+        "en": "Fortress Besieged"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/fortress-besieged.txt",
+          "started": "2026-10-16T01:57:01.318Z",
+          "finished": "2026-10-16T01:57:56.178Z",
+          "elapsedSeconds": 55,
+          "selected": false,
+          "output": "process/vol-02/fortress-besieged-v1.png"
+        },
+        {
+          "kind": "edit",
+          "input": "process/vol-02/fortress-besieged-v1.png",
+          "prompt": "prompts/fortress-besieged-refinement.txt",
+          "output": "artwork/fortress-besieged.png",
+          "selected": true,
+          "started": "2026-10-16T02:01:54.137Z",
+          "finished": "2026-10-16T02:03:01.348Z",
+          "elapsedSeconds": 67
+        }
+      ],
+      "firstDraftEditoriallyAccepted": false,
+      "visualObservation": "First draft rejected for unsolicited trees, pot, bench and leaves. One image edit removed those objects and reduced distressed texture. Revised courtyards preserve the offset openings; viewpoint remains model-like.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "hulan-river",
+      "title": {
+        "zh": "呼兰河传",
+        "en": "Tales of Hulan River"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/hulan-river.txt",
+          "started": "2026-10-16T01:58:29.032Z",
+          "finished": "2026-10-16T01:59:07.006Z",
+          "elapsedSeconds": 38,
+          "selected": true,
+          "output": "artwork/hulan-river.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Three stalks and snow shadows remain readable. More individual fence slats and twigs than the ideal minimal treatment.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "old-beijing",
+      "title": {
+        "zh": "城南旧事",
+        "en": "My Memories of Old Beijing"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/old-beijing.txt",
+          "started": "2026-10-16T01:58:29.032Z",
+          "finished": "2026-10-16T01:59:29.889Z",
+          "elapsedSeconds": 61,
+          "selected": true,
+          "output": "artwork/old-beijing.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted with reservation: recognizable child-height stool/door scale, but brickwork and roof tiles are busier than the brief. Main weakness is detail density, not text clearance.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "call-to-arms",
+      "title": {
+        "zh": "呐喊",
+        "en": "Call to Arms"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/call-to-arms.txt",
+          "started": "2026-10-16T01:58:29.032Z",
+          "finished": "2026-10-16T01:58:47.249Z",
+          "elapsedSeconds": 18,
+          "selected": true,
+          "output": "artwork/call-to-arms.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Strong light wedge and dark enclosure. Scene begins slightly above the requested 43% boundary, below the actual type region.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "moon-sixpence",
+      "title": {
+        "zh": "月亮与六便士",
+        "en": "The Moon and Sixpence"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/moon-sixpence.txt",
+          "started": "2026-10-16T02:00:00.171Z",
+          "finished": "2026-10-16T02:00:18.445Z",
+          "elapsedSeconds": 18,
+          "selected": true,
+          "output": "artwork/moon-sixpence.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Canvas/window relationship reads clearly. Illustration starts around y=620, above the requested y=660 boundary, but below the renderer's y=610 title region.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "hundred-years",
+      "title": {
+        "zh": "百年孤独",
+        "en": "One Hundred Years of Solitude"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/hundred-years.txt",
+          "started": "2026-10-16T02:00:00.171Z",
+          "finished": "2026-10-16T02:00:53.604Z",
+          "elapsedSeconds": 53,
+          "selected": true,
+          "output": "artwork/hundred-years.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted with reservation: repeating doors and curtain carry the idea; an unrequested chair, palm shadow and worn-plaster detail add visual noise. Starts slightly above the requested 43% boundary.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "snow-country",
+      "title": {
+        "zh": "雪国",
+        "en": "Snow Country"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/snow-country.txt",
+          "started": "2026-10-16T02:00:00.172Z",
+          "finished": "2026-10-16T02:00:34.527Z",
+          "elapsedSeconds": 34,
+          "selected": true,
+          "output": "artwork/snow-country.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Open snow and small warm window read well. Background mountain/tree silhouettes were added; the palette and whitespace stay restrained.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "pride-prejudice",
+      "title": {
+        "zh": "傲慢与偏见",
+        "en": "Pride and Prejudice"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/pride-prejudice.txt",
+          "started": "2026-10-16T02:01:54.137Z",
+          "finished": "2026-10-16T02:02:20.648Z",
+          "elapsedSeconds": 27,
+          "selected": true,
+          "output": "artwork/pride-prejudice.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Chair orientation and near-meeting shadows are readable. Floorboards and furniture curves are finer than the brief's broad shapes.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    },
+    {
+      "id": "unknown-woman",
+      "title": {
+        "zh": "一个陌生女人的来信",
+        "en": "Letter from an Unknown Woman"
+      },
+      "generationAttempts": [
+        {
+          "kind": "generate",
+          "prompt": "prompts/unknown-woman.txt",
+          "started": "2026-10-16T02:01:54.137Z",
+          "finished": "2026-10-16T02:02:40.531Z",
+          "elapsedSeconds": 46,
+          "selected": true,
+          "output": "artwork/unknown-woman.png"
+        }
+      ],
+      "firstDraftEditoriallyAccepted": true,
+      "visualObservation": "Accepted first draft. Blank letter remains genuinely text-free; desk/chair absence is legible. A cropped stack at the far left was not requested.",
+      "typographyStatus": "passed first layout in both languages",
+      "manualReview": {
+        "rawArtwork": true,
+        "typesetBothLanguages": true,
+        "thumbnailWidth": 180,
+        "reviewer": "creating agent; not an independent human evaluation"
+      }
+    }
+  ]
+}

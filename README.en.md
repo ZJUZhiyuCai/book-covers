@@ -8,15 +8,15 @@
 
 Book Covers is an open collection of literary covers and a standalone agent skill. It pairs generated illustrations with titles and author names composed from real font files, giving the image and the lettering a deliberate place in the design.
 
-The first collection contains **10 generated illustrations and 20 Chinese and English covers**. Warm paper, spare ink colours and open compositions give the series its visual character. Browse and download the work in the gallery, or install the skill in your own agent to design covers for other books.
+Two volumes contain **20 generated illustrations and 40 Chinese and English covers**. Warm paper, spare ink colours and open compositions give the series its visual character. Browse and download the work in the gallery, or install the skill in your own agent to design covers for other books.
 
 ## What you get
 
-| Output | Contents |
-|---|---|
-| Text-free PNG | The selected generated illustration, preserved intact |
-| Typeset PNG | The illustration with its title and author rendered from real font files |
-| Generation prompt | Complete copyable text, also supplied as a UTF-8 TXT file |
+| Output            | Contents                                                                 |
+| ----------------- | ------------------------------------------------------------------------ |
+| Text-free PNG     | The selected generated illustration, preserved intact                    |
+| Typeset PNG       | The illustration with its title and author rendered from real font files |
+| Generation prompt | Complete copyable text, also supplied as a UTF-8 TXT file                |
 
 A cover in one language produces three files. A bilingual brief shares the artwork and prompt, with a separate typeset cover for each language: four files in three categories. Every book page has download links and a prompt-copying control. Layout specs, WebP previews and provenance records are optional extras.
 
@@ -56,23 +56,37 @@ See [installation details](INSTALL.md) and [runtime usage](skills/book-covers/re
 
 Each cover begins with a spatial relationship: a path leading to a cave dwelling in the loess hills, or a white horse crossing a broad dune. A few forms carry the story's mood; the empty space leaves room for the title and the reader.
 
-Most Chinese titles use Zhuque Fangsong, while *White Horse Neighs in the West Wind* uses the brush forms of Ma Shan Zheng. Characters in a Chinese main title keep the same size and weight, with rhythm shaped by spacing, line breaks and alignment. English titles use Cormorant Garamond roman and its separately drawn italic, with hierarchy following the phrasing.
+Most Chinese titles use Zhuque Fangsong, while _White Horse Neighs in the West Wind_ uses the brush forms of Ma Shan Zheng. Characters in a Chinese main title keep the same size and weight, with rhythm shaped by spacing, line breaks and alignment. English titles use Cormorant Garamond roman and its separately drawn italic, with hierarchy following the phrasing.
 
-The vertical title of *Dream of the Red Chamber*, the open spacing of *Border Town*, the roman/italic pairing of *To the Lighthouse* and the brush strokes of *White Horse* show how the typography can vary within a series.
+The vertical title of _Dream of the Red Chamber_, the open spacing of _Border Town_, the roman/italic pairing of _To the Lighthouse_ and the brush strokes of _White Horse_ show how the typography can vary within a series.
 
 [Art direction](skills/book-covers/references/art-direction.md) · [Typography guide](skills/book-covers/references/typography.md) · [Design decisions and limits](docs/design.md) · [Review](docs/review-v1.4.0.md)
 
 ## Volume I: Stories and space
 
-| Chinese literature | International titles |
-|---|---|
-| *Ordinary World* · Lu Yao | *The Count of Monte Cristo* · Alexandre Dumas |
-| *Border Town* · Shen Congwen | *How the Steel Was Tempered* · Nikolai Ostrovsky |
-| *White Horse Neighs in the West Wind* · Jin Yong | *The Old Man and the Sea* · Ernest Hemingway |
-| *Dream of the Red Chamber* · Cao Xueqin | *The Metamorphosis* · Franz Kafka |
-| *Rickshaw Boy* · Lao She | *To the Lighthouse* · Virginia Woolf |
+| Chinese literature                               | International titles                             |
+| ------------------------------------------------ | ------------------------------------------------ |
+| _Ordinary World_ · Lu Yao                        | _The Count of Monte Cristo_ · Alexandre Dumas    |
+| _Border Town_ · Shen Congwen                     | _How the Steel Was Tempered_ · Nikolai Ostrovsky |
+| _White Horse Neighs in the West Wind_ · Jin Yong | _The Old Man and the Sea_ · Ernest Hemingway     |
+| _Dream of the Red Chamber_ · Cao Xueqin          | _The Metamorphosis_ · Franz Kafka                |
+| _Rickshaw Boy_ · Lao She                         | _To the Lighthouse_ · Virginia Woolf             |
 
 These are independent cover studies, not publisher editions, and contain no novel texts. The illustrations were made with OpenAI's built-in image tool, which did not expose a specific model version. The repository preserves the original images and actual prompts; reusing a prompt will not necessarily reproduce the same image.
+
+## Volume II: Everyday echoes
+
+| Chinese literature                        | International titles                                     |
+| ----------------------------------------- | -------------------------------------------------------- |
+| _To Live_ · Yu Hua                        | _The Moon and Sixpence_ · W. Somerset Maugham            |
+| _Fortress Besieged_ · Qian Zhongshu       | _One Hundred Years of Solitude_ · Gabriel García Márquez |
+| _Tales of Hulan River_ · Xiao Hong        | _Snow Country_ · Yasunari Kawabata                       |
+| _My Memories of Old Beijing_ · Lin Haiyin | _Pride and Prejudice_ · Jane Austen                      |
+| _Call to Arms_ · Lu Xun                   | _Letter from an Unknown Woman_ · Stefan Zweig            |
+
+[Browse Volume II](https://zjuzhiyucai.github.io/book-covers/en/?shelf=volume-2#collection) · [Ten-cover stability observations](docs/stability/vol-02/README.en.md)
+
+This batch used unchanged Skill 1.4.0. One illustration needed a simplification edit; all initial Chinese and English layouts exported successfully. All 40 files matched on a repeated export in the same environment. The record also documents excess texture, similar compositions and imprecise whitespace, rather than treating ten examples as a general success rate.
 
 ## Local development and export
 
@@ -83,7 +97,7 @@ npm ci
 npm run dev                 # Local preview: http://127.0.0.1:4187/
 npm test                    # Check catalog, layout, file protection and local server
 npm run build               # Build the gallery, covers and prompt downloads
-npm run export              # Five portrait sheets and a banner → output/
+npm run export              # Seven portrait sheets and a banner → output/
 npm run compose -- --spec examples/complete-cover.json --out output/custom
 ```
 

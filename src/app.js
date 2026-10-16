@@ -4,11 +4,12 @@ const zh = lang === 'zh';
 const filterButtons = [...document.querySelectorAll('[data-filter]')];
 const cards = [...document.querySelectorAll('.book[data-group]')];
 function filter(group, updateURL = false) {
-  if (!['all', 'chinese', 'world'].includes(group)) group = 'all';
+  if (!['all', 'chinese', 'world', 'volume-2'].includes(group)) group = 'all';
   for (const b of filterButtons) b.setAttribute('aria-pressed', String(b.dataset.filter === group));
   let count = 0;
   for (const card of cards) {
-    card.hidden = group !== 'all' && card.dataset.group !== group;
+    card.hidden =
+      group === 'volume-2' ? card.dataset.volume !== '2' : group !== 'all' && card.dataset.group !== group;
     if (!card.hidden) count++;
   }
   const status = document.querySelector('#collection-count');

@@ -1,0 +1,33 @@
+{
+  "id": "fortress-besieged",
+  "number": "12",
+  "artwork": "../../../../artwork/fortress-besieged.png",
+  "prompt": "../../../../prompts/fortress-besieged-recipe.txt",
+  "title": {
+    "zh": "围城",
+    "en": "Fortress Besieged"
+  },
+  "author": {
+    "zh": "钱锺书",
+    "en": "Qian Zhongshu"
+  },
+  "titleLines": {
+    "zh": ["围城"],
+    "en": ["Fortress", "Besieged"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "size": 172,
+      "baselines": [327],
+      "tracking": 18,
+      "ink": "#433f3e"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [136, 136],
+      "baselines": [258, 405],
+      "ink": "#433f3e"
+    }
+  }
+}

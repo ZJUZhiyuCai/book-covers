@@ -1,0 +1,12 @@
+Use case: illustration-story.
+Create ONE original literary cover ILLUSTRATION LAYER, not a finished cover. Exact title and author will be typeset later from font files. Portrait 2:3, exactly 1024 by 1536 pixels, PNG preferred. Flat edge-to-edge paper, no book mockup.
+Art direction: quiet mid-century printmaking, broad confident shapes, irregular ink edges, very fine natural paper grain, matte warm ivory (#f1ede3). No more than TWO muted ink colours plus graphite linework and paper. Very few small details. An inhabitable spatial scene with weather, distance or absence, never a floating icon, logo, sticker or decorative emblem.
+PRODUCTION COMPOSITION: reserve the ENTIRE TOP 43% (y=0 through660) as empty warm ivory for separate typography. All meaningful illustration occupies y=720 through1330, roughly 47%–87%. Entire bottom 9% (y=1398 through1536) stays clean, empty warm ivory for the author line. Scene may reach left/right edges inside its own area. No border or artificially white rectangle pasted over an image. Quiet space is part of the composition. Coherent at 180 pixels wide.
+No text, letterlike marks, digits, signature, watermark, publisher logo, frames, collage, glossy 3D, photorealism, cute cartoon, ornate ornament or heavy distressed texture. No green. Make an original interpretation, not a copy of a published cover.
+
+Work: Letter from an Unknown Woman / 一个陌生女人的来信, by Stefan Zweig.
+Emotional tension: A lifetime remembered by one person and unrecognised by the other; intimacy meeting absence.
+Scene: An oblique close view of the corner of a plain writing desk, with a single unfolded ivory letter resting near its edge. One empty chair is partly cropped behind the desk. A long cool slate window shadow crosses the dusty rose tabletop and touches the paper without covering all of it. The letter is ABSOLUTELY BLANK, no writing, no faint scribbles or pseudo text. Broad asymmetrical planes; light feels like late morning after someone has gone. Keep desk, chair, paper and shadow below y=730 and above y=1330; upper43% and bottom9% are untouched warm ivory.
+Visual decision: The large blank letter lit on an otherwise unoccupied desk; intimate scale, not a floating envelope icon.
+Palette: #9b7475 and #5c5966. Render as restrained printed inks, not glossy gradients.
+Omit: Written letters, handwriting, envelopes with stamps, roses, tears, portraits, wax seals and decorative furniture.

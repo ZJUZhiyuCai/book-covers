@@ -1,0 +1,34 @@
+{
+  "id": "moon-sixpence",
+  "number": "16",
+  "artwork": "../../../../artwork/moon-sixpence.png",
+  "prompt": "../../../../prompts/moon-sixpence.txt",
+  "title": {
+    "zh": "月亮与六便士",
+    "en": "The Moon and Sixpence"
+  },
+  "author": {
+    "zh": "威廉·萨默塞特·毛姆",
+    "en": "W. Somerset Maugham"
+  },
+  "titleLines": {
+    "zh": ["月亮与", "六便士"],
+    "en": ["The Moon", "and Sixpence"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "size": 123,
+      "baselines": [266, 410],
+      "tracking": 7,
+      "ink": "#324e59"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [135, 111],
+      "baselines": [262, 402],
+      "italicLines": [1],
+      "ink": "#324e59"
+    }
+  }
+}

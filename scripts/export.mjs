@@ -24,13 +24,14 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
   const covers = new Map();
   for (const b of books) covers.set(b.id, await renderCover(b, 'zh'));
   async function sheet(name, title, subtitle, ids) {
+    if (ids.length > 6) throw new Error(`Press sheet ${name} holds at most six covers; split the selection.`);
     let design =
       textPaths('BOOK COVERS', 84, 100, 26, { tracking: 1 }) +
       lines(title, 84, 223, 65, 92) +
       textPaths(subtitle, 88, 318, 27, { fill: '#62665e' });
     design +=
       '<path d="M84 1724H1356" stroke="#c9c6b9"/>' +
-      textPaths('10 部文学作品 · AI 插画 × 独立排版 × 开源 Skill', 84, 1785, 26) +
+      textPaths(`${books.length} 部文学作品 · AI 插画 × 独立排版 × 开源 Skill`, 84, 1785, 26) +
       textPaths('github.com/ZJUZhiyuCai/book-covers', 84, 1845, 24, { fill: '#62665e' });
     const layers = [];
     const width = 370,
@@ -62,13 +63,25 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     '02-chinese-literature.png',
     '五部作品，五处心境。',
     '黄土坡、渡口、沙丘、空庭与窄巷。',
-    books.filter((b) => b.group === 'chinese').map((b) => b.id),
+    books.filter((b) => b.group === 'chinese' && (b.volume ?? 1) === 1).map((b) => b.id),
   );
   await sheet(
     '03-world-literature.png',
     '走进另一个文学空间。',
     '孤岛、雪地、海面、房间与远岸。',
-    books.filter((b) => b.group === 'world').map((b) => b.id),
+    books.filter((b) => b.group === 'world' && (b.volume ?? 1) === 1).map((b) => b.id),
+  );
+  await sheet(
+    '06-volume-02-chinese.png',
+    '日常里，藏着回声。',
+    '第二辑 · 五部中国文学作品',
+    books.filter((b) => b.group === 'chinese' && b.volume === 2).map((b) => b.id),
+  );
+  await sheet(
+    '07-volume-02-world.png',
+    '越过距离，看见彼此。',
+    '第二辑 · 五部外国文学作品',
+    books.filter((b) => b.group === 'world' && b.volume === 2).map((b) => b.id),
   );
   const b = books[0];
   let method =
@@ -165,7 +178,7 @@ export async function exportPress(out = resolve(ROOT, 'output')) {
     .composite(compareLayers)
     .png()
     .toFile(resolve(out, '05-typography.png'));
-  console.log(`Exported five 1440×1920 press sheets and a GitHub banner to ${out}`);
+  console.log(`Exported seven 1440×1920 press sheets and a GitHub banner to ${out}`);
 }
 
 export function parseExportArgs(args) {
@@ -187,7 +200,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const options = parseExportArgs(process.argv.slice(2));
   if (options.help)
     console.log(
-      'npm run export [-- --book <id> --lang zh|en --width 1024 --out output]\nWithout --book, exports five press sheets and a GitHub banner.',
+      'npm run export [-- --book <id> --lang zh|en --width 1024 --out output]\nWithout --book, exports seven press sheets and a GitHub banner.',
     );
   else if (options.book) {
     const books = await loadCatalog();

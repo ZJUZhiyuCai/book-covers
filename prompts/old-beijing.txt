@@ -1,0 +1,12 @@
+Use case: illustration-story.
+Create ONE original literary cover ILLUSTRATION LAYER, not a finished cover. Exact title and author will be typeset later from font files. Portrait 2:3, exactly 1024 by 1536 pixels, PNG preferred. Flat edge-to-edge paper, no book mockup.
+Art direction: quiet mid-century printmaking, broad confident shapes, irregular ink edges, very fine natural paper grain, matte warm ivory (#f1ede3). No more than TWO muted ink colours plus graphite linework and paper. Very few small details. An inhabitable spatial scene with weather, distance or absence, never a floating icon, logo, sticker or decorative emblem.
+PRODUCTION COMPOSITION: reserve the ENTIRE TOP 43% (y=0 through660) as empty warm ivory for separate typography. All meaningful illustration occupies y=720 through1330, roughly 47%–87%. Entire bottom 9% (y=1398 through1536) stays clean, empty warm ivory for the author line. Scene may reach left/right edges inside its own area. No border or artificially white rectangle pasted over an image. Quiet space is part of the composition. Coherent at 180 pixels wide.
+No text, letterlike marks, digits, signature, watermark, publisher logo, frames, collage, glossy 3D, photorealism, cute cartoon, ornate ornament or heavy distressed texture. No green. Make an original interpretation, not a copy of a published cover.
+
+Work: My Memories of Old Beijing / 城南旧事, by Lin Haiyin.
+Emotional tension: Affectionate childhood memory touched by the quiet disappearance of familiar people.
+Scene: An intimate old Beijing alley seen from a child's low eye level. Two broad weathered stone-grey walls recede gently to a small sunlit opening, not a dramatic vanishing-point tunnel. A closed faded terracotta door at the left and a very low, empty wooden stool beside it. The stool is the only portable object. A single oblique patch of pale afternoon light cuts the ground. Crop architecture into the scene edges; keep all architecture below y=700, ending by y=1330. Use very few roof and paving lines.
+Visual decision: A low empty stool beneath adult-sized walls; an intimate scale relationship rather than an architectural showcase.
+Palette: #a09b85 and #bd8972. Render as restrained printed inks, not glossy gradients.
+Omit: Lettered shop signs, lanterns, bicycles, children, crowds, ornate roofs, tourist scenery.

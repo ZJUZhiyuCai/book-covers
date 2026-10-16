@@ -8,7 +8,7 @@ import { coverLayout, textBounds, textPaths, renderCover, wrapText } from '../sc
 import { parseExportArgs } from '../scripts/export.mjs';
 const books = await loadCatalog({ verifyAssets: false });
 
-test('all twenty layouts fit the reserved title and author regions', () => {
+test('all catalog layouts fit the reserved title and author regions', () => {
   for (const b of books)
     for (const lang of ['zh', 'en']) {
       const layout = coverLayout(b, lang);

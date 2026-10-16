@@ -1,0 +1,322 @@
+[
+  {
+    "id": "to-live",
+    "ok": true,
+    "firstSeconds": null,
+    "repeatSeconds": 0.413,
+    "files": [
+      {
+        "name": "to-live-artwork.png",
+        "sha256": "baf2aa9fd385c9a4c7d1a15bb3dcb97161c98f71f6d28c6a7642048e0ddfa2b0",
+        "bytes": 2782459,
+        "repeatIdentical": true
+      },
+      {
+        "name": "to-live-zh.png",
+        "sha256": "d1d4f4dbf2dcddbb5d5bc748c38cb741554794a3b55879954abff96ea6062fab",
+        "bytes": 2757440,
+        "repeatIdentical": true
+      },
+      {
+        "name": "to-live-en.png",
+        "sha256": "3ca84330bc072b6a5991609fea7b8bafc2791c4aa7435824b824ad92a568c5cd",
+        "bytes": 2763229,
+        "repeatIdentical": true
+      },
+      {
+        "name": "to-live-prompt.txt",
+        "sha256": "b1dc48e69af5ac1a1fc8e2c44e58ab0c1a47fde197f6252e0a13bd5ea4ff4707",
+        "bytes": 2254,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "fortress-besieged",
+    "ok": true,
+    "firstSeconds": 0.399,
+    "repeatSeconds": 0.407,
+    "files": [
+      {
+        "name": "fortress-besieged-artwork.png",
+        "sha256": "84925dc1169fc329cd7df4b0d4b3a6a91d7009eada12347dca71d73b6a65f720",
+        "bytes": 2186322,
+        "repeatIdentical": true
+      },
+      {
+        "name": "fortress-besieged-zh.png",
+        "sha256": "708c2403fe1cd803a4fa9c32b430fc52aed18f4022476ce691143626a003d9b4",
+        "bytes": 2313509,
+        "repeatIdentical": true
+      },
+      {
+        "name": "fortress-besieged-en.png",
+        "sha256": "0e5181e7300a9a7652182397d9c8debac6382086a61336db662ee81e43cf394e",
+        "bytes": 2315979,
+        "repeatIdentical": true
+      },
+      {
+        "name": "fortress-besieged-prompt.txt",
+        "sha256": "6a9f3459d279714a4c172b4dbeae0fbf8270a1e2a954f875bb92786c7bd948d3",
+        "bytes": 2671,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "hulan-river",
+    "ok": true,
+    "firstSeconds": 0.452,
+    "repeatSeconds": 0.424,
+    "files": [
+      {
+        "name": "hulan-river-artwork.png",
+        "sha256": "cdcab857ad15dfeaeba784128da2e6127162f4ad9f5e48b2e7aada9a80d06823",
+        "bytes": 2369302,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hulan-river-zh.png",
+        "sha256": "e45384e08bdc8a2fe6f001175959df19a3c181865d3c0ac1f2857e9f43234ccc",
+        "bytes": 2228949,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hulan-river-en.png",
+        "sha256": "0093c4161dbc0ccff6baf3fa02bac8cfb926e84b975e2e23817c52df6cae1593",
+        "bytes": 2225868,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hulan-river-prompt.txt",
+        "sha256": "3280645f6f834423c5387661b73e162067f366e8e5c5b4deb2d46275a4c6ffde",
+        "bytes": 2312,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "old-beijing",
+    "ok": true,
+    "firstSeconds": 0.407,
+    "repeatSeconds": 0.415,
+    "files": [
+      {
+        "name": "old-beijing-artwork.png",
+        "sha256": "468efd856a1ab7f0369ffb40b795054209307077e0009347928d7bb14a9c885b",
+        "bytes": 2424627,
+        "repeatIdentical": true
+      },
+      {
+        "name": "old-beijing-zh.png",
+        "sha256": "a34bcf02d245684c180e11f3e3b3e787da270c2be9effdd75f05701e07baa476",
+        "bytes": 2598815,
+        "repeatIdentical": true
+      },
+      {
+        "name": "old-beijing-en.png",
+        "sha256": "b124e275196906d6ba640de67c25c0414a120c0067728120b268905eaa841aef",
+        "bytes": 2604689,
+        "repeatIdentical": true
+      },
+      {
+        "name": "old-beijing-prompt.txt",
+        "sha256": "c039edb444829cd807e3687adcb60222d4d96fa577bb72cbf34a552463c5c256",
+        "bytes": 2342,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "call-to-arms",
+    "ok": true,
+    "firstSeconds": 0.384,
+    "repeatSeconds": 0.381,
+    "files": [
+      {
+        "name": "call-to-arms-artwork.png",
+        "sha256": "2703225693662bbc5c0be06b7443444bdfd89be638d7f9b16c73a45ebb357c33",
+        "bytes": 2585460,
+        "repeatIdentical": true
+      },
+      {
+        "name": "call-to-arms-zh.png",
+        "sha256": "54891e7227447117640bec03e86994996e370e91a9c9c23cef2a5f88451cba24",
+        "bytes": 2551578,
+        "repeatIdentical": true
+      },
+      {
+        "name": "call-to-arms-en.png",
+        "sha256": "db2b1b200d0358e4348621f08e616c108ec0d3b98de0d89e08850a03f6df116f",
+        "bytes": 2559255,
+        "repeatIdentical": true
+      },
+      {
+        "name": "call-to-arms-prompt.txt",
+        "sha256": "3cc9dadef0a0b4f47d5d3bfa916c7aad14cc727bb8bec3622f86c2f257b687da",
+        "bytes": 2366,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "moon-sixpence",
+    "ok": true,
+    "firstSeconds": 0.402,
+    "repeatSeconds": 0.405,
+    "files": [
+      {
+        "name": "moon-sixpence-artwork.png",
+        "sha256": "c6d5e752be98339c580a8e2ee1934b75ee6836d3bcea79e36470a5b3d3a3ef53",
+        "bytes": 2522151,
+        "repeatIdentical": true
+      },
+      {
+        "name": "moon-sixpence-zh.png",
+        "sha256": "f54f0e07b9fa95d9134d006fe503db64a601a1f45336cf6da30ca6894b51d055",
+        "bytes": 2807447,
+        "repeatIdentical": true
+      },
+      {
+        "name": "moon-sixpence-en.png",
+        "sha256": "1c3a08aa0fdc50ccecb04dec62f36ed749b74d98f15a83399f886500b8f96f18",
+        "bytes": 2803047,
+        "repeatIdentical": true
+      },
+      {
+        "name": "moon-sixpence-prompt.txt",
+        "sha256": "99b2d5a873f7c22ceb5eeaf3f2dc3683fdf48b0a6ceb6ff2e43de3efce55b4a0",
+        "bytes": 2357,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "hundred-years",
+    "ok": true,
+    "firstSeconds": 0.403,
+    "repeatSeconds": 0.406,
+    "files": [
+      {
+        "name": "hundred-years-artwork.png",
+        "sha256": "9936435456526896dc6c5ebb82a44a4ed20702a0a15369fdd694ae167be6f394",
+        "bytes": 2574536,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hundred-years-zh.png",
+        "sha256": "df54fdde09ccbcd45cc1d8ad56418aa770b8bc21692d8ef0d78050ce500e912f",
+        "bytes": 3001948,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hundred-years-en.png",
+        "sha256": "84da817a36a3d3fdab9b6e52809382a6ae799d20a661bbbb51a1d728540de169",
+        "bytes": 3002878,
+        "repeatIdentical": true
+      },
+      {
+        "name": "hundred-years-prompt.txt",
+        "sha256": "2d4338287a0870d897de65d5c4dfc3bec64719c42dabf50e1e42679a132394df",
+        "bytes": 2397,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "snow-country",
+    "ok": true,
+    "firstSeconds": 0.423,
+    "repeatSeconds": 0.451,
+    "files": [
+      {
+        "name": "snow-country-artwork.png",
+        "sha256": "4236e6afebe84164a955502d2f9b5e6a7f76b633ac0f6f4a4cca34785f6f123f",
+        "bytes": 2373276,
+        "repeatIdentical": true
+      },
+      {
+        "name": "snow-country-zh.png",
+        "sha256": "8b6fed93a945c9f3c07ef12818436bb9f977955bc65cd6162a37e1c9c2d3c5e5",
+        "bytes": 2206918,
+        "repeatIdentical": true
+      },
+      {
+        "name": "snow-country-en.png",
+        "sha256": "3e0028da24d93aad8fcd85243ce9466f1f5fdb75b2772b4e81bb8d81491f1296",
+        "bytes": 2207662,
+        "repeatIdentical": true
+      },
+      {
+        "name": "snow-country-prompt.txt",
+        "sha256": "c0bcae93e5a03dbb6c1d1ad507a827b9839a67410ba0eaa04d25e1de8d1d8b61",
+        "bytes": 2324,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "pride-prejudice",
+    "ok": true,
+    "firstSeconds": 0.401,
+    "repeatSeconds": 0.401,
+    "files": [
+      {
+        "name": "pride-prejudice-artwork.png",
+        "sha256": "a344e88daf2f98ccfdf5b40a88f56c8a0e94c1a261aaedcbfab4c0c1cb7d281c",
+        "bytes": 2648160,
+        "repeatIdentical": true
+      },
+      {
+        "name": "pride-prejudice-zh.png",
+        "sha256": "ded82d97d02614e3b726558ae5ff458b5b8c71bd4bb0332bdd97bb5dc156e228",
+        "bytes": 2603300,
+        "repeatIdentical": true
+      },
+      {
+        "name": "pride-prejudice-en.png",
+        "sha256": "f29ebb5e6d4865a8608e184ec0033b6ea65d1e2b7183d5efb97e94cfd2a1de07",
+        "bytes": 2603205,
+        "repeatIdentical": true
+      },
+      {
+        "name": "pride-prejudice-prompt.txt",
+        "sha256": "98472c6ae603ed77e2e536941f8722a2a6e052e5ef936204622cd977912b04a1",
+        "bytes": 2405,
+        "repeatIdentical": true
+      }
+    ]
+  },
+  {
+    "id": "unknown-woman",
+    "ok": true,
+    "firstSeconds": 0.405,
+    "repeatSeconds": 0.408,
+    "files": [
+      {
+        "name": "unknown-woman-artwork.png",
+        "sha256": "fecea84d91add34a64d938a8b3f56db5e496b9e5b1d812fdf3c1da9ad16cb341",
+        "bytes": 2315176,
+        "repeatIdentical": true
+      },
+      {
+        "name": "unknown-woman-zh.png",
+        "sha256": "77eff52d3db9a848a7f0c1efddc9a2a6719c23391cb58d9ae90cd4aa8c24ca25",
+        "bytes": 2311368,
+        "repeatIdentical": true
+      },
+      {
+        "name": "unknown-woman-en.png",
+        "sha256": "588bfa85cd27f4800dc404a3b46f8660b46db7ae38241e0985123f40b214f96d",
+        "bytes": 2309114,
+        "repeatIdentical": true
+      },
+      {
+        "name": "unknown-woman-prompt.txt",
+        "sha256": "83eb48c5ae00b979144a64ccfa7e287acdb5f0ed324e8a6a225182032068ba02",
+        "bytes": 2439,
+        "repeatIdentical": true
+      }
+    ]
+  }
+]

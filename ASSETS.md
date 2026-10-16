@@ -1,17 +1,17 @@
 # Asset provenance and reuse
 
-All ten illustrations in `artwork/` were generated with OpenAI's built-in image-generation tool for this project or its founding personal-library studies, under Zhiyu Cai's art direction. The exact model version was not exposed by the tool. No publisher covers, novel passages or personal photographs are bundled.
+All twenty illustrations in `artwork/` were generated with OpenAI's built-in image-generation tool for this project or its founding personal-library studies, under Zhiyu Cai's art direction. The exact model version was not exposed by the tool. No publisher covers, novel passages or personal photographs are bundled.
 
-`catalog.json` records each selected image's SHA-256, creation date, prompt path and origin. Four founding studies were selected from Zhiyu Cai's personal website; six are new studies for Book Covers. Two first drafts are retained in `process/`, alongside their revision prompt in `prompts/margin-revision.txt`. Re-running a prompt does not guarantee identical pixels.
+`catalog.json` records each selected image's SHA-256, creation date, prompt path and origin. Four founding studies were selected from Zhiyu Cai's personal website; six were new studies for Volume I of Book Covers. Two first drafts are retained in `process/`, alongside their revision prompt in `prompts/margin-revision.txt`. Volume II adds ten studies made on 2026-10-16 with unchanged Skill 1.4.0. Its Fortress Besieged first draft is retained in `process/vol-02/`, with its exact refinement prompt and a separately labeled standalone recipe in `prompts/`. Detailed observations, provenance and checks are in [the stability record](docs/stability/vol-02/README.en.md). Re-running a prompt does not guarantee identical pixels.
 
 ## Licenses
 
-| Material | License |
-|---|---|
-| Code, prompts, written design briefs and skill instructions | [MIT](LICENSE) |
+| Material                                                                                                                                         | License                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Code, prompts, written design briefs and skill instructions                                                                                      | [MIT](LICENSE)                                                                                |
 | Original generated illustrations and their derivatives in `artwork/`, `process/`, `press/`, skill reference images and generated cover downloads | [CC BY 4.0](LICENSE-ARTWORK), to the extent the contributor holds rights that can be licensed |
-| Noto Serif SC font and subsets | [SIL Open Font License 1.1](fonts/OFL.txt) |
-| Zhuque Fangsong, Cormorant Garamond (roman and italic), Ma Shan Zheng | Their respective OFL notices under `fonts/zhuque/`, `fonts/cormorant/`, `fonts/mashanzheng/` |
+| Noto Serif SC font and subsets                                                                                                                   | [SIL Open Font License 1.1](fonts/OFL.txt)                                                    |
+| Zhuque Fangsong, Cormorant Garamond (roman and italic), Ma Shan Zheng                                                                            | Their respective OFL notices under `fonts/zhuque/`, `fonts/cormorant/`, `fonts/mashanzheng/`  |
 
 Suggested artwork credit: **Book Covers — Zhiyu Cai, AI-generated illustration, CC BY 4.0.** Link to this repository and identify changes when reusing the artwork under that license. This notice does not assert exclusive copyright in wholly machine-generated elements or grant rights in the underlying literary works, authors' names or any third-party marks.
 

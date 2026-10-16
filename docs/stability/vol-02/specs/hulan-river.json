@@ -1,0 +1,36 @@
+{
+  "id": "hulan-river",
+  "number": "13",
+  "artwork": "../../../../artwork/hulan-river.png",
+  "prompt": "../../../../prompts/hulan-river.txt",
+  "title": {
+    "zh": "呼兰河传",
+    "en": "Tales of Hulan River"
+  },
+  "author": {
+    "zh": "萧红",
+    "en": "Xiao Hong"
+  },
+  "titleLines": {
+    "zh": ["呼兰", "河传"],
+    "en": ["Tales of", "Hulan River"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "vertical",
+      "size": 120,
+      "centers": [584, 420],
+      "top": 168,
+      "topOffsets": [0, 68],
+      "leading": 130,
+      "ink": "#45535a"
+    },
+    "en": {
+      "mode": "centered",
+      "sizes": [85, 137],
+      "baselines": [237, 385],
+      "italicLines": [0],
+      "ink": "#45535a"
+    }
+  }
+}

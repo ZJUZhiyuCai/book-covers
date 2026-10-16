@@ -8,9 +8,10 @@ const data = JSON.parse(await readFile(resolve(ROOT, 'catalog.json'), 'utf8'));
 
 test('all bilingual records have intact source artwork, prompts and revision inputs', async () => {
   const books = await loadCatalog();
-  assert.equal(books.length, 10);
-  assert.equal(books.filter((b) => b.group === 'chinese').length, 5);
-  assert.equal(books.filter((b) => b.group === 'world').length, 5);
+  assert.equal(books.length, 20);
+  assert.equal(books.filter((b) => b.group === 'chinese').length, 10);
+  assert.equal(books.filter((b) => b.group === 'world').length, 10);
+  assert.equal(books.filter((b) => b.volume === 2).length, 10);
 });
 test('invalid, duplicate or incomplete metadata fails before building', () => {
   const duplicate = structuredClone(data);
@@ -53,4 +54,25 @@ test('both languages have actual permanent pages, translated controls and safe c
   assert.ok(en.includes('../en/books/ordinary-world/'));
   assert.ok(en.includes('Read the skill'));
   assert.ok(en.includes('id="collection-count"'));
+});
+
+test('new revision recipes retain their actual reason and source without changing legacy records', () => {
+  const b = data.books.find((b) => b.id === 'fortress-besieged');
+  const zh = detailPage(
+    b,
+    data.books,
+    'zh',
+    'original generation',
+    'remove clutter',
+    'standalone simplified courtyard recipe',
+  );
+  assert.ok(zh.includes('VOL. 02'));
+  assert.ok(zh.includes('树、罐子、长凳和落叶'));
+  assert.ok(zh.includes('process/vol-02/fortress-besieged-v1.png'));
+  assert.ok(zh.includes('standalone simplified courtyard recipe'));
+  assert.ok(!zh.includes('首稿占用了作者署名区'));
+  assert.doesNotThrow(() => validateCatalog(data));
+  const invalid = structuredClone(data);
+  invalid.books.find((book) => book.id === 'fortress-besieged').generation.revision.recipe = '../outside.txt';
+  assert.throws(() => validateCatalog(invalid), /leaves project/);
 });

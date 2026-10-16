@@ -1,0 +1,12 @@
+Use case: illustration-story.
+Create ONE original literary cover ILLUSTRATION LAYER, not a finished cover. Exact title and author will be typeset later from font files. Portrait 2:3, exactly 1024 by 1536 pixels, PNG preferred. Flat edge-to-edge paper, no book mockup.
+Art direction: quiet mid-century printmaking, broad confident shapes, irregular ink edges, very fine natural paper grain, matte warm ivory (#f1ede3). No more than TWO muted ink colours plus graphite linework and paper. Very few small details. An inhabitable spatial scene with weather, distance or absence, never a floating icon, logo, sticker or decorative emblem.
+PRODUCTION COMPOSITION: reserve the ENTIRE TOP 43% (y=0 through660) as empty warm ivory for separate typography. All meaningful illustration occupies y=720 through1330, roughly 47%–87%. Entire bottom 9% (y=1398 through1536) stays clean, empty warm ivory for the author line. Scene may reach left/right edges inside its own area. No border or artificially white rectangle pasted over an image. Quiet space is part of the composition. Coherent at 180 pixels wide.
+No text, letterlike marks, digits, signature, watermark, publisher logo, frames, collage, glossy 3D, photorealism, cute cartoon, ornate ornament or heavy distressed texture. No green. Make an original interpretation, not a copy of a published cover.
+
+Work: Pride and Prejudice / 傲慢与偏见, by Jane Austen.
+Emotional tension: Misjudgment becoming attention, restrained attraction expressed through social distance.
+Scene: A spare Regency-era drawing-room floor, seen at a low oblique angle. Two simple elegant wooden chairs without upholstery, one dusty mauve at lower left and one slate violet at right, face at slightly different angles across a wide pale stripe of window light. Their long shadows almost touch in the middle. Only hint of a plain skirting board along the rear wall; no chandelier, no wall frames, no flowers. The whole room vignette lives between y=750 and1320 and reaches the side edges. Chair legs and backs must be few clear strokes, correctly grounded, not floating symbols.
+Visual decision: Two differently angled chairs whose shadows almost meet across the empty floor.
+Palette: #9d7f86 and #686b7c. Render as restrained printed inks, not glossy gradients.
+Omit: Dancing silhouettes, faces, hearts, floral borders, lace, chandeliers, mansion facades and ornate chair carving.

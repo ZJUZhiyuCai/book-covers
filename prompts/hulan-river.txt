@@ -1,0 +1,12 @@
+Use case: illustration-story.
+Create ONE original literary cover ILLUSTRATION LAYER, not a finished cover. Exact title and author will be typeset later from font files. Portrait 2:3, exactly 1024 by 1536 pixels, PNG preferred. Flat edge-to-edge paper, no book mockup.
+Art direction: quiet mid-century printmaking, broad confident shapes, irregular ink edges, very fine natural paper grain, matte warm ivory (#f1ede3). No more than TWO muted ink colours plus graphite linework and paper. Very few small details. An inhabitable spatial scene with weather, distance or absence, never a floating icon, logo, sticker or decorative emblem.
+PRODUCTION COMPOSITION: reserve the ENTIRE TOP 43% (y=0 through660) as empty warm ivory for separate typography. All meaningful illustration occupies y=720 through1330, roughly 47%–87%. Entire bottom 9% (y=1398 through1536) stays clean, empty warm ivory for the author line. Scene may reach left/right edges inside its own area. No border or artificially white rectangle pasted over an image. Quiet space is part of the composition. Coherent at 180 pixels wide.
+No text, letterlike marks, digits, signature, watermark, publisher logo, frames, collage, glossy 3D, photorealism, cute cartoon, ornate ornament or heavy distressed texture. No green. Make an original interpretation, not a copy of a published cover.
+
+Work: Tales of Hulan River / 呼兰河传, by Xiao Hong.
+Emotional tension: Childhood warmth remembered through the distance and stillness of winter.
+Scene: A quiet northeastern Chinese backyard in winter, viewed at a child's low height. A slightly crooked low brown fence crosses the back of the scene; a tiny fragment of dark eaves enters at the upper right of the illustration area. Three dry sunflower stalks, with small spare dark seedheads, stand close to the fence. The foreground snow is the paper itself, cut only by two broad cool blue-grey shadows. The scene is open and asymmetrical, y=740 to1290. Few fine twig marks, no intricate foliage.
+Visual decision: The enormous unprinted snow foreground and three fragile stalks against a human-scale fence.
+Palette: #7f929c and #8e7260. Render as restrained printed inks, not glossy gradients.
+Omit: People, village panoramas, snowflakes, holiday ornaments, well wheels, mountains and illustrative clutter.

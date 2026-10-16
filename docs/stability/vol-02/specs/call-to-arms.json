@@ -1,0 +1,35 @@
+{
+  "id": "call-to-arms",
+  "number": "15",
+  "artwork": "../../../../artwork/call-to-arms.png",
+  "prompt": "../../../../prompts/call-to-arms.txt",
+  "title": {
+    "zh": "呐喊",
+    "en": "Call to Arms"
+  },
+  "author": {
+    "zh": "鲁迅",
+    "en": "Lu Xun"
+  },
+  "titleLines": {
+    "zh": ["呐喊"],
+    "en": ["Call", "to Arms"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "left",
+      "face": "brush",
+      "size": 186,
+      "baselines": [331],
+      "tracking": 12,
+      "ink": "#383b3d"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [168, 142],
+      "baselines": [269, 420],
+      "italicLines": [1],
+      "ink": "#383b3d"
+    }
+  }
+}

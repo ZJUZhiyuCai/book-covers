@@ -1,0 +1,581 @@
+{
+  "baselineCommit": "e177a920978348d9a529f887de7c72b0f51024f2",
+  "skillVersion": "1.4.0",
+  "purpose": "Ten new works, five Chinese and five world-literature studies; agent-directed generation and bilingual font-file composition.",
+  "books": [
+    {
+      "id": "to-live",
+      "number": "11",
+      "group": "chinese",
+      "title": {
+        "zh": "活着",
+        "en": "To Live"
+      },
+      "author": {
+        "zh": "余华",
+        "en": "Yu Hua"
+      },
+      "titleLines": {
+        "zh": ["活着"],
+        "en": ["To Live"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "face": "brush",
+          "size": 184,
+          "baselines": [334],
+          "tracking": 24,
+          "ink": "#45382f"
+        },
+        "en": {
+          "mode": "centered",
+          "sizes": [166],
+          "baselines": [326],
+          "italicLines": [0],
+          "ink": "#45382f"
+        }
+      },
+      "palette": ["#b78156", "#4a4136"],
+      "mood": {
+        "zh": "苦难过后，生活仍在继续。",
+        "en": "After loss, life goes on."
+      },
+      "concept": {
+        "zh": "收割后的田地伸向远处，一头老牛站在土色与纸白之间。让身躯的微小，与土地的绵长彼此映照。",
+        "en": "A harvested field stretches beyond a solitary ox. Its small, patient form sits against the length of the land."
+      },
+      "restraint": {
+        "zh": "不罗列苦难，也不把人物画成悲情的象征。",
+        "en": "No catalogue of suffering or sentimental portrait."
+      },
+      "alt": {
+        "zh": "赭褐色田垄间站着一头小小的老牛，大片暖白留空。",
+        "en": "A small ox among ochre-brown furrows beneath a broad ivory field."
+      },
+      "scene": "A broad harvested field, seen at a shallow diagonal. Three or four long irregular umber furrows run across the lower half, with a small elderly ox standing sideways at their far edge, around x=680 y=930. The animal is a compact, spare ink silhouette, head slightly bowed, feet grounded. No person. The field thins into untouched paper at its far edge. Keep the animal tender and ordinary, not heroic.",
+      "emotion": "Patient endurance after loss; a very small living presence against the long continuity of the earth.",
+      "decision": "The horizontal span of worked earth and the tiny still ox. Avoid imitating the dune-and-horse reference; this is close, level farmland with furrows.",
+      "omit": "Portraits, houses, mountains, sun disc, birds, plough machinery, dramatic tragedy.",
+      "volume": 2,
+      "artwork": "artwork/to-live.png",
+      "prompt": "prompts/to-live.txt"
+    },
+    {
+      "id": "fortress-besieged",
+      "number": "12",
+      "group": "chinese",
+      "title": {
+        "zh": "围城",
+        "en": "Fortress Besieged"
+      },
+      "author": {
+        "zh": "钱锺书",
+        "en": "Qian Zhongshu"
+      },
+      "titleLines": {
+        "zh": ["围城"],
+        "en": ["Fortress", "Besieged"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "size": 172,
+          "baselines": [327],
+          "tracking": 18,
+          "ink": "#433f3e"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [136, 136],
+          "baselines": [258, 405],
+          "ink": "#433f3e"
+        }
+      },
+      "palette": ["#9b6858", "#4b5663"],
+      "mood": {
+        "zh": "门的两边，都在望向别处。",
+        "en": "On either side of the wall, somewhere else seems better."
+      },
+      "concept": {
+        "zh": "俯看的院墙围出两个相邻的空庭，门口错开，影子却相接。进与出，变成同一条不断折返的线。",
+        "en": "Seen from above, two adjoining courtyards have offset entrances and touching shadows. Entering and leaving become turns along the same line."
+      },
+      "restraint": {
+        "zh": "不用城堡、围攻或人物对峙来直译书名。",
+        "en": "No literal fortress, siege or confrontation."
+      },
+      "alt": {
+        "zh": "灰蓝与陶土色院墙围着两个空庭，入口彼此错开。",
+        "en": "Slate and terracotta walls enclose two empty courtyards with offset openings."
+      },
+      "scene": "An oblique overhead view of two adjoining, modest domestic courtyards. Broad low terracotta walls form two incomplete rectangles; their openings are offset, so the eye must turn to pass from one to the other. One long slate-blue wall shadow connects the empty courts. No roof tiles or architectural ornament. The structure occupies the lower middle, x=0 to1024, y=760 to1270, with a little paper breathing through. Not a diagram, not a maze logo: palpable worn plaster, spatial depth, awkward domestic intimacy.",
+      "emotion": "The comic unease of wanting to enter and wanting to leave.",
+      "decision": "Two adjoining empty spaces with misaligned thresholds and one continuous shadow.",
+      "omit": "Fortress towers, battlements, soldiers, arrows, keyholes, locks, lovers, detailed brickwork.",
+      "volume": 2,
+      "artwork": "artwork/fortress-besieged.png",
+      "prompt": "prompts/fortress-besieged.txt"
+    },
+    {
+      "id": "hulan-river",
+      "number": "13",
+      "group": "chinese",
+      "title": {
+        "zh": "呼兰河传",
+        "en": "Tales of Hulan River"
+      },
+      "author": {
+        "zh": "萧红",
+        "en": "Xiao Hong"
+      },
+      "titleLines": {
+        "zh": ["呼兰", "河传"],
+        "en": ["Tales of", "Hulan River"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "vertical",
+          "size": 120,
+          "centers": [584, 420],
+          "top": 168,
+          "topOffsets": [0, 68],
+          "leading": 130,
+          "ink": "#45535a"
+        },
+        "en": {
+          "mode": "centered",
+          "sizes": [85, 137],
+          "baselines": [237, 385],
+          "italicLines": [0],
+          "ink": "#45535a"
+        }
+      },
+      "palette": ["#7f929c", "#8e7260"],
+      "mood": {
+        "zh": "很远的故乡，仍留着童年的温度。",
+        "en": "A distant hometown still holds the warmth of childhood."
+      },
+      "concept": {
+        "zh": "积雪的后院只有一道歪斜木篱和低低的屋檐。稀疏的向日葵枯茎穿过雪面，让季节留下比人物更久的记忆。",
+        "en": "A crooked fence and low eaves border a snow-covered backyard. A few dry sunflower stalks hold the memory of another season."
+      },
+      "restraint": {
+        "zh": "不堆民俗物件，也不把雪景装饰成节日贺卡。",
+        "en": "No catalogue of folk objects or decorative winter postcard."
+      },
+      "alt": {
+        "zh": "灰蓝雪影、褐色木篱和几根枯茎，组成安静的东北后院。",
+        "en": "Blue-grey snow shadows, a brown fence and a few dry stalks in a quiet northern backyard."
+      },
+      "scene": "A quiet northeastern Chinese backyard in winter, viewed at a child's low height. A slightly crooked low brown fence crosses the back of the scene; a tiny fragment of dark eaves enters at the upper right of the illustration area. Three dry sunflower stalks, with small spare dark seedheads, stand close to the fence. The foreground snow is the paper itself, cut only by two broad cool blue-grey shadows. The scene is open and asymmetrical, y=740 to1290. Few fine twig marks, no intricate foliage.",
+      "emotion": "Childhood warmth remembered through the distance and stillness of winter.",
+      "decision": "The enormous unprinted snow foreground and three fragile stalks against a human-scale fence.",
+      "omit": "People, village panoramas, snowflakes, holiday ornaments, well wheels, mountains and illustrative clutter.",
+      "volume": 2,
+      "artwork": "artwork/hulan-river.png",
+      "prompt": "prompts/hulan-river.txt"
+    },
+    {
+      "id": "old-beijing",
+      "number": "14",
+      "group": "chinese",
+      "title": {
+        "zh": "城南旧事",
+        "en": "My Memories of Old Beijing"
+      },
+      "author": {
+        "zh": "林海音",
+        "en": "Lin Haiyin"
+      },
+      "titleLines": {
+        "zh": ["城南旧事"],
+        "en": ["My Memories", "of Old Beijing"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "size": 157,
+          "baselines": [326],
+          "tracking": 8,
+          "ink": "#4b4d48"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [113, 115],
+          "baselines": [253, 389],
+          "italicLines": [1],
+          "ink": "#4b4d48"
+        }
+      },
+      "palette": ["#a09b85", "#bd8972"],
+      "mood": {
+        "zh": "巷口还在，熟悉的人已渐渐走远。",
+        "en": "The alley remains as familiar faces drift away."
+      },
+      "concept": {
+        "zh": "从孩子的高度看向巷口，门前的小板凳空着。午后的光横过地面，给离别留下一点温柔。",
+        "en": "At a child's eye level, an alley opens toward the light. A low stool stands empty beside a doorway; afternoon light crosses the paving."
+      },
+      "restraint": {
+        "zh": "不添怀旧招牌，不把旧北京画成旅游街景。",
+        "en": "No nostalgic signage or picturesque tourist street."
+      },
+      "alt": {
+        "zh": "石灰色的窄巷里，一张小板凳靠着赭粉色门口。",
+        "en": "A small stool beside a dusty terracotta doorway in a pale stone alley."
+      },
+      "scene": "An intimate old Beijing alley seen from a child's low eye level. Two broad weathered stone-grey walls recede gently to a small sunlit opening, not a dramatic vanishing-point tunnel. A closed faded terracotta door at the left and a very low, empty wooden stool beside it. The stool is the only portable object. A single oblique patch of pale afternoon light cuts the ground. Crop architecture into the scene edges; keep all architecture below y=700, ending by y=1330. Use very few roof and paving lines.",
+      "emotion": "Affectionate childhood memory touched by the quiet disappearance of familiar people.",
+      "decision": "A low empty stool beneath adult-sized walls; an intimate scale relationship rather than an architectural showcase.",
+      "omit": "Lettered shop signs, lanterns, bicycles, children, crowds, ornate roofs, tourist scenery.",
+      "volume": 2,
+      "artwork": "artwork/old-beijing.png",
+      "prompt": "prompts/old-beijing.txt"
+    },
+    {
+      "id": "call-to-arms",
+      "number": "15",
+      "group": "chinese",
+      "title": {
+        "zh": "呐喊",
+        "en": "Call to Arms"
+      },
+      "author": {
+        "zh": "鲁迅",
+        "en": "Lu Xun"
+      },
+      "titleLines": {
+        "zh": ["呐喊"],
+        "en": ["Call", "to Arms"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "face": "brush",
+          "size": 186,
+          "baselines": [331],
+          "tracking": 12,
+          "ink": "#383b3d"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [168, 142],
+          "baselines": [269, 420],
+          "italicLines": [1],
+          "ink": "#383b3d"
+        }
+      },
+      "palette": ["#3d464a", "#a05b4e"],
+      "mood": {
+        "zh": "沉默的房间，需要一道能透气的缝。",
+        "en": "A silent room needs a break in its enclosure."
+      },
+      "concept": {
+        "zh": "暗色墙面占据画面，一扇微开的门切出窄窄的纸白。用厚重与裂隙之间的关系，回应声音穿透沉默的力量。",
+        "en": "A dark wall fills the scene. A barely open door cuts a narrow strip of ivory through it, setting the weight of enclosure against the possibility of a voice."
+      },
+      "restraint": {
+        "zh": "不画张开的嘴、拳头或口号。",
+        "en": "No shouting mouth, raised fist or slogan."
+      },
+      "alt": {
+        "zh": "深灰色室内墙面上，一道斜斜的门缝投出暖白色的光。",
+        "en": "A narrow, slanting doorway admits ivory light into a charcoal-grey room."
+      },
+      "scene": "A powerful, sparse interior: a broad near-charcoal slate wall occupies the lower illustration field, with a partly open, plain dusty red door near the right third. The door is seen at an angle, leaving a very narrow vertical ivory slit; this opens into a long triangular wedge of untouched paper across the empty floor. The wall has no bricks or windows. Three broad printed planes total, with irregular edges and just enough scraped ink to feel human. The wall begins around y=735 and the floor ends by y=1320. No object floating on blank paper; this is a room you could enter.",
+      "emotion": "The pressure of collective silence and the urgent possibility of awakening.",
+      "decision": "A dense dark enclosure interrupted by one thin opening, the paper light widening toward the reader.",
+      "omit": "Mouths, fists, slogans, typography, people, literal flames, ornamental cracks, props.",
+      "volume": 2,
+      "artwork": "artwork/call-to-arms.png",
+      "prompt": "prompts/call-to-arms.txt"
+    },
+    {
+      "id": "moon-sixpence",
+      "number": "16",
+      "group": "world",
+      "title": {
+        "zh": "月亮与六便士",
+        "en": "The Moon and Sixpence"
+      },
+      "author": {
+        "zh": "威廉·萨默塞特·毛姆",
+        "en": "W. Somerset Maugham"
+      },
+      "titleLines": {
+        "zh": ["月亮与", "六便士"],
+        "en": ["The Moon", "and Sixpence"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "size": 123,
+          "baselines": [266, 410],
+          "tracking": 7,
+          "ink": "#324e59"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [135, 111],
+          "baselines": [262, 402],
+          "italicLines": [1],
+          "ink": "#324e59"
+        }
+      },
+      "palette": ["#3d6473", "#bd8e54"],
+      "mood": {
+        "zh": "离开熟悉的一切，走向不可解释的热望。",
+        "en": "Leaving the familiar for an inexplicable longing."
+      },
+      "concept": {
+        "zh": "一块空白画布倚在房间里，敞开的窗外是一片深蓝海面。室内的赭色与窗外的冷色，留下选择的张力。",
+        "en": "An unpainted canvas leans inside an ochre room. Beyond an open window, a deep blue sea offers another kind of space."
+      },
+      "restraint": {
+        "zh": "舍去月亮、钱币和画家的肖像。",
+        "en": "No moon, coins or portrait of the painter."
+      },
+      "alt": {
+        "zh": "赭色房间里的空白画布，面向窗外深蓝色的海。",
+        "en": "A blank canvas in an ochre room faces a deep blue sea through an open window."
+      },
+      "scene": "A spare painter's room seen obliquely. In the lower right, one tall unpainted ivory canvas leans against a warm ochre wall; at lower left, an open rectangular window reveals a broad deep desaturated blue sea with one pale horizon. The canvas and window face each other across a narrow strip of floor. No easel, brushes, paint tubes or furniture. Window, wall and floor are large flattened print planes with modest uneven edges. Entire room and sea confined to y=730 to1320, no roof or lines extending into title space.",
+      "emotion": "The uncomfortable pull between a familiar life and a private, consuming artistic longing.",
+      "decision": "The blank canvas inside facing the open colour outside; the room is a space of choice.",
+      "omit": "Moon discs, coins, stars, palm-tree symbols, portraits, painter's equipment and travel-poster motifs.",
+      "volume": 2,
+      "artwork": "artwork/moon-sixpence.png",
+      "prompt": "prompts/moon-sixpence.txt"
+    },
+    {
+      "id": "hundred-years",
+      "number": "17",
+      "group": "world",
+      "title": {
+        "zh": "百年孤独",
+        "en": "One Hundred Years of Solitude"
+      },
+      "author": {
+        "zh": "加夫列尔·加西亚·马尔克斯",
+        "en": "Gabriel García Márquez"
+      },
+      "titleLines": {
+        "zh": ["百年孤独"],
+        "en": ["One Hundred", "Years of", "Solitude"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "size": 158,
+          "baselines": [326],
+          "tracking": 8,
+          "ink": "#555044"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [115, 80, 152],
+          "baselines": [240, 345, 495],
+          "italicLines": [1],
+          "ink": "#555044"
+        }
+      },
+      "palette": ["#b29961", "#5a6464"],
+      "mood": {
+        "zh": "时间经过房屋，也在房屋里反复回响。",
+        "en": "Time passes through a house, and echoes within it."
+      },
+      "concept": {
+        "zh": "空屋里几道门框向深处重复，风掀起一层薄帘。逐渐褪去的赭色，让时间看起来像可以穿过的空间。",
+        "en": "Empty doorways repeat into the depth of a house. A thin curtain lifts in the wind, and fading ochre turns time into a space one might pass through."
+      },
+      "restraint": {
+        "zh": "不把家族史压缩成一串神奇物件。",
+        "en": "No inventory of magical objects standing in for a family history."
+      },
+      "alt": {
+        "zh": "赭色空屋中，重复的门框与风中的薄帘向灰蓝深处退去。",
+        "en": "Repeating ochre doorframes and a windblown curtain recede into a grey-blue house."
+      },
+      "scene": "A timeworn tropical house interior reduced to three successive plain doorframes, slightly offset, receding into a cool grey-blue room. One translucent ivory curtain, a broad curved printed shape, lifts gently through the nearest doorway. Dusty golden ochre walls fade with distance; a few large wind-swept shadow shapes cross the floor. No many-branched tree, no family portraits. Place this spatial scene low, between y=720 and1330, leaving the top completely quiet and the author margin untouched. Few forms, no intricate surface decoration.",
+      "emotion": "Generations repeating through a house, memory and solitude eroded by time.",
+      "decision": "Three diminishing thresholds and one lifted curtain make time spatial, without a decorative collage.",
+      "omit": "Butterfly swarms, flowers, portraits, clocks, genealogical diagrams, ornate furniture and written manuscripts.",
+      "volume": 2,
+      "artwork": "artwork/hundred-years.png",
+      "prompt": "prompts/hundred-years.txt"
+    },
+    {
+      "id": "snow-country",
+      "number": "18",
+      "group": "world",
+      "title": {
+        "zh": "雪国",
+        "en": "Snow Country"
+      },
+      "author": {
+        "zh": "川端康成",
+        "en": "Yasunari Kawabata"
+      },
+      "titleLines": {
+        "zh": ["雪国"],
+        "en": ["Snow", "Country"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "vertical",
+          "size": 150,
+          "centers": [512],
+          "top": 170,
+          "leading": 162,
+          "ink": "#485966"
+        },
+        "en": {
+          "mode": "centered",
+          "sizes": [154, 145],
+          "baselines": [257, 414],
+          "italicLines": [1],
+          "ink": "#485966"
+        }
+      },
+      "palette": ["#7c94a6", "#9f6b65"],
+      "mood": {
+        "zh": "越是接近，越感到遥远。",
+        "en": "Closeness can make distance more palpable."
+      },
+      "concept": {
+        "zh": "蓝灰色雪坡上，一间小小的旅舍亮着暖色的窗。雪地的空与窗口的暖，保持着无法消除的距离。",
+        "en": "A small inn has one warm window against a blue-grey snow slope. The open snow holds that warmth at a distance."
+      },
+      "restraint": {
+        "zh": "不画艺伎肖像，不添樱花或富士山。",
+        "en": "No geisha portrait, cherry blossoms or Mount Fuji."
+      },
+      "alt": {
+        "zh": "空旷雪坡和小旅舍，一扇灰玫瑰色的窗亮在冷色之中。",
+        "en": "An empty snowy slope and a small inn with one dusty rose window."
+      },
+      "scene": "An expansive winter snow slope in the Japanese mountains, flattened into two gently diagonal blue-grey shadow bands. A very small low-roofed inn sits at the far right of the slope, one dusty rose window softly warm without glow. No detailed architecture. The paper itself is the snow, merging upward into the empty title field, with the first actual printed shape no higher than y=760. A single dark bare twig at the far left may balance the distant building, no more than three strokes. Keep the bottom y=1380 to1536 untouched ivory.",
+      "emotion": "Beauty and human warmth felt at an unbridgeable distance.",
+      "decision": "A tiny warm opening separated from the viewer by an enormous field of unprinted snow.",
+      "omit": "Train tracks, trains, geisha figures, Mount Fuji, cherry blossoms, ornamental snowflakes and dramatic skies.",
+      "volume": 2,
+      "artwork": "artwork/snow-country.png",
+      "prompt": "prompts/snow-country.txt"
+    },
+    {
+      "id": "pride-prejudice",
+      "number": "19",
+      "group": "world",
+      "title": {
+        "zh": "傲慢与偏见",
+        "en": "Pride and Prejudice"
+      },
+      "author": {
+        "zh": "简·奥斯汀",
+        "en": "Jane Austen"
+      },
+      "titleLines": {
+        "zh": ["傲慢与偏见"],
+        "en": ["Pride", "and Prejudice"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "centered",
+          "size": 141,
+          "baselines": [327],
+          "tracking": 7,
+          "ink": "#51464e"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [166, 112],
+          "baselines": [265, 410],
+          "italicLines": [1],
+          "ink": "#51464e"
+        }
+      },
+      "palette": ["#9d7f86", "#686b7c"],
+      "mood": {
+        "zh": "在礼貌的距离里，慢慢重新看见彼此。",
+        "en": "Across a polite distance, two people learn to see again."
+      },
+      "concept": {
+        "zh": "两把空椅隔着一块明亮的地板，椅背各有朝向，投影却悄悄靠近。把关系的变化藏在一点点角度里。",
+        "en": "Two empty chairs sit across a patch of light. They face at different angles, while their shadows almost meet."
+      },
+      "restraint": {
+        "zh": "不使用人物剪影、花边或豪宅的正面肖像。",
+        "en": "No character silhouettes, lace or grand-house portrait."
+      },
+      "alt": {
+        "zh": "灰紫色室内，两把简洁的木椅隔着窗光，影子缓缓靠近。",
+        "en": "Two simple wooden chairs and approaching shadows in a muted mauve interior."
+      },
+      "scene": "A spare Regency-era drawing-room floor, seen at a low oblique angle. Two simple elegant wooden chairs without upholstery, one dusty mauve at lower left and one slate violet at right, face at slightly different angles across a wide pale stripe of window light. Their long shadows almost touch in the middle. Only hint of a plain skirting board along the rear wall; no chandelier, no wall frames, no flowers. The whole room vignette lives between y=750 and1320 and reaches the side edges. Chair legs and backs must be few clear strokes, correctly grounded, not floating symbols.",
+      "emotion": "Misjudgment becoming attention, restrained attraction expressed through social distance.",
+      "decision": "Two differently angled chairs whose shadows almost meet across the empty floor.",
+      "omit": "Dancing silhouettes, faces, hearts, floral borders, lace, chandeliers, mansion facades and ornate chair carving.",
+      "volume": 2,
+      "artwork": "artwork/pride-prejudice.png",
+      "prompt": "prompts/pride-prejudice.txt"
+    },
+    {
+      "id": "unknown-woman",
+      "number": "20",
+      "group": "world",
+      "title": {
+        "zh": "一个陌生女人的来信",
+        "en": "Letter from an Unknown Woman"
+      },
+      "author": {
+        "zh": "斯特凡·茨威格",
+        "en": "Stefan Zweig"
+      },
+      "titleLines": {
+        "zh": ["一个陌生", "女人的来信"],
+        "en": ["Letter from", "an Unknown", "Woman"]
+      },
+      "typography": {
+        "zh": {
+          "mode": "left",
+          "size": 119,
+          "baselines": [263, 405],
+          "tracking": 5,
+          "ink": "#664647"
+        },
+        "en": {
+          "mode": "left",
+          "sizes": [96, 119, 153],
+          "baselines": [235, 365, 510],
+          "italicLines": [0],
+          "ink": "#664647"
+        }
+      },
+      "palette": ["#9b7475", "#5c5966"],
+      "mood": {
+        "zh": "她记得一切，而他没有认出她。",
+        "en": "She remembers everything. He does not recognise her."
+      },
+      "concept": {
+        "zh": "桌面上留着一张展开的无字信纸，椅子空着，窗的影子横过纸面。让倾诉与缺席，落在同一处寂静里。",
+        "en": "An unfolded, blank letter rests on a desk beside an empty chair. A window shadow crosses the page, bringing confession and absence into the same quiet room."
+      },
+      "restraint": {
+        "zh": "不画泪水、玫瑰或虚构的手写信文。",
+        "en": "No tears, roses or invented handwriting."
+      },
+      "alt": {
+        "zh": "灰玫瑰色桌面上的空白信纸，被一道冷灰窗影斜斜穿过。",
+        "en": "A blank letter on a dusty rose desk, crossed diagonally by a cool grey window shadow."
+      },
+      "scene": "An oblique close view of the corner of a plain writing desk, with a single unfolded ivory letter resting near its edge. One empty chair is partly cropped behind the desk. A long cool slate window shadow crosses the dusty rose tabletop and touches the paper without covering all of it. The letter is ABSOLUTELY BLANK, no writing, no faint scribbles or pseudo text. Broad asymmetrical planes; light feels like late morning after someone has gone. Keep desk, chair, paper and shadow below y=730 and above y=1330; upper43% and bottom9% are untouched warm ivory.",
+      "emotion": "A lifetime remembered by one person and unrecognised by the other; intimacy meeting absence.",
+      "decision": "The large blank letter lit on an otherwise unoccupied desk; intimate scale, not a floating envelope icon.",
+      "omit": "Written letters, handwriting, envelopes with stamps, roses, tears, portraits, wax seals and decorative furniture.",
+      "volume": 2,
+      "artwork": "artwork/unknown-woman.png",
+      "prompt": "prompts/unknown-woman.txt"
+    }
+  ]
+}

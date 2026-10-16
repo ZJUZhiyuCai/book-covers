@@ -1,0 +1,34 @@
+{
+  "id": "hundred-years",
+  "number": "17",
+  "artwork": "../../../../artwork/hundred-years.png",
+  "prompt": "../../../../prompts/hundred-years.txt",
+  "title": {
+    "zh": "百年孤独",
+    "en": "One Hundred Years of Solitude"
+  },
+  "author": {
+    "zh": "加夫列尔·加西亚·马尔克斯",
+    "en": "Gabriel García Márquez"
+  },
+  "titleLines": {
+    "zh": ["百年孤独"],
+    "en": ["One Hundred", "Years of", "Solitude"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "centered",
+      "size": 158,
+      "baselines": [326],
+      "tracking": 8,
+      "ink": "#555044"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [115, 80, 152],
+      "baselines": [240, 345, 495],
+      "italicLines": [1],
+      "ink": "#555044"
+    }
+  }
+}

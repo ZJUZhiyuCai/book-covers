@@ -1,0 +1,34 @@
+{
+  "id": "old-beijing",
+  "number": "14",
+  "artwork": "../../../../artwork/old-beijing.png",
+  "prompt": "../../../../prompts/old-beijing.txt",
+  "title": {
+    "zh": "城南旧事",
+    "en": "My Memories of Old Beijing"
+  },
+  "author": {
+    "zh": "林海音",
+    "en": "Lin Haiyin"
+  },
+  "titleLines": {
+    "zh": ["城南旧事"],
+    "en": ["My Memories", "of Old Beijing"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "left",
+      "size": 157,
+      "baselines": [326],
+      "tracking": 8,
+      "ink": "#4b4d48"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [113, 115],
+      "baselines": [253, 389],
+      "italicLines": [1],
+      "ink": "#4b4d48"
+    }
+  }
+}

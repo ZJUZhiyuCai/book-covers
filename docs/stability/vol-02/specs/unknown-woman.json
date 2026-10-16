@@ -1,0 +1,34 @@
+{
+  "id": "unknown-woman",
+  "number": "20",
+  "artwork": "../../../../artwork/unknown-woman.png",
+  "prompt": "../../../../prompts/unknown-woman.txt",
+  "title": {
+    "zh": "一个陌生女人的来信",
+    "en": "Letter from an Unknown Woman"
+  },
+  "author": {
+    "zh": "斯特凡·茨威格",
+    "en": "Stefan Zweig"
+  },
+  "titleLines": {
+    "zh": ["一个陌生", "女人的来信"],
+    "en": ["Letter from", "an Unknown", "Woman"]
+  },
+  "typography": {
+    "zh": {
+      "mode": "left",
+      "size": 119,
+      "baselines": [263, 405],
+      "tracking": 5,
+      "ink": "#664647"
+    },
+    "en": {
+      "mode": "left",
+      "sizes": [96, 119, 153],
+      "baselines": [235, 365, 510],
+      "italicLines": [0],
+      "ink": "#664647"
+    }
+  }
+}
