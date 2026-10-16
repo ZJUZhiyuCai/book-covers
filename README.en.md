@@ -151,4 +151,4 @@ The gallery uses static HTML/CSS and a little JavaScript, with no analytics or o
 
 See [ASSETS.md](ASSETS.md) for sources and attribution details.
 
-Created and curated by [Zhiyu Cai](https://caizhiyu.com/).
+Created and curated by Zhiyu Cai. Contact: [22519085@zju.edu.cn](mailto:22519085@zju.edu.cn).

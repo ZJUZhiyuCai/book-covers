@@ -58,3 +58,7 @@ Open the exported typeset PNG at full size and at about 180 px wide, and inspect
 Revise the specific failure and re-export. Do not claim a successful render is proof of top-tier design. Preview the typeset result first, link all three deliverables clearly, include the copyable prompt, and briefly explain the design decision and any remaining limitation. These are screen-resolution front-cover studies; do not describe them as press-ready jackets without trim, bleed, spine, colour and print checks.
 
 Read [worked briefs](references/briefs.md) only when another conceptual example would help. Publishing, posting and repository changes follow the user's actual authorization; the skill itself does not grant it.
+
+## Contact
+
+Questions or feedback for the creator, Zhiyu Cai: [22519085@zju.edu.cn](mailto:22519085@zju.edu.cn).

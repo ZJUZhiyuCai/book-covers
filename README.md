@@ -151,4 +151,4 @@ tests/              内容、排版、文件保护与服务检查
 
 完整来源和署名方式见 [ASSETS.md](ASSETS.md)。
 
-创作与策划：[蔡志宇 Zhiyu Cai](https://caizhiyu.com/)。
+创作与策划：蔡志宇 Zhiyu Cai。联系邮箱：[22519085@zju.edu.cn](mailto:22519085@zju.edu.cn)。
